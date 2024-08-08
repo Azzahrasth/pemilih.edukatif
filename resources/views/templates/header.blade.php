@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark poppins-bold" style="background-color: #162f50">
   <a class="navbar-brand" href="#">
-    <img src="{{ asset('storage/images/Logo.png') }}" alt="Logo PeLif" class="img-fluid" style="width: 18vh" />
+    <img src="{{ asset('storage/images/Logo.png') }}" alt="Logo PeLif" class="img-fluid" style="width: 141px" />
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

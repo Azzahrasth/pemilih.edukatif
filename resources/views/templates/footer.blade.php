@@ -1,7 +1,7 @@
-<div class="container-fluid" style="background-color: #162f50;">
+<div class="container-fluid" style="background: linear-gradient(to right, #162F50, #224370, #2D5890);">
     <div class="row pt-lg-5 pt-4 pb-lg-2 pb-1 ">
         <div class="col-xl-3 text-center poppins-bold align-self-center">
-            <img src="{{ asset('storage/images/Logo.png') }}" class="img-fluid" alt="Logo Pelif">
+            <img src="{{ asset('storage/images/Logo.png') }}" class="img-fluid logo-footer" alt="Logo Pelif">
         </div>
         <div class="col-xl-9 text-xl-left text-center">
             <div class="row">
