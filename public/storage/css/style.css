@@ -1,0 +1,379 @@
+/* Font Poppins */
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.montserrat-regular {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+/* Mengatur active navbar menu saat dipilih */
+
+.active {
+    color: #F6B951;
+}
+
+/* Mengatur font saat di layar tertentu */
+
+.judul-daftar-partai {
+    font-size: 64px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .judul-daftar-partai {
+        font-size: 50px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .judul-daftar-partai {
+        font-size: 36px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .judul-daftar-partai {
+        font-size: 1.75rem;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.deskripsi-daftar-partai {
+    font-size: 30px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .deskripsi-daftar-partai {
+        font-size: 1rem;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .deskripsi-daftar-partai {
+        font-size: 1.25rem;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .deskripsi-daftar-partai {
+        font-size: 1rem;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.logo-footer {
+    width: 393px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .logo-footer {
+        width: 343px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .logo-footer {
+        width: 293px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .logo-footer {
+        width: 243px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+/* Mengatur font saat di layar tertentu */
+
+.judul-berita {
+    font-size: 50px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .judul-berita {
+        font-size: 40px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .judul-berita {
+        font-size: 30px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .judul-berita {
+        font-size: 28px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.deskripsi-berita {
+    font-size: 25px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .deskripsi-berita {
+        font-size: 25px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .deskripsi-berita {
+        font-size: 20px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .deskripsi-berita {
+        font-size: 18px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.berita-populer {
+    font-size: 40px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .berita-populer {
+        font-size: 36px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .berita-populer {
+        font-size: 32px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .berita-populer {
+        font-size: 28px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.search-berita {
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    width: 366px;
+    height: 58px;
+    font-size: 25px;
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .search-berita {
+        background-color: #F1F1F1;
+        border-radius: 10px;
+        width: 326px;
+        height: 52px;
+        font-size: 22px;
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .search-berita {
+        background-color: #F1F1F1;
+        border-radius: 10px;
+        width: 286px;
+        height: 48px;
+        font-size: 19px;
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .search-berita {
+        background-color: #F1F1F1;
+        border-radius: 10px;
+        width: 246px;
+        height: 44px;
+        font-size: 15px;
+    }
+}
+
+.foto-berita {
+    width: 434px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .foto-berita {
+        width: 343px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .foto-berita {
+        width: 293px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .foto-berita {
+        width: 243px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
