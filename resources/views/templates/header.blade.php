@@ -8,10 +8,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active pr-lg-4">
-        <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
+      <li class="nav-item {{ request()->is('/') ? 'active' : '' }} pr-lg-4">
+        <a class="nav-link" href="{{ url('/') }}">Beranda</a>
       </li>
-      <li class="nav-item dropdown pr-lg-4">
+      <li class="nav-item {{ request()->is('kandidat') ? 'active' : '' }} dropdown pr-lg-4">
         <a class="nav-link dropdown-toggle" href="kandidat.html" id="navbarDropdownMenuLink"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Kandidat
@@ -23,10 +23,10 @@
           <a class="dropdown-item" href="kandidat.html">Partai</a>
         </div>
       </li>
-      <li class="nav-item pr-lg-4">
-        <a class="nav-link" href="berita.html">Berita</a>
+      <li class="nav-item {{ request()->is('berita') ? 'active' : '' }} pr-lg-4">
+        <a class="nav-link" href="{{ url('/berita') }}">Berita</a>
       </li>
-      <li class="nav-item pr-lg-4">
+      <li class="nav-item {{ request()->is('tentangkami') ? 'active' : '' }} pr-lg-4">
         <a class="nav-link" href="tentang_kami.html">Tentang Kami</a>
       </li>
       <li class="nav-item pr-lg-4">
