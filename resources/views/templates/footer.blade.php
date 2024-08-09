@@ -3,7 +3,7 @@
         <div class="col-xl-3 text-center poppins-bold align-self-center">
             <img src="{{ asset('storage/images/Logo.png') }}" class="img-fluid logo-footer" alt="Logo Pelif">
         </div>
-        <div class="col-xl-9 text-xl-left text-center">
+        <div class="col-xl-9 text-xl-start text-center">
             <div class="row">
                 <div class="col-xl-4" style="font-size: 32px; color: white;">
                     <p class="poppins-bold">Fitur</p>
