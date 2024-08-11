@@ -74,7 +74,7 @@
             <div class="col text-center mb-4">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Frontend Developer" style="width: 80px;" class="rounded-circle mb-2">
+                        <img src="{{ asset('storage/images/tentangkami/member2.png') }}" alt="Frontend Developer" style="width: 80px;" class="rounded-circle mb-2">
                         <h6 class="card-title poppins-bold" style="color: #162f50;">Abdullah Hafidz Furqon</h6>
                         <p class="card-text poppins-regular" style="color: #162f50;">Frontend Developer</p>
                     </div>
