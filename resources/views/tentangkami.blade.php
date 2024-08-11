@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12 text-center">
         <h1 class="poppins-bold" style="color: #162f50; font-size: 36px;">Tentang Kami</h1>
-        <img src="{{ asset('storage/images/logo.png') }}" alt="Pemilih Edukatif" style="max-width: 250px;" class="my-4">
+        <img src="{{ asset('storage/images/logo2.png') }}" alt="Pemilih Edukatif" style="max-width: 500px;" class="my-4">
         <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
             <strong style="color: #F6B951;">Pemilih Edukatif</strong> adalah platform yang dirancang untuk memberikan akses mudah dan terpercaya kepada para pemilih dalam <strong style="color: #F6B951;">PILKADA 2024</strong> agar memperoleh informasi lengkap dan obyektif mengenai calon-calon dalam <strong style="color: #F6B951;">Pilkada 2024</strong>. Kami membantu masyarakat memahami <strong style="color: #F6B951;">visi, misi</strong>, dan <strong style="color: #F6B951;">program kerja</strong> setiap calon, sehingga mereka dapat membuat <strong style="color: #F6B951;">keputusan</strong> yang lebih terinformasi dan <strong style="color: #F6B951;">bijak</strong>.
         </p>
@@ -89,7 +89,7 @@
         <div class="card">
             <div class="card-body text-center">
                 <div class="mb-4">
-                    <img src="{{ asset('images/your-image.png') }}" alt="Feedback Illustration" class="img-fluid">
+                    <img src="{{ asset('storage/images/tentangkami/masukan.png') }}" alt="Feedback Illustration" class="img-fluid" style="max-width: 500px;">
                 </div>
                 <h3 class="poppins-bold" style="color: #162f50; font-size: 36px;">Masukan</h3>
                 <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
