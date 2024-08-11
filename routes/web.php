@@ -24,3 +24,7 @@ Route::get('/berita', function () {
 Route::get('/tentangkami', function () {
     return view('tentangkami');
 })->name('tentangkami');
+
+Route::get('/register', function () {
+    return view('register');
+})->name('register');

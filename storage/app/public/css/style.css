@@ -127,12 +127,34 @@
 .active {
     color: #f6b951;
 }
+.yellow {
+    color: #f6b951;
+}
+.blue {
+    color: #162f50;
+}
 
 /* Mengatur font saat di layar tertentu */
 
 .judul-daftar-partai {
     font-size: 64px;
     /* Ukuran font default */
+}
+
+.form-login {
+    border-radius: 30px;
+    border: 2px solid #f6b951;
+}
+
+.btn-login {
+    background-color: #162f50;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 12px;
+}
+
+.btn-login:hover {
+    background-color: #0e1937;
 }
 
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
