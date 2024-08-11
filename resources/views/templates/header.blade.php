@@ -31,7 +31,7 @@
       </li>
       <li class="nav-item pr-lg-4">
         <a class="nav-link"
-          style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px;"
+          style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px; display: flex; justify-content: center; align-items: center;"
           href="#">Masuk</a>
       </li>
     </ul>
