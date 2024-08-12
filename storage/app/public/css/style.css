@@ -377,3 +377,32 @@
         /* Ukuran font untuk layar sangat kecil */
     }
 }
+
+.foto-terkini {
+    width: 314px; height: 295px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .foto-terkini {
+        width: 314px; height: 295px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .foto-terkini {
+        width: 314px; height: 295px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .foto-terkini {
+        width: 157px; height: 143px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
