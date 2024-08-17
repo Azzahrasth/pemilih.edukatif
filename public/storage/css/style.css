@@ -157,6 +157,101 @@
     background-color: #0e1937;
 }
 
+/* Bagian untuk mengatur countdown timer di beranda */
+
+.countdown-timer {
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.col.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-box {
+    background-color: #1e3a61;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.count-number {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.separator {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+.count-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e3a61;
+    margin-top: 5px; /* Sesuaikan jika diperlukan */
+}
+
+.count-box:last-child .separator {
+    display: none; /* Hilangkan separator di kolom terakhir */
+}
+
+/* Bagian untuk mengatur sinar dsb di bagian beranda */
+
+
+
+textarea {
+    position: relative;
+    height: 100px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
+
+textarea::placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.starburst {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 430px;
+    height: 430px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0.7;
+    transform: translate(-50%, -50%) rotate(45deg);
+    pointer-events: none; /* Supaya cahaya tidak mengganggu interaksi */
+    border-radius: 50%;
+    z-index: 0; /* Cahaya di latar belakang */
+}
+
+.col-lg-7 {
+    position: relative; /* Untuk memastikan sinar cahaya ditempatkan relatif terhadap elemen ini */
+}
+
+.row {
+    z-index: 1; /* Memastikan teks dan tombol tetap di atas sinar */
+    position: relative; /* Menjaga teks dan tombol tetap di atas sinar tanpa memodifikasi relative positioning secara individual */
+}
+
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
 @media (max-width: 992px) {
     .judul-daftar-partai {
@@ -369,14 +464,14 @@
     }
 }
 
-.foto-berita {
+.foto-list-berita {
     width: 434px;
     /* Ukuran font default */
 }
 
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
 @media (max-width: 992px) {
-    .foto-berita {
+    .foto-list-berita {
         width: 343px;
         /* Ukuran font untuk layar medium */
     }
@@ -384,7 +479,7 @@
 
 /* Media query untuk layar lebih kecil dari 768px (hp) */
 @media (max-width: 768px) {
-    .foto-berita {
+    .foto-list-berita {
         width: 293px;
         /* Ukuran font untuk layar kecil */
     }
@@ -392,7 +487,7 @@
 
 /* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
 @media (max-width: 576px) {
-    .foto-berita {
+    .foto-list-berita {
         width: 243px;
         /* Ukuran font untuk layar sangat kecil */
     }
@@ -425,4 +520,123 @@
         width: 157px; height: 143px;
         /* Ukuran font untuk layar sangat kecil */
     }
+}
+
+.foto-berita {
+    width: 1128px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .foto-berita {
+        width: 314px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .foto-berita {
+        width: 314px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .foto-berita {
+        width: 386px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.foto-profil-berita {
+    width: 120px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .foto-profil-berita {
+        width: 314px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .foto-profil-berita {
+        width: 314px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .foto-profil-berita {
+        width: 80px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #162f50;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #162f50;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #162f50
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #162f50;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
 }

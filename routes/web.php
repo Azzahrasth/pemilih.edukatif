@@ -21,6 +21,10 @@ Route::get('/berita', function () {
     return view('berita');
 })->name('berita');
 
+Route::get('/detailberita', function () {
+    return view('detailberita');
+})->name('detailberita');
+
 Route::get('/tentangkami', function () {
     return view('tentangkami');
 })->name('tentangkami');
