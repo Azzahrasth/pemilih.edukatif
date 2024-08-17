@@ -32,7 +32,7 @@
         <li class="nav-item pe-lg-4">
           <a class="nav-link"
             style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px; display: flex; justify-content: center; align-items: center;"
-            href="#">Masuk</a>
+            href="{{ url('/register') }}">Masuk</a>
         </li>
       </ul>
     </div>
