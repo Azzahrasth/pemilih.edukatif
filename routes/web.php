@@ -32,3 +32,15 @@ Route::get('/tentangkami', function () {
 Route::get('/register', function () {
     return view('register');
 })->name('register');
+
+Route::get('/profilkandidat', function () {
+    return view('profilkandidat');
+})->name('profilkandidat');
+
+Route::get('/profilpaslon', function () {
+    return view('profilpaslon');
+})->name('profilpaslon');
+
+Route::get('/profilpartai', function () {
+    return view('profilpartai');
+})->name('profilpartai');
