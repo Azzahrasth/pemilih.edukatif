@@ -1,21 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row p-5" style="background-color: #162F50; border-radius: 0 0 15% 15%;">
-    <div class="col-lg-7 col-12 p-5 order-2 order-xl-1" style="border-radius: 15px; overflow: hidden; position: relative;">
+<div class="row p-lg-5 p-2" style="background-color: #162F50; border-radius: 0 0 15% 15%;">
+    <div class="col-lg-7 col-12 p-lg-5 p-3 order-2 order-xl-1 text-lg-start text-center" style="border-radius: 15px; overflow: hidden; position: relative;">
         <div class="starburst"></div>
         <div class="row">
-            <div class="col-lg-12 poppins-extrabold" style="font-size: 70px; color: white;">MENUJU PILKADA SERENTAK 2024</div>
+            <div class="col-lg-12 poppins-extrabold slogan-beranda" style="color: white;">MENUJU PILKADA SERENTAK 2024</div>
             <div class="col-lg-12 poppins-regular" style="font-size: 29px; color: white;">Suara Kita, Masa Depan Bangsa!</div>
             <div class="col-lg-12 pt-3">
                 <a href="#" class="btn poppins-bold px-4" style="background-color: #F6B951; color: white; font-size: 29px; border-radius: 15px;">Kenali Calon</a>
             </div>
         </div>
     </div>
-    <div class="col-lg-5 col-12 order-1 order-xl-2"><img src="{{ asset('storage/images/beranda/headline-beranda.png')}}" alt="Foto Berita" class="foto-berita" style="width: 458px;"></div>
+    <div class="col-lg-5 col-12 order-1 order-xl-2 text-lg-start text-center"><img src="{{ asset('storage/images/beranda/headline-beranda.png')}}" alt="Foto Beranda" class="foto-beranda"></div>
 </div>
 
-<div class="row countdown-timer p-3 poppins-bold my-4">
+<div class="row countdown-timer p-3 poppins-bold my-lg-4 my-1">
     <div class="col text-center">
         <div class="count-box position-relative">
             <span id="days" class="count-number">5</span>
@@ -47,12 +47,12 @@
 </div>
 
 <div class="row p-3 mx-5">
-    <div class="col-12 poppins-extrabold text-lg-start text-center" style="font-size: 50px;">Apa itu Pilkada?</div>
+    <div class="col-12 poppins-extrabold text-lg-start text-center judul-beranda">Apa itu Pilkada?</div>
 </div>
 
 <div class="row p-3 mb-4 mx-5 justify-content-center" style="background-color: #F1F1F1; border-radius: 20px;">
-    <div class="col-12 poppins-bold p-5 pb-0 my-4 mb-0 text-center" style="color: #162F50; font-size: 32px;">
-        <p>Pemilihan Kepala Daerah yang diadakan untuk <span style="color: #F6B951;">memilih</span> kepala daerah beserta wakilnya di tingkat <span style="color: #F6B951;">provinsi</span> (gubernur), <span style="color: #F6B951;">kota</span> (wali kota), dan <span style="color: #F6B951;">kabupaten</span> (bupati) secara langsung setiap lima tahun sekali. Tahun ini, pilkada akan dilaksanakan serentak di:</p>
+    <div class="col-12 poppins-bold p-lg-4 p-2 pb-0 my-4 mb-0 text-center" style="color: #162F50;">
+        <p class="penjelasan-beranda">Pemilihan Kepala Daerah yang diadakan untuk <span style="color: #F6B951;">memilih</span> kepala daerah beserta wakilnya di tingkat <span style="color: #F6B951;">provinsi</span> (gubernur), <span style="color: #F6B951;">kota</span> (wali kota), dan <span style="color: #F6B951;">kabupaten</span> (bupati) secara langsung setiap lima tahun sekali. Tahun ini, pilkada akan dilaksanakan serentak di:</p>
     </div>
     <div class="row justify-content-center mt-3">
         <div class="col-2 poppins-bold text-center me-5" style="background-color: #162F50; font-size: 96px; color: white; border-radius: 25px 25px 0px 0px;">37</div>
@@ -64,8 +64,8 @@
     </div>
 </div>
 
-<div class="row p-3 mb-4 mx-5">
-    <div class="col-12 poppins-extrabold pb-5 text-lg-start text-center" style="font-size: 50px;">Tanggal Penting!!</div>
+<div class="row p-3 mb-lg-4 mb-0 mx-5">
+    <div class="col-12 poppins-extrabold pb-5 text-lg-start text-center judul-beranda">Tanggal Penting!!</div>
     <div class="col">
         <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
             <div class="timeline-step">
@@ -100,12 +100,12 @@
 </div>
 
 <div class="row p-3 mx-5">
-    <div class="col-12 poppins-extrabold text-lg-start text-center" style="font-size: 50px;">Cara Mencoblos di TPS</div>
+    <div class="col-12 poppins-extrabold text-lg-start text-center judul-beranda">Cara Mencoblos di TPS</div>
 </div>
 
 <div class="row p-3 mb-4 mt-2 mx-5 justify-content-center" style="background-color: #F1F1F1; border-radius: 20px;">
-    <div class="col-12 poppins-bold p-5 pt-3 pb-3 my-2 text-center" style="color: #162F50; font-size: 32px;">
-        <p>Tahukah kamu? Indonesia mempunyai tata cara dalam menggunakan hak suara ketika Pilkada. Sobat pemilih, akan mendapatkan dua surat suara untuk Gubernur dan Bupati atau Walikota. Simak prosedurnya, yuk!</p>
+    <div class="col-12 poppins-bold p-lg-4 p-2 pt-3 pb-3 my-2 text-center" style="color: #162F50; font-size: 32px;">
+        <p class="penjelasan-beranda">Tahukah kamu? Indonesia mempunyai tata cara dalam menggunakan hak suara ketika Pilkada. Sobat pemilih, akan mendapatkan dua surat suara untuk Gubernur dan Bupati atau Walikota. Simak prosedurnya, yuk!</p>
     </div>
 </div>
 
@@ -155,10 +155,15 @@
 </div>
 
 <div class="row text-center mt-lg-4 mt-1 mb-4">
-    <div class="col-12 poppins-extrabold mb-4" style="font-size: 80px;">🌐 QUIZ 🌐</div>
-    <div class="col-12 poppins-extrabold mb-4" style="font-size: 32px;">Untuk mengukur tingkat pemahamanmu mengenai Pilkada.</div>
-    <div class="col-lg-12 mb-4">
-        <a href="#" class="btn poppins-bold px-4" style="background-color: #F6B951; color: white; font-size: 48px; border-radius: 15px;">Cobain, yuk!</a>
+    <div class="col-12" style="overflow: hidden; position: relative;">
+        <div class="starburst-yellow"></div>
+        <div class="row">
+            <div class="col-12 poppins-extrabold mb-4 slogan-beranda">🌐 QUIZ 🌐</div>
+            <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Untuk mengukur tingkat pemahamanmu mengenai Pilkada.</div>
+            <div class="col-lg-12 mb-4">
+                <a href="#" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
+            </div>
+        </div>
     </div>
 </div>
 
