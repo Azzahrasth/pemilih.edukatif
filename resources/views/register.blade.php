@@ -16,9 +16,9 @@
 <body >
     <div class="poppins-regular container mt-5 mb-5 px-lg-1 px-4">
         <div class="row justify-content-center align-items-center">
-        <p class="text-end ">
-            <a href="{{ url('/') }}" class="blue text-decoration-none">
-                Kembali ke Beranda <i class="bi bi-house-fill"></i> 
+        <p class="text-end poppins-semibold ">
+            <a href="{{ url('/') }}" class="yellow text-decoration-none">
+                Kembali ke Beranda <i class=" bi bi-house-fill"></i> 
             </a>
         </p>
             <div class="col-lg-5 text-center mb-4 position-relative">
