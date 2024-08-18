@@ -44,3 +44,7 @@ Route::get('/profilpaslon', function () {
 Route::get('/profilpartai', function () {
     return view('profilpartai');
 })->name('profilpartai');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');

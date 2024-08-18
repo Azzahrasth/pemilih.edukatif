@@ -33,22 +33,12 @@
             </div>
 
             <div class="col-lg-6">
-                <h3 class="blue poppins-bold">REGISTER</h3>
+                <h3 class="blue poppins-bold">LOGIN</h3>
                 <div class="text-start link mt-1 mb-4">
-                        <p class= "text-start ">Daftarkan dirimu sekarang juga !</p>
+                        <p class= "text-start ">Masuk ke akun mu untuk menjelajah lebih luas !</p>
                 </div>
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
-                    <div class="mb-4">
-                        <label for="name" class="form-label poppins-semibold blue">Name</label>
-                        <input type="text" class="form-control form-login" id="name" name="name" placeholder="Masukan nama Anda" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="email" class="form-label poppins-semibold blue">Email</label>
-                        <input type="email" class="form-control form-login" id="email" name="email" placeholder="Masukan Email Anda" required>
-                    </div>
-
                     <div class="mb-4">
                         <label for="username" class="form-label poppins-semibold blue">Username</label>
                         <input type="text" class="form-control form-login" id="username" name="username" placeholder="Masukan Username Anda" required>
@@ -59,12 +49,29 @@
                         <input type="password" class="form-control form-login" id="password" name="password" placeholder="*******" required>
                     </div>
 
-                    <button type="submit" class=" poppins-semibold btn btn-primary btn-login w-100 mt-3">Daftar</button>
-
+                     <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                            <label class="form-check-label blue poppins-regular" for="remember">Ingat Saya</label>
+                        </div>
+                        <a href="#" class="blue poppins-regular text-decoration-none">Lupa password?</a>
+                    </div>
+                    <button type="submit" class=" poppins-semibold btn btn-primary btn-login w-100 mb-4">Masuk</button>
+                    <div class="text-center my-3 mx-5">
+                        <div class="text-center my-3 d-flex align-items-center">
+                            <hr class="flex-grow-1">
+                            <span class="px-2 poppins-regular blue">atau masuk dengan</span>
+                            <hr class="flex-grow-1">
+                        </div>
+                        <a href="#" class="mt-3 btn btn-outline-dark w-100 py-3 btn-google">
+                            <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" class="me-2">
+                            Login dengan Google
+                        </a>
+                    </div>
                     
                 </form>
             </div>
-            <p class= "text-start mt-4 mt-lg-1 ">Sudah memiliki akun?<br>Kamu bisa <a class="text-decoration-none" href="{{ url('/login') }}" >Masuk disini!</a></p>
+            <p class= "text-start mt-4 mt-lg-1 ">Tidak memiliki akun?<br>Kamu bisa <a class="text-decoration-none" href="{{ url('/register') }}" >Daftar disini!</a></p>
         </div>
     </div>
 
