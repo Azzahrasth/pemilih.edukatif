@@ -17,9 +17,10 @@
             Kandidat
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="{{ url('/profilkandidat') }}">Gubernur</a>
+            <a class="dropdown-item" href="{{ url('/profilkandidat') }}">Kandidat</a>
+            <a class="dropdown-item" href="{{ url('/profilpaslon') }}">Gubernur</a>
             <a class="dropdown-item" href="{{ url('/profilpaslon') }}">Walikota</a>
-            <a class="dropdown-item" href="{{ url('/profilkandidat') }}">Bupati</a>
+            <a class="dropdown-item" href="{{ url('/profilpaslon') }}">Bupati</a>
             <a class="dropdown-item" href="{{ url('/profilpartai') }}">Partai</a>
           </div>
         </li>

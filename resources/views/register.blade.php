@@ -59,7 +59,7 @@
                         <input type="password" class="form-control form-login" id="password" name="password" placeholder="*******" required>
                     </div>
 
-                    <button type="submit" class=" poppins-semibold btn btn-primary btn-login w-100 mt-3">Daftar</button>
+                    <button type="submit" class=" poppins-semibold btn btn-primary btn-blue w-100 mt-3">Daftar</button>
 
                     
                 </form>

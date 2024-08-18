@@ -146,14 +146,14 @@
     border: 2px solid #f6b951;
 }
 
-.btn-login {
+.btn-blue {
     background-color: #162f50;
     border-radius: 30px;
     font-size: 18px;
     padding: 12px;
 }
 
-.btn-login:hover {
+.btn-blue:hover {
     background-color: #0e1937;
 }
 
@@ -294,6 +294,30 @@ textarea::placeholder {
     background-color: #f6c268; /* Warna biru */
     border-color: #93733c; /* Warna border biru */
     color: black; /* Warna teks menjadi putih */
+}
+
+.star-rating {
+    direction: rtl; /* Membalikkan urutan bintang */
+    font-size: 3rem;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    color: gray;
+    cursor: pointer;
+}
+
+.star-rating input[type="radio"]:checked ~ label,
+.star-rating input[type="radio"]:hover ~ label {
+    color: #f6b951;
+}
+
+.star-rating input[type="radio"]:checked + label,
+.star-rating input[type="radio"]:checked + label ~ label {
+    color: #f6b951;
 }
 
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */

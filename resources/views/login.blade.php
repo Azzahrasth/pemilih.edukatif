@@ -56,7 +56,7 @@
                         </div>
                         <a href="#" class="blue poppins-regular text-decoration-none">Lupa password?</a>
                     </div>
-                    <button type="submit" class=" poppins-semibold btn btn-primary btn-login w-100 mb-4">Masuk</button>
+                    <button type="submit" class=" poppins-semibold btn btn-primary btn-blue w-100 mb-4">Masuk</button>
                     <div class="text-center my-3 mx-5">
                         <div class="text-center my-3 d-flex align-items-center">
                             <hr class="flex-grow-1">

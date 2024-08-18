@@ -48,3 +48,7 @@ Route::get('/profilpartai', function () {
 Route::get('/login', function () {
     return view('login');
 })->name('login');
+
+Route::get('/feedback', function () {
+    return view('feedback');
+})->name('feedback');

@@ -95,7 +95,7 @@
                 <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
                     Kami sangat menghargai masukan dan pendapat Anda. Umpan balik dari pengguna sangat penting bagi kami untuk terus memperbaiki dan mengembangkan platform Pemilih Edukatif. Dengan memberikan umpan balik, Anda membantu kami menciptakan pengalaman yang lebih baik dan lebih relevan bagi semua pemilih.
                 </p>
-                <a href="#" class="btn btn-primary" style="background-color: #162f50; border-color: #162f50; font-family: 'Poppins', sans-serif;">Berikan Masukan</a>
+                <a href="{{ url('/feedback') }}"class="btn btn-primary" style="background-color: #162f50; border-color: #162f50; font-family: 'Poppins', sans-serif;">Berikan Masukan</a>
             </div>
         </div>
     </div>
