@@ -52,3 +52,15 @@ Route::get('/login', function () {
 Route::get('/feedback', function () {
     return view('feedback');
 })->name('feedback');
+
+Route::get('/kandidat', function () {
+    return view('kandidat');
+})->name('kandidat');
+
+Route::get('/paslon', function () {
+    return view('paslon');
+})->name('paslon');
+
+Route::get('/partai', function () {
+    return view('partai');
+})->name('partai');
