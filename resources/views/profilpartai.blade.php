@@ -18,6 +18,12 @@
             </p> </br>
         </div>
         <div>
+            <h4 class="poppins-bold" style=" text-align: justify;">Tanggal Dibentuk</h4>
+            <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
+                28 Juli 2004
+            </p> </br>
+        </div>
+        <div>
             <h4 class="poppins-bold" style=" text-align: justify;">Alamat Kantor</h4>
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
                 Jalan TB. Simatupang No.82
@@ -30,7 +36,19 @@
             </p> 
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
                 PK dideklarasikan pada 20 Juli 1998 dan memenangkan tujuh kursi di Dewan Perwakilan Rakyat pada pemilu 1999, meskipun gagal memenuhi ambang batas parlemen dua persen. Pada tahun 2000, Hidayat Nur Wahid menjadi presiden partai, menggantikan Nurmahmudi Isma'il yang menjadi Menteri Kehutanan. Karena kegagalan memenuhi ambang batas parlemen, PK berubah nama menjadi Partai Keadilan Sejahtera (PKS) pada 2 Juli 2003. Dalam pemilu legislatif 2004, PKS meraih 7,34% suara nasional dan 45 kursi di DPR, dengan Hidayat Nur Wahid terpilih sebagai ketua Majelis Permusyawaratan Rakyat.
-            </p>
+            </p></br>
+        </div>
+        <div>
+            <h4 class="poppins-bold" style=" text-align: justify;">Ideologi</h4>
+            <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa doloribus voluptas perferendis impedit eligendi similique nam dolorem esse, corrupti dicta quam, facilis dolores, beatae velit eveniet. Rerum labore consequatur, sit obcaecati itaque quaerat aspernatur! Assumenda nisi vel unde cum deleniti dolores asperiores sed quis architecto, ea veritatis minus beatae.
+            </p> </br>
+        </div>
+        <div>
+            <h4 class="poppins-bold" style=" text-align: justify;">Kontroversi</h4>
+            <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores culpa doloribus voluptas perferendis impedit eligendi similique nam dolorem esse, corrupti dicta quam, facilis dolores, beatae velit eveniet. Rerum labore consequatur, sit obcaecati itaque quaerat aspernatur! Assumenda nisi vel unde cum deleniti dolores asperiores sed quis architecto, ea veritatis minus beatae.
+            </p> 
         </div>
     </div>
 </div>

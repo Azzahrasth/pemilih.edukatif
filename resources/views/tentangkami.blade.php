@@ -4,7 +4,9 @@
 <div class="row mt-lg-5 mt-4 mb-5 justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12 text-center">
         <h1 class="poppins-bold" style="color: #162f50; font-size: 36px;">Tentang Kami</h1>
-        <img src="{{ asset('storage/images/logo2.png') }}" alt="Pemilih Edukatif" style="max-width: 500px;" class="my-4">
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('storage/images/logo2.png') }}" alt="Pemilih Edukatif" class="img-fluid my-4" style="width: 500px">
+        </div>
         <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
             <strong style="color: #F6B951;">Pemilih Edukatif</strong> adalah platform yang dirancang untuk memberikan akses mudah dan terpercaya kepada para pemilih dalam <strong style="color: #F6B951;">PILKADA 2024</strong> agar memperoleh informasi lengkap dan obyektif mengenai calon-calon dalam <strong style="color: #F6B951;">Pilkada 2024</strong>. Kami membantu masyarakat memahami <strong style="color: #F6B951;">visi, misi</strong>, dan <strong style="color: #F6B951;">program kerja</strong> setiap calon, sehingga mereka dapat membuat <strong style="color: #F6B951;">keputusan</strong> yang lebih terinformasi dan <strong style="color: #F6B951;">bijak</strong>.
         </p>
@@ -18,7 +20,7 @@
     <div class="col-lg-8 col-md-10 col-sm-12 text-center">
         <h2 class="poppins-bold" style="color: #162f50;">Tim Kami</h2>
         
-        <div class="row justify-content-center mb-4 align-items-center">
+        <div class="row justify-content-center mt-4 align-items-start">
             <div class="col-12 text-center">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px; margin: 0 auto;">
                     <div class="card-body">
@@ -88,9 +90,10 @@
     <div class="col-lg-8 col-md-10 col-sm-12">
         <div class="card">
             <div class="card-body text-center">
-                <div class="mb-4">
-                    <img src="{{ asset('storage/images/tentangkami/masukan.png') }}" alt="Feedback Illustration" class="img-fluid" style="max-width: 500px;">
+                <div class="d-flex justify-content-center">
+                    <img src="{{ asset('storage/images/tentangkami/masukan.png') }}" alt="Feedback Illustration" class="img-fluid my-4" style="width: 500px">
                 </div>
+                
                 <h3 class="poppins-bold" style="color: #162f50; font-size: 36px;">Masukan</h3>
                 <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
                     Kami sangat menghargai masukan dan pendapat Anda. Umpan balik dari pengguna sangat penting bagi kami untuk terus memperbaiki dan mengembangkan platform Pemilih Edukatif. Dengan memberikan umpan balik, Anda membantu kami menciptakan pengalaman yang lebih baik dan lebih relevan bagi semua pemilih.
@@ -100,4 +103,32 @@
         </div>
     </div>
 </div>
+<div class="container my-5">
+    <div class="slider row justify-content-center">
+        <div class="slider-item col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card p-4" style="border-radius: 15px; background-color: #F6B951;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="poppins-bold" style="color: #162f50;">Fitur chatbot</h5>
+                        <p class="poppins-regular" style="color: #162f50;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <img src="{{ asset('storage/images/avatar.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
+                            <div class="ms-3">
+                                <p class="mb-0" style="color: #162f50;">John Smith</p>
+                                <p style="color: #162f50;">19 Maret 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @endsection
