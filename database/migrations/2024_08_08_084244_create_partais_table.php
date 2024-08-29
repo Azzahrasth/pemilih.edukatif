@@ -17,8 +17,7 @@ return new class extends Migration
             $table->string('image', 225)->nullable();
             $table->date('tanggal_dibentuk');
             $table->text('deskripsi');
-            $table->string('presiden', 225);
-            $table->string('alamat', 255);
+            $table->string('ketua_umum', 225);
             $table->text('sejarah');
             $table->text('kontroversi');
             $table->text('ideologi');

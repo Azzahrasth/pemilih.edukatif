@@ -16,6 +16,7 @@ return new class extends Migration
             $table->text('judul');
             $table->text('berita');
             $table->string('sumber', 225);
+            $table->date('tanggal_berita');
             $table->timestamps();
             $table->softDeletes();
         });

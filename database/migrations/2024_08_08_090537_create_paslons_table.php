@@ -13,18 +13,16 @@ return new class extends Migration
     {
         Schema::create('paslons', function (Blueprint $table) {
             $table->id();
+            $table->string('nama', 225);
+            $table->string('image', 225)->nullable();
             $table->string('kategori', 225);
             $table->string('daerah', 225);
             $table->text('visi_misi');
-            $table->text('program_kerja');
+            $table->text('target_sasaran');
             $table->text('motivasi');
-            $table->unsignedBigInteger('kandidat1_id');
-            $table->unsignedBigInteger('kandidat2_id');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('kandidat1_id')->references('id')->on('kandidats');
-            $table->foreign('kandidat2_id')->references('id')->on('kandidats');
+            
         });
     }
 

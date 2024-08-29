@@ -15,20 +15,19 @@ return new class extends Migration
             $table->id();
             $table->string('nama', 225);
             $table->string('image', 225)->nullable();
+            $table->string('tempat_lahir', 225);
             $table->date('tanggal_lahir');
-            $table->string('domisili', 225);
-            $table->string('daerah', 225);
             $table->text('latar_belakang');
             $table->text('pendidikan');
             $table->text('jejak_karir');
             $table->text('pestasi');
             $table->text('kontroversi');
             $table->text('organisasi');
-            $table->unsignedBigInteger('partai_id');
+            $table->unsignedBigInteger('paslon_id');
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('partai_id')->references('id')->on('partais');
+            $table->foreign('paslon_id')->references('id')->on('paslons');
         });
     }
 
