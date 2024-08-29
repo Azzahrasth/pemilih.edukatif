@@ -23,11 +23,8 @@ return new class extends Migration
             $table->text('pestasi');
             $table->text('kontroversi');
             $table->text('organisasi');
-            $table->unsignedBigInteger('paslon_id');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('paslon_id')->references('id')->on('paslons');
         });
     }
 
