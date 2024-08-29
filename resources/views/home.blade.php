@@ -8,7 +8,7 @@
             <div class="col-lg-12 poppins-extrabold slogan-beranda" style="color: white;">MENUJU PILKADA SERENTAK 2024</div>
             <div class="col-lg-12 poppins-regular" style="font-size: 29px; color: white;">Suara Kita, Masa Depan Bangsa!</div>
             <div class="col-lg-12 pt-3">
-                <a href="#" class="btn poppins-bold px-4" style="background-color: #F6B951; color: white; font-size: 29px; border-radius: 15px;">Kenali Calon</a>
+                <a href="/kandidat" class="btn poppins-bold px-4" style="background-color: #F6B951; color: white; font-size: 29px; border-radius: 15px;">Kenali Calon</a>
             </div>
         </div>
     </div>
