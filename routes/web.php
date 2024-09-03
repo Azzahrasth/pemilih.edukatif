@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +18,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/berita', function () {
-    return view('berita');
-})->name('berita');
-
-Route::get('/detailberita', function () {
-    return view('detailberita');
-})->name('detailberita');
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
+Route::get('/berita/{id}', [BeritaController::class, 'detail_berita'])->name('berita.detail');
+Route::get('/search', [BeritaController::class, 'search'])->name('berita.search');
 
 Route::get('/tentangkami', function () {
     return view('tentangkami');

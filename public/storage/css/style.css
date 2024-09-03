@@ -433,6 +433,35 @@ textarea::placeholder {
     }
 }
 
+.judul-detail-berita {
+    font-size: 45px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .judul-detail-berita {
+        font-size: 30px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .judul-detail-berita {
+        font-size: 30px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .judul-detail-berita {
+        font-size: 30px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
 .deskripsi-berita {
     font-size: 25px;
     /* Ukuran font default */
@@ -457,6 +486,35 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
 @media (max-width: 576px) {
     .deskripsi-berita {
+        font-size: 18px;
+        /* Ukuran font untuk layar sangat kecil */
+    }
+}
+
+.deskripsi-detail-berita {
+    font-size: 25px;
+    /* Ukuran font default */
+}
+
+/* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
+@media (max-width: 992px) {
+    .deskripsi-detail-berita {
+        font-size: 18px;
+        /* Ukuran font untuk layar medium */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 768px (hp) */
+@media (max-width: 768px) {
+    .deskripsi-detail-berita {
+        font-size: 18px;
+        /* Ukuran font untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
+@media (max-width: 576px) {
+    .deskripsi-detail-berita {
         font-size: 18px;
         /* Ukuran font untuk layar sangat kecil */
     }
@@ -596,6 +654,7 @@ textarea::placeholder {
 
 .foto-berita {
     width: 1128px;
+    height: 542px;
     /* Ukuran font default */
 }
 
@@ -603,6 +662,7 @@ textarea::placeholder {
 @media (max-width: 992px) {
     .foto-berita {
         width: 314px;
+        height: 271px;
         /* Ukuran font untuk layar medium */
     }
 }
@@ -611,6 +671,7 @@ textarea::placeholder {
 @media (max-width: 768px) {
     .foto-berita {
         width: 314px;
+        height: 271px;
         /* Ukuran font untuk layar kecil */
     }
 }

@@ -25,7 +25,7 @@
           </div>
         </li>
         <li class="nav-item pe-lg-4">
-          <a class="nav-link {{ request()->is('berita') ? 'active' : '' }}" href="{{ url('/berita') }}">Berita</a>
+          <a class="nav-link {{ request()->is('berita') || request()->is('berita/*') ? 'active' : '' }}" href="{{ url('/berita') }}">Berita</a>
         </li>
         <li class="nav-item pe-lg-4">
           <a class="nav-link {{ request()->is('tentangkami') ? 'active' : '' }}" href="{{ url('/tentangkami') }}">Tentang Kami</a>
