@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+@if(session('success'))
+    <div class="mt-4 alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 <div class="row mt-lg-5 mt-4 mb-5">
     <div class="col-12 text-center"><img src="{{ $berita->image }}" style="border-radius: 8px;" alt="Foto Berita" style="height: auto;" class="foto-berita"></div>
     <div class="col-12 pt-4 ps-lg-6 ps-4">
@@ -18,9 +23,11 @@
         <p>KOMENTAR</p>
     </div>
     <div class="col-12 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-semibold" style="font-size: 32px;">
-        <form action="">
+        <form action="{{ route('berita.komentar') }}" method="post">
+        @csrf
             <div class="position-relative mb-3">
-                <textarea class="form-control poppins-medium" id="exampleFormControlTextarea1" rows="3" placeholder="Tambahkan Komentar..." style="resize: none; background-color: #F6B951; border-radius: 15px; padding-right: 160px;"></textarea>
+                <input type="hidden" name="berita_id" value="{{ $berita->id }}">
+                <textarea class="form-control poppins-medium" name="komentar" id="exampleFormControlTextarea1" rows="3" placeholder="Tambahkan Komentar..." style="resize: none; background-color: #F6B951; border-radius: 15px; padding-right: 160px;"></textarea>
                 <button type="submit" class="btn btn position-absolute px-5 py-2" style="background-color: #162F50; right: 15px; top: 50%; transform: translateY(-50%); color: white; border-radius: 15px;">Kirim</button>
             </div>
         </form>
@@ -32,7 +39,7 @@
     </div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4" style="font-size: 20px;">
         @foreach($komentars as $komentar)
-        <div class="row m-1 p-2" style="background-color: #BAD7E9; border-radius: 15px;">
+        <div class="row m-1 p-2 mb-3" style="background-color: #BAD7E9; border-radius: 15px;">
             <div class="col-lg-1 col-3 text-center"><img src="{{ asset('storage/images/element/vector-people.png') }}" class="ps-lg-2 ps-2 pe-3 foto-profil-berita"></div>
             <div class="col-lg-11 col-9 ps-lg-5 ps-0 pt-lg-3">
                 <div>

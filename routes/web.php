@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,11 @@ Route::get('/', function () {
 Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
 Route::get('/berita/{id}', [BeritaController::class, 'show'])->name('berita.detail');
 Route::get('/search', [BeritaController::class, 'search'])->name('berita.search');
+
+Route::post('/komentar', [BeritaController::class, 'komentar'])->name('berita.komentar');
+
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
 
 Route::get('/tentangkami', function () {
     return view('tentangkami');
@@ -43,7 +50,11 @@ Route::get('/profilpartai', function () {
 })->name('profilpartai');
 
 Route::get('/login', function () {
-    return view('login');
+    if (Auth::check()) {
+        return redirect('/');
+    } else {
+        return view('login');
+    }
 })->name('login');
 
 Route::get('/feedback', function () {

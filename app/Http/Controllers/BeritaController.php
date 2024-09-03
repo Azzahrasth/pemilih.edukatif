@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Berita;
 use App\Models\Komentar;
 use App\Models\User;
+use Carbon\Carbon;
 use DateTime;
+use Session;
+use Illuminate\Support\Facades\Auth;
 use IntlDateFormatter;
 
 class BeritaController extends Controller
@@ -34,7 +37,7 @@ class BeritaController extends Controller
         $berita->komentar = Komentar::where('berita_id', $id)->count();
         $komentar = Komentar::where('berita_id', $id)->get();
         for ($i = 0; $i < $komentar->count(); $i++) {
-            $komentar[$i]->nama = User::where('id', $komentar[$i]->id)->pluck('name')->first();
+            $komentar[$i]->nama = User::where('id', $komentar[$i]->user_id)->pluck('name')->first();
         }
 
         // Jika berita tidak ditemukan, kembalikan halaman 404
@@ -71,6 +74,30 @@ class BeritaController extends Controller
 
         $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->limit(3)->get();
 
-        return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);    
+        return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);
+    }
+
+    public function komentar(Request $request)
+    {
+        if (Auth::check()) {
+            // Validasi input
+            $request->validate([
+                'komentar' => 'required|string|max:255',
+            ]);
+
+            // Menyimpan komentar ke database
+            Komentar::create([
+                'komentar' => $request->input('komentar'),
+                'berita_id' => $request->input('berita_id'),
+                'user_id' => auth()->user()->id,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ]);
+
+            return redirect()->route('berita.detail', ['id' => $request->input('berita_id')])->with('success', 'Komentar berhasil ditambahkan!');
+        } else {
+            Session::flash('error', 'Login terlebih dahulu');
+            return view('login');
+        }
     }
 }
