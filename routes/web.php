@@ -67,6 +67,9 @@ Route::get('/kandidat', function () {
 Route::get('/paslon', function () {
     return view('paslon');
 })->name('paslon');
+Route::get('/kategorisasi', function () {
+    return view('kategorisasi');
+})->name('kategorisasi');
 
 
 Route::get('/partai', [PartaiController::class, 'index'])->name('partai');

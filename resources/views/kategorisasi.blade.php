@@ -13,8 +13,8 @@
             <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-5 pt-3 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
                 Pilih Daerah
             </div>
-            <div class="col-lg-6 poppins-bold pt-lg-5 pt-2 d-flex justify-content-end position-relative" style="color: #162f50;">
-                <select id="daerah" name="daerah" class="mx-auto d-block" style="  background-color: #f1f1f1; border-radius: 10px; width: 366px; height: 58px; font-size: 20px; padding: 5px 20px;" required>
+            <div class="col-lg-6 poppins-bold pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
+                <select id="daerah" name="daerah" class="mx-3 d-block search-berita"  required>
                     <option value="" disabled selected>Pilih</option>
                     <option value="Jawa Barat">Jawa Barat</option>
                     <option value="Jawa Timur">Jawa Timur</option>
@@ -27,8 +27,8 @@
             <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-3 pt-2 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
                 Pilih Kategori
             </div>
-            <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex justify-content-end position-relative" style="color: #162f50;">
-                <select id="kategori" name="kategori" class="mx-auto d-block" style="  background-color: #f1f1f1; border-radius: 10px; width: 366px; height: 58px; font-size: 20px; padding: 5px 20px;" required>
+            <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
+                <select id="kategori" name="kategori" class="mx-3 d-block search-berita"  required>
                     <option value="" disabled selected>Pilih</option>
                     <option value="Gubernur">Gubernur</option>
                     <option value="Wali Kota">Wali Kota</option>

@@ -521,14 +521,14 @@ textarea::placeholder {
 }
 
 .berita-populer {
-    font-size: 40px;
+    font-size: 35px;
     /* Ukuran font default */
 }
 
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
 @media (max-width: 992px) {
     .berita-populer {
-        font-size: 36px;
+        font-size: 30px;
         /* Ukuran font untuk layar medium */
     }
 }
@@ -536,7 +536,7 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 768px (hp) */
 @media (max-width: 768px) {
     .berita-populer {
-        font-size: 32px;
+        font-size: 27px;
         /* Ukuran font untuk layar kecil */
     }
 }
@@ -544,7 +544,7 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
 @media (max-width: 576px) {
     .berita-populer {
-        font-size: 28px;
+        font-size: 25px;
         /* Ukuran font untuk layar sangat kecil */
     }
 }
@@ -552,9 +552,10 @@ textarea::placeholder {
 .search-berita {
     background-color: #f1f1f1;
     border-radius: 10px;
-    width: 366px;
-    height: 58px;
-    font-size: 25px;
+    width: 326px;
+    height: 50px;
+    font-size: 20px;
+    padding-inline: 10px;
 }
 
 /* Media query untuk layar lebih kecil dari 992px (tablet dan hp) */
@@ -562,9 +563,10 @@ textarea::placeholder {
     .search-berita {
         background-color: #f1f1f1;
         border-radius: 10px;
-        width: 326px;
-        height: 52px;
-        font-size: 22px;
+        width: 286px;
+        height: 48px;
+        font-size: 19px;
+        padding-inline: 10px;
     }
 }
 
@@ -573,9 +575,10 @@ textarea::placeholder {
     .search-berita {
         background-color: #f1f1f1;
         border-radius: 10px;
-        width: 286px;
-        height: 48px;
-        font-size: 19px;
+        width: 246px;
+        height: 44px;
+        font-size: 15px;
+        padding-inline: 10px;
     }
 }
 
@@ -584,9 +587,10 @@ textarea::placeholder {
     .search-berita {
         background-color: #f1f1f1;
         border-radius: 10px;
-        width: 246px;
-        height: 44px;
+        width: 236px;
+        height: 40px;
         font-size: 15px;
+        padding-inline: 10px;
     }
 }
 
