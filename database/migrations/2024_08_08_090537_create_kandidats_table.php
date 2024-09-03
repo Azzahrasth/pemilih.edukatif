@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('latar_belakang');
             $table->text('pendidikan');
             $table->text('jejak_karir');
-            $table->text('pestasi');
+            $table->text('prestasi');
             $table->text('kontroversi');
             $table->text('organisasi');
             $table->timestamps();

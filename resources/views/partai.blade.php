@@ -10,14 +10,15 @@
 </div>
 
 <div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
+    @foreach($partais as $partai)
     <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pks.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <img class="card-img-top mx-auto" src="{{ $partai->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
             <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Keadilan Sejahtera</h5>
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">{{ $partai->nama}}</h5>
                 <div class="row pt-2 mt-auto">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                        <a href="{{ url('/partai/' . $partai->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
                             Selengkapnya
                             <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
                         </a>
@@ -26,71 +27,8 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
-        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/gerindra.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Gerakan Indonesai Raya</h5>
-                <div class="row pt-2 mt-auto">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                            Selengkapnya
-                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
-        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pdip.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Demokrasi Indonesia Perjuangan</h5>
-                <div class="row pt-2 mt-auto">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                            Selengkapnya
-                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
-        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pkb.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Kebangkitan</h5>
-                <div class="row pt-2 mt-auto">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                            Selengkapnya
-                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
-        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pks.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
-            <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Keadilan Sejahtera</h5>
-                <div class="row pt-2 mt-auto">
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                            Selengkapnya
-                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+    @endforeach
+    {{-- <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
             <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/gerindra.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
             <div class="card-body d-flex flex-column">
@@ -202,6 +140,70 @@
             </div>
         </div>
     </div>
+    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
+            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pks.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Keadilan Sejahtera</h5>
+                <div class="row pt-2 mt-auto">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
+            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/gerindra.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Gerakan Indonesai Raya</h5>
+                <div class="row pt-2 mt-auto">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
+            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pdip.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Demokrasi Indonesia Perjuangan</h5>
+                <div class="row pt-2 mt-auto">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
+            <img class="card-img-top mx-auto" src="{{ asset('storage/images/partai/pkb.png') }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">Partai Kebangkitan</h5>
+                <div class="row pt-2 mt-auto">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="{{ url('/profilpartai') }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
     
 </div>
 
