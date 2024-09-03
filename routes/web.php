@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
-Route::get('/berita/{id}', [BeritaController::class, 'detail_berita'])->name('berita.detail');
+Route::get('/berita/{id}', [BeritaController::class, 'show'])->name('berita.detail');
 Route::get('/search', [BeritaController::class, 'search'])->name('berita.search');
 
 Route::get('/tentangkami', function () {
