@@ -3,6 +3,7 @@
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PartaiController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -59,10 +60,6 @@ Route::get('/login', function () {
     }
 })->name('login');
 
-Route::get('/feedback', function () {
-    return view('feedback');
-})->name('feedback');
-
 Route::get('/kandidat', function () {
     return view('kandidat');
 })->name('kandidat');
@@ -77,3 +74,7 @@ Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.deta
 
 Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat');
 Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandidat.detail');
+
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
+Route::post('createFeedback', [FeedbackController::class, 'store'])->name('createFeedback');
+
