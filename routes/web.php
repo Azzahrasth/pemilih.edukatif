@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\PartaiController;
+use App\Http\Controllers\KandidatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,9 +40,9 @@ Route::get('/profilpaslon', function () {
     return view('profilpaslon');
 })->name('profilpaslon');
 
-Route::get('/profilpartai', function () {
-    return view('profilpartai');
-})->name('profilpartai');
+// Route::get('/profilpartai', function () {
+//     return view('profilpartai');
+// })->name('profilpartai');
 
 Route::get('/login', function () {
     return view('login');
@@ -58,6 +60,9 @@ Route::get('/paslon', function () {
     return view('paslon');
 })->name('paslon');
 
-Route::get('/partai', function () {
-    return view('partai');
-})->name('partai');
+
+Route::get('/partai', [PartaiController::class, 'index'])->name('partai');
+Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.detail');
+
+Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat');
+Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandidat.detail');
