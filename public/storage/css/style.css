@@ -754,7 +754,7 @@ textarea::placeholder {
 }
 
 .penjelasan-beranda {
-    font-size: 32px;
+    font-size: 26px;
     /* Ukuran font default */
 }
 
@@ -768,7 +768,7 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 768px (hp) */
 @media (max-width: 768px) {
     .penjelasan-beranda {
-        font-size: 23px;
+        font-size: 20px;
         /* Ukuran font untuk layar kecil */
     }
 }
@@ -776,7 +776,7 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
 @media (max-width: 576px) {
     .penjelasan-beranda {
-        font-size: 23px;
+        font-size: 20px;
         /* Ukuran font untuk layar sangat kecil */
     }
 }
@@ -784,13 +784,13 @@ textarea::placeholder {
 /* Media query untuk layar lebih kecil dari 576px (hp lebih kecil) */
 @media (max-width: 576px) {
     .penjelasan-beranda {
-        font-size: 23px;
+        font-size: 20px;
         /* Ukuran font untuk layar sangat kecil */
     }
 }
 
 .judul-beranda {
-    font-size: 50px;
+    font-size: 43px;
     /* Ukuran font default */
 }
 
