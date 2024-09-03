@@ -61,3 +61,7 @@ Route::get('/paslon', function () {
 Route::get('/partai', function () {
     return view('partai');
 })->name('partai');
+
+Route::get('/kategorisasi', function () {
+    return view('kategorisasi');
+})->name('kategorisasi');
