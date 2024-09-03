@@ -31,9 +31,15 @@
           <a class="nav-link {{ request()->is('tentangkami') ? 'active' : '' }}" href="{{ url('/tentangkami') }}">Tentang Kami</a>
         </li>
         <li class="nav-item pe-lg-4">
+          @if(Auth::check())
+          <a class="nav-link"
+            style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px; display: flex; justify-content: center; align-items: center;"
+            href="{{ route('actionlogout') }}">Logout</a>
+          @else
           <a class="nav-link"
             style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px; display: flex; justify-content: center; align-items: center;"
             href="{{ url('/login') }}">Masuk</a>
+          @endif
         </li>
       </ul>
     </div>
