@@ -182,7 +182,7 @@
             <div class="col-12 poppins-extrabold mb-4 slogan-beranda blue">📜 KATEGORISASI VISI MISI 📜</div>
             <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Jelajahi Visi Misi Kandidat Berdasarkan Kategori <br> Isu Yang Paling Penting Bagi Anda.</div>
             <div class="col-lg-12 mb-4">
-                <a href="#" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Lihat, yuk!</a>
+                <a href="{{ url('/kategorisasi') }}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Lihat, yuk!</a>
             </div>
         </div>
     </div>
