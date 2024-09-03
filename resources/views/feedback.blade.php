@@ -7,7 +7,23 @@
         Kami sangat menghargai setiap masukan yang Sobat Pemilih berikan untuk meningkatkan layanan kami.
     </p>
 
-    <form action="" method="POST" enctype="multipart/form-data">
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <form action="{{ route('createFeedback') }}" method="POST" enctype="multipart/form-data">
         @csrf
        <div class="mt-5 mb-4 text-center">
             <label for="jenisMasukan" class="form-label poppins-semibold blue"><h5>Jenis Masukan:</h5></label>
@@ -29,13 +45,13 @@
             <label class=" form-label poppins-semibold blue"><h5>Penilaian:</h5></label>
              <div class="star-rating text-center">
                 <input type="radio" id="star5" name="rating" value="5" />
-                <label for="star5" title="5 stars">&#9733;</label>
+                <label for="star5" title="bintang 5 ">&#9733;</label>
                 <input type="radio" id="star4" name="rating" value="4" />
-                <label for="star4" title="4 stars">&#9733;</label>
+                <label for="star4" title="bintang 4 ">&#9733;</label>
                 <input type="radio" id="star3" name="rating" value="3" />
-                <label for="star3" title="3 stars">&#9733;</label>
+                <label for="star3" title="bintang 3 ">&#9733;</label>
                 <input type="radio" id="star2" name="rating" value="2" />
-                <label for="star2" title="2 stars">&#9733;</label>
+                <label for="star2" title="bintang 2 ">&#9733;</label>
                 <input type="radio" id="star1" name="rating" value="1" />
                 <label for="star1" title="1 star">&#9733;</label>
             </div>
@@ -53,7 +69,8 @@
 
         <div class="mt-5 d-flex justify-content-center">
             <button type="submit" class="btn btn-primary poppins-semibold px-5 py-2 me-5" style="background-color: #162f50; border-radius: 10px;">Kirim</button>
-            <button type="reset" class="btn btn-danger poppins-semibold py-2 px-5" style=" border-radius: 10px;">Batal</button>
+            {{-- <button type="reset" class="btn btn-danger poppins-semibold py-2 px-5" style=" border-radius: 10px;">Batal</button> --}}
+            <button type="reset" class="btn btn-danger poppins-semibold py-2 px-5" style=" border-radius: 10px;"  onclick="window.location.href='{{ route('tentangkami') }}';">Batal</button>
         </div>
     </form>
 </div>
