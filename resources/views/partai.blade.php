@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
+<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5 justify-content-center">
     @foreach($partais as $partai)
     <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
