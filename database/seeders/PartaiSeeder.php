@@ -15,7 +15,7 @@ class PartaiSeeder extends Seeder
     {
         Partai::create([
             'nama' => 'PKS',
-            'image' => 'storage/images/partai/pks.png',
+            'image' => 'pks.png',
             'tanggal_dibentuk' => '1998-05-20',
             'deskripsi' => 'Partai Keadilan Sejahtera (PKS) adalah partai politik Islam di Indonesia.',
             'ketua_umum' => 'Ahmad Syaikhu',
@@ -26,7 +26,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'Gerindra',
-            'image' => 'storage/images/partai/gerindra.png',
+            'image' => 'gerindra.png',
             'tanggal_dibentuk' => '2008-02-06',
             'deskripsi' => 'Partai Gerakan Indonesia Raya (Gerindra) adalah partai nasionalis yang didirikan oleh Prabowo Subianto.',
             'ketua_umum' => 'Prabowo Subianto',
@@ -37,7 +37,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'PDIP',
-            'image' => 'storage/images/partai/pdip.png',
+            'image' => 'pdip.png',
             'tanggal_dibentuk' => '1973-01-10',
             'deskripsi' => 'Partai Demokrasi Indonesia Perjuangan (PDIP) adalah partai politik terbesar di Indonesia saat ini.',
             'ketua_umum' => 'Megawati Soekarnoputri',
@@ -48,7 +48,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'PKB',
-            'image' => 'storage/images/partai/pkb.png',
+            'image' => 'pkb.png',
             'tanggal_dibentuk' => '1998-07-23',
             'deskripsi' => 'Partai Kebangkitan Bangsa (PKB) adalah partai yang didirikan oleh Nahdlatul Ulama.',
             'ketua_umum' => 'Muhaimin Iskandar',
@@ -59,7 +59,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'PKS',
-            'image' => 'storage/images/partai/pks.png',
+            'image' => 'pks.png',
             'tanggal_dibentuk' => '1998-05-20',
             'deskripsi' => 'Partai Keadilan Sejahtera (PKS) adalah partai politik Islam di Indonesia.',
             'ketua_umum' => 'Ahmad Syaikhu',
@@ -70,7 +70,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'Gerindra',
-            'image' => 'storage/images/partai/gerindra.png',
+            'image' => 'gerindra.png',
             'tanggal_dibentuk' => '2008-02-06',
             'deskripsi' => 'Partai Gerakan Indonesia Raya (Gerindra) adalah partai nasionalis yang didirikan oleh Prabowo Subianto.',
             'ketua_umum' => 'Prabowo Subianto',
@@ -81,7 +81,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'PDIP',
-            'image' => 'storage/images/partai/pdip.png',
+            'image' => 'pdip.png',
             'tanggal_dibentuk' => '1973-01-10',
             'deskripsi' => 'Partai Demokrasi Indonesia Perjuangan (PDIP) adalah partai politik terbesar di Indonesia saat ini.',
             'ketua_umum' => 'Megawati Soekarnoputri',
@@ -92,7 +92,7 @@ class PartaiSeeder extends Seeder
 
         Partai::create([
             'nama' => 'PKB',
-            'image' => 'storage/images/partai/pkb.png',
+            'image' => 'pkb.png',
             'tanggal_dibentuk' => '1998-07-23',
             'deskripsi' => 'Partai Kebangkitan Bangsa (PKB) adalah partai yang didirikan oleh Nahdlatul Ulama.',
             'ketua_umum' => 'Muhaimin Iskandar',
