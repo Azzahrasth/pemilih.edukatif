@@ -15,7 +15,7 @@ class PaslonSeeder extends Seeder
     {
         Paslon::create([
             'nama' => 'John Doe - Jane Smith',
-            'image' => 'storage/images/avatar-paslon.png',
+            'image' => 'avatar-paslon.jpg',
             'kategori' => 'Gubernur',
             'daerah' => 'Jawa Barat',
             'target_sasaran' => 'Kemandirian pangan$Kemudahan akases hunian$Ketahanan energi$Kedaulatan air$Pengentasan Kemiskinan$Penciptaan lapangan kerja berkualitas',
@@ -24,7 +24,7 @@ class PaslonSeeder extends Seeder
 
         Paslon::create([
             'nama' => 'Michael Brown - Lisa White',
-            'image' => 'storage/images/avatar-paslon.png',
+            'image' => 'avatar-paslon.jpg',
             'kategori' => 'Gubernur',
             'daerah' => 'Jawa Barat',
             'target_sasaran' => 'Memajukan kinerja Pemerintahan untuk melunasi cita-cita abadi bangsa Indonesia$mengejar pelunasan target RPJPN Indonesia Emas 2045$Pemerataan ekonomi$Sumber daya alam berkelanjutan',
@@ -33,7 +33,7 @@ class PaslonSeeder extends Seeder
 
         Paslon::create([
             'nama' => 'Robert Green - Emily Black',
-            'image' => 'storage/images/avatar-paslon.png',
+            'image' => 'avatar-paslon.jpg',
             'kategori' => 'Gubernur',
             'daerah' => 'Jakarta',
             'target_sasaran' => 'Mempercepat Pembangunan Manusia Indonesia Unggul yang Berkualitas, Produktif dan Berkepribadian$Mempercepat Pemerataan Pembangunan Ekonomi$Mempercepat Pembangunan Sistem Digital Nasional',
@@ -41,7 +41,7 @@ class PaslonSeeder extends Seeder
         ]);
         Paslon::create([
             'nama' => 'David Blue - Sophia Yellow',
-            'image' => 'storage/images/avatar-paslon.png',
+            'image' => 'avatar-paslon.jpg',
             'kategori' => 'Gubernur',
             'daerah' => 'Jakarta',
             'target_sasaran' => 'Mempercepat Pembangunan Ekonomi Berdikari Berbasis Pengetahuan dan Nilai Tambah$Mempercepat Pelaksanaan Demokrasi Substantif, Penghormatan HAM,',
