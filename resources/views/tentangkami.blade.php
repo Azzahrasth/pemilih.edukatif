@@ -103,48 +103,49 @@
         </div>
     </div>
 </div>
+
 <div class="container my-5">
     <div class="slider row justify-content-center">
         <div class="slider-item col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card p-4" style="border-radius: 15px; background-color: #F6B951;">
-                <div class="d-flex justify-content-between align-items-center">
+            <div class="card h-100 p-4" style="border-radius: 15px; background-color: #F6B951;">
+                <div class="d-flex flex-column justify-content-between h-100">
                     <div>
                         <h5 class="poppins-bold" style="color: #162f50;">Fitur chatbot</h5>
                         <p class="poppins-regular" style="color: #162f50;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Keren banget, kita bisa chat dengan bot untuk membantu kita menentukan kandidat yang kita inginkan dengan praktis dan mudah, good job!
                         </p>
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/images/avatar.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
-                            <div class="ms-3">
-                                <p class="mb-0" style="color: #162f50;">John Smith</p>
-                                <p style="color: #162f50;">19 Maret 2022</p>
-                            </div>
-                        </div>
                     </div>
-                    <div>
-                        <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
+                    <div class="d-flex align-items-center ">
+                        <img src="{{ asset('storage/images/element/vector-people.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
+                        <div class="ms-3">
+                            <p class="mb-0" style="color: #162f50;">Muhammad Niko</p>
+                            <p style="color: #162f50;">19 Maret 2022</p>
+                        </div>
+                        <div class="ms-auto">
+                            <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="slider-item col-12 col-md-6 col-lg-4 mb-4">
-            <div class="card p-4" style="border-radius: 15px; background-color: #F6B951;">
-                <div class="d-flex justify-content-between align-items-center">
+            <div class="card h-100 p-4" style="border-radius: 15px; background-color: #F6B951;">
+                <div class="d-flex flex-column justify-content-between h-100">
                     <div>
-                        <h5 class="poppins-bold" style="color: #162f50;">Fitur chatbot</h5>
+                        <h5 class="poppins-bold" style="color: #162f50;">Fitur Kategorisasi</h5>
                         <p class="poppins-regular" style="color: #162f50;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Gabingung lagi membandingkan visi misi kandidat calon pemimpin kita, cobain quiz nya buat tau isu yang kita utamakan.
                         </p>
-                        <div class="d-flex align-items-center">
-                            <img src="{{ asset('storage/images/avatar.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
-                            <div class="ms-3">
-                                <p class="mb-0" style="color: #162f50;">John Smith</p>
-                                <p style="color: #162f50;">19 Maret 2022</p>
-                            </div>
-                        </div>
                     </div>
-                    <div>
-                        <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
+                    <div class="d-flex align-items-center">
+                        <img src="{{ asset('storage/images/element/vector-people.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
+                        <div class="ms-3">
+                            <p class="mb-0" style="color: #162f50;">Larasati Miranty</p>
+                            <p style="color: #162f50;">19 Maret 2022</p>
+                        </div>
+                        <div class="ms-auto">
+                            <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
+                        </div>
                     </div>
                 </div>
             </div>

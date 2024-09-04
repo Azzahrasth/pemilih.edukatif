@@ -12,7 +12,7 @@
     </div>
     <div class="col-lg-6 poppins-bold pe-xl-5 pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center" style="color: #162f50;">
         <form method="GET" action="{{ url('/kandidat') }}" class="mb-4">
-            <select name="daerah" class="form-select" onchange="this.form.submit()">
+            <select name="daerah" class="form-select search-berita" onchange="this.form.submit()">
                 <option value="">Pilih Daerah</option>
                 @foreach($daerahs as $daerah)
                     <option value="{{ $daerah }}" {{ request('daerah') == $daerah ? 'selected' : '' }}>

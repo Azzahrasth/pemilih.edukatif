@@ -3,6 +3,7 @@
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PartaiController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\PaslonController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
@@ -64,9 +65,7 @@ Route::get('/kandidat', function () {
     return view('kandidat');
 })->name('kandidat');
 
-Route::get('/paslon', function () {
-    return view('paslon');
-})->name('paslon');
+
 Route::get('/kategorisasi', function () {
     return view('kategorisasi');
 })->name('kategorisasi');
@@ -79,5 +78,7 @@ Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat');
 Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandidat.detail');
 
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
-Route::post('createFeedback', [FeedbackController::class, 'store'])->name('createFeedback');
+Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
 
+Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
+Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');

@@ -15,7 +15,7 @@
             </div>
             <div class="col-lg-6 poppins-bold pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
                 <select id="daerah" name="daerah" class="mx-3 d-block search-berita"  required>
-                    <option value="" disabled selected>Pilih</option>
+                    <option value="" disabled selected>Pilih Daerah</option>
                     <option value="Jawa Barat">Jawa Barat</option>
                     <option value="Jawa Timur">Jawa Timur</option>
                     <option value="Jawa Tengah">Jawa Tengah</option>
@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
                 <select id="kategori" name="kategori" class="mx-3 d-block search-berita"  required>
-                    <option value="" disabled selected>Pilih</option>
+                    <option value="" disabled selected>Pilih Kategori</option>
                     <option value="Gubernur">Gubernur</option>
                     <option value="Wali Kota">Wali Kota</option>
                     <option value="Kabupaten">Kabupaten</option>

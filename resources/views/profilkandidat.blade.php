@@ -54,7 +54,7 @@
                     <div class="col-md-3">
                         <div class="card text-center">
                             <div class="card-body">
-                                <img src={{ $data->image }} class="card-img-top" alt="Kim Jennie" style="width: 100px; height: 100px; margin: 0 auto;">
+                                <img src={{ asset('storage/images/' . $data->image) }} class="card-img-top" alt="Kim Jennie" style="width: 100px; height: 100px; margin: 0 auto;">
                                 <h5 class="card-title mt-3">{{ $data->nama }}</h5>
                                 <a href="{{ url('/kandidat/' . $data->id) }}" class="btn btn-link text-warning">Selengkapnya &rarr;</a>
                             </div>
