@@ -3,7 +3,7 @@
 @section('content')
 <div class="row mt-lg-5 mt-4 mb-5 justify-content-center">
     <div class="col-lg-8 col-md-10 col-sm-12 text-center">
-        <img src="{{ asset('storage/images/partai/pkb.png') }}" alt="Pemilih Edukatif" style="max-width: 250px;" class="my-4">
+        <img src="{{ asset('storage/images/partai/' . $partai->image) }}" alt="Pemilih Edukatif" style="max-width: 250px;" class="my-4">
         <h2 class="poppins-bold">{{ $partai->nama }}</h2> </br>
         <div>
             <h4 class="poppins-bold" style="text-align: justify;">Deskripsi</h4>

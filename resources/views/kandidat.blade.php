@@ -11,7 +11,18 @@
         Pilih Daerahmu
     </div>
     <div class="col-lg-6 poppins-bold pe-xl-5 pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center" style="color: #162f50;">
-        <form class="form-inline poppins-regular position-relative">
+        <form method="GET" action="{{ url('/kandidat') }}" class="mb-4">
+            <select name="daerah" class="form-select" onchange="this.form.submit()">
+                <option value="">Pilih Daerah</option>
+                @foreach($daerahs as $daerah)
+                    <option value="{{ $daerah }}" {{ request('daerah') == $daerah ? 'selected' : '' }}>
+                        {{ $daerah }}
+                    </option>
+                @endforeach
+            </select>
+        </form>
+        
+        {{-- <form class="form-inline poppins-regular position-relative">
             <!-- Dropdown filter dengan style yang mirip search form -->
             <select class="form-control search-berita" aria-label="Filter" style="padding-left: 2.5rem; padding-right: 2.5rem;">
                 <option selected disabled>Pilih Filter</option>
@@ -29,7 +40,7 @@
             <span class="position-absolute top-50 translate-middle-y" style="right: 15px;">
                 <i class="bi bi-chevron-down"></i>
             </span>
-        </form>
+        </form> --}}
     </div>
 </div>
 
@@ -37,7 +48,7 @@
     @foreach($kandidats as $kandidat)
     <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-            <img class="card-img-top mx-auto" src="{{ $kandidat->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+            <img class="card-img-top mx-auto" src="{{ 'storage/images/' . $kandidat->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
             <div class="card-body d-flex flex-column">
                 <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">{{ $kandidat->nama }}</h5>
                 <div class="row pt-2 mt-auto">

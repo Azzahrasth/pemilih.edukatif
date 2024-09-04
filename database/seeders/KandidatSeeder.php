@@ -15,7 +15,7 @@ class KandidatSeeder extends Seeder
     {
         Kandidat::create([
             'nama' => 'John Doe',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Bandung',
             'tanggal_lahir' => '1970-01-01',
             'latar_belakang' => 'Politikus',
@@ -29,7 +29,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Jane Smith',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Jakarta',
             'tanggal_lahir' => '1980-02-15',
             'latar_belakang' => 'Akademisi',
@@ -43,7 +43,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Michael Brown',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Surabaya',
             'tanggal_lahir' => '1975-03-22',
             'latar_belakang' => 'Pengusaha',
@@ -57,7 +57,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Lisa White',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Medan',
             'tanggal_lahir' => '1982-05-12',
             'latar_belakang' => 'Aktivis',
@@ -71,7 +71,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Robert Green',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Makassar',
             'tanggal_lahir' => '1979-07-30',
             'latar_belakang' => 'Militer',
@@ -85,7 +85,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Emily Black',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Semarang',
             'tanggal_lahir' => '1985-09-25',
             'latar_belakang' => 'Jurnalis',
@@ -99,7 +99,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'David Blue',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Yogyakarta',
             'tanggal_lahir' => '1988-11-11',
             'latar_belakang' => 'Dokter',
@@ -113,7 +113,7 @@ class KandidatSeeder extends Seeder
 
         Kandidat::create([
             'nama' => 'Sophia Yellow',
-            'image' => 'storage/images/avatar.png',
+            'image' => 'avatar.png',
             'tempat_lahir' => 'Palembang',
             'tanggal_lahir' => '1990-04-18',
             'latar_belakang' => 'Pendidik',
