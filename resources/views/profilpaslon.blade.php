@@ -43,8 +43,7 @@
                 <div class="col-md-3">
                     <div class="card text-center custom-card">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <img src="{{ 'storage/images/partai/' . $partai->image }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
-                            <li>{{ 'storage/images/partai/' . $partai->image }}</li>
+                            <img src="{{ asset('storage/images/partai/' . $partai->image) }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
                         </div>
                     </div>
                 </div>

@@ -119,7 +119,7 @@
                         <img src="{{ asset('storage/images/element/vector-people.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
                         <div class="ms-3">
                             <p class="mb-0" style="color: #162f50;">Muhammad Niko</p>
-                            <p style="color: #162f50;">19 Maret 2022</p>
+                            <p style="color: #162f50;">7 September 2024</p>
                         </div>
                         <div class="ms-auto">
                             <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">
@@ -141,7 +141,7 @@
                         <img src="{{ asset('storage/images/element/vector-people.png') }}" alt="User" class="rounded-circle" style="width: 40px;">
                         <div class="ms-3">
                             <p class="mb-0" style="color: #162f50;">Larasati Miranty</p>
-                            <p style="color: #162f50;">19 Maret 2022</p>
+                            <p style="color: #162f50;">14 September 2024</p>
                         </div>
                         <div class="ms-auto">
                             <img src="{{ asset('storage/images/tentangkami/thumbsup.png') }}" alt="Rating" style="width: 60px;">

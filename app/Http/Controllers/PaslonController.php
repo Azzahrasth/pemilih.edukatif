@@ -7,28 +7,28 @@ use App\Models\Paslon;
 
 class PaslonController extends Controller
 {
-    // Menampilkan daftar paslon
-    public function index(Request $request)
-{
-    // Ambil daftar semua daerah untuk dropdown
-    $daerahs = Paslon::pluck('daerah')->unique();
+        // Menampilkan daftar paslon
+        public function index(Request $request)
+    {
+        // Ambil daftar semua daerah untuk dropdown
+        $daerahs = Paslon::pluck('daerah')->unique();
 
-    // Query untuk mendapatkan kandidat
-    $query = Paslon::query();
+        // Query untuk mendapatkan kandidat
+        $query = Paslon::query();
 
-    // Filter berdasarkan daerah yang dipilih
-    if ($request->filled('daerah')) {
-        $query->where('daerah', $request->daerah);
+        // Filter berdasarkan daerah yang dipilih
+        if ($request->filled('daerah')) {
+            $query->where('daerah', $request->daerah);
+        }
+
+        // Ambil data paslon berdasarkan filter
+        $paslons = $query->orderBy('id', 'asc')->get();
+
+        return view('paslon', [
+            'paslons' => $paslons,
+            'daerahs' => $daerahs,
+        ]);
     }
-
-    // Ambil data paslon berdasarkan filter
-    $paslons = $query->orderBy('id', 'asc')->get();
-
-    return view('paslon', [
-        'paslons' => $paslons,
-        'daerahs' => $daerahs,
-    ]);
-}
 
 
     // Menampilkan detail paslon

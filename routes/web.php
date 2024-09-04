@@ -6,6 +6,7 @@ use App\Http\Controllers\KandidatController;
 use App\Http\Controllers\PaslonController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KategorisasiController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,13 +42,6 @@ Route::get('/register', function () {
     return view('register');
 })->name('register');
 
-Route::get('/profilkandidat', function () {
-    return view('profilkandidat');
-})->name('profilkandidat');
-
-Route::get('/profilpaslon', function () {
-    return view('profilpaslon');
-})->name('profilpaslon');
 
 // Route::get('/profilpartai', function () {
 //     return view('profilpartai');
@@ -61,16 +55,6 @@ Route::get('/login', function () {
     }
 })->name('login');
 
-Route::get('/kandidat', function () {
-    return view('kandidat');
-})->name('kandidat');
-
-
-Route::get('/kategorisasi', function () {
-    return view('kategorisasi');
-})->name('kategorisasi');
-
-
 Route::get('/partai', [PartaiController::class, 'index'])->name('partai');
 Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.detail');
 
@@ -82,3 +66,5 @@ Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedb
 
 Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
 Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');
+
+Route::get('/kategorisasi', [KategorisasiController::class, 'index'])->name('kategorisasi');

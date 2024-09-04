@@ -50,7 +50,7 @@
         <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px;">
             <img class="card-img-top mx-auto" src="{{ 'storage/images/' . $paslon->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
             <div class="card-body d-flex flex-column">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">{{ $paslon->nama }}</h5>
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 23px;">{{ $paslon->nama }}</h5>
                 <div class="row pt-3 mt-auto">
                     <div class="col-12 d-flex justify-content-center align-items-center">
                         <a href="{{ url('/paslon/' . $paslon->id) }}" class="btn montserrat-semibold px-3 py-2" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
