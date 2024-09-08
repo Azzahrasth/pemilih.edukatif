@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Paslon;
+use App\Models\Kandidat;
 
 class PaslonController extends Controller
 {
@@ -35,14 +36,15 @@ class PaslonController extends Controller
   public function show($id)
     {
         $paslon = Paslon::with(['pengusung', 'kategorisasi'])->find($id); // Menggunakan eager loading
-
+        $kandidats = Kandidat::where('paslon_id', $id)->get();
         if (!$paslon) {
             abort(404);
         }
 
     //   dd($paslon);
         return view('profilpaslon', [
-            'paslon' => $paslon
+            'paslon' => $paslon,
+            'kandidats' => $kandidats
         ]);
     }
 }

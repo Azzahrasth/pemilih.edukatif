@@ -42,14 +42,48 @@
                 @foreach($paslon->pengusung as $partai)
                 <div class="col-md-3">
                     <div class="card text-center custom-card">
-                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                            <img src="{{ asset('storage/images/partai/' . $partai->image) }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
-                        </div>
+                        <a href="{{ url('/partai/' . $partai->id) }}" class="d-block">
+                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                <img src="{{ asset('storage/images/partai/' . $partai->image) }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
+                            </div>
+                        </a>
                     </div>
                 </div>
                 @endforeach
             </div>
-</div>
+            </div>
+        </div>
+       <div>
+           <h4 class="poppins-bold" style=" text-align: justify;">Kandidat</h4>
+            <div class="container my-5">
+                <div class="row">
+                    @foreach($kandidats as $kandidat)
+                    <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <img src={{ asset('storage/images/' . $kandidat->image) }} class="card-img-top" alt="Kim Jennie" style="width: 100px; height: 100px; margin: 0 auto;">
+                                <h5 class="card-title mt-3">{{ $kandidat->nama }}</h5>
+                                 <div class="col-12 d-flex justify-content-center align-items-center">
+                                    <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                                        Selengkapnya
+                                        <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    {{-- <div class="col-md-3">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <img src="storage/images/tentangkami/member2.png" class="card-img-top" alt="Kim Taehyung" style="width: 100px; height: 100px; margin: 0 auto;">
+                                <h5 class="card-title mt-3">Kim Taehyung</h5>
+                                <a href="#" class="btn btn-link text-warning">Selengkapnya &rarr;</a>
+                            </div>
+                        </div>
+                    </div> --}}
+                </div>
+            </div>
         </div>
     </div>
 </div>

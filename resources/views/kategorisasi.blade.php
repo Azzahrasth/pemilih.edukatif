@@ -26,10 +26,10 @@
                 </div>
 
                 <!-- Pilih Kategori -->
-               <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-3 pt-2 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
+               <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-3 pt-2 mt-lg-1 mt-sm-4 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
                     Pilih Kategori
                 </div>
-                <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
+                <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex mt-lg-1 justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
                     <select id="kategori" name="kategori" class="form-select search-berita" required>
                         <option value="" disabled {{ request('kategori') ? '' : 'selected' }}>Pilih Kategori</option>
                         <option value="Budaya" {{ request('kategori') == 'Budaya' ? 'selected' : '' }}>Budaya</option>
@@ -46,7 +46,7 @@
             </div>
 
             <!-- Submit Button -->
-            <div class="row w-100 m-0 mt-2">
+            <div class="row w-100 m-0 mt-lg-1 mt-sm-4">
                 <div class="col-12 d-flex justify-content-center">
                     <button type="Submit" class="btn poppins-bold px-4" style="background-color: #162f50; color: white; border-radius: 15px; height: 48px;">Submit</button>
                 </div>
@@ -57,12 +57,17 @@
     @if(isset($message))
         <div class="row text-center mt-1 mb-4 py-5">
             <div class="col-12" style="overflow: hidden; position: relative;">
-                <div class="starburst-yellow "></div>
-                <div class="row">
-                    <div class="col-12 poppins-extrabold mb-5 mt-1 penjelasan-beranda " style="color: #882121;">Masukan Daerah dan Kategori terlebih dahulu yaa!</div>
-                    <div class="col-12 poppins-extrabold mt-3 mb-2 slogan-beranda yellow">📜 KATEGORISASI VISI MISI 📜</div>
-                    <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Jelajahi Visi Misi paslon Berdasarkan Kategori <br> Isu Yang Paling Penting Bagi Anda.</div>
-            
+                <div class="col-12 py-4 poppins-extrabold mb-5 mt-1 penjelasan-beranda" style="
+                    color: #882121; 
+                    font-size: 25px; 
+                    background-color: #fff4e5; 
+                    border: 2px solid #882121; 
+                    border-radius: 8px; 
+                    padding: 20px; 
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+                    text-align: center;
+                ">
+                    Masukan Daerah dan Kategori terlebih dahulu yaa!
                 </div>
             </div>
         </div>

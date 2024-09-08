@@ -24,7 +24,7 @@ class KategorisasiController extends Controller
         // Query untuk mendapatkan paslon berdasarkan filter
         $paslons = Paslon::where('daerah', $request->daerah)
             ->with(['kategorisasi' => function($query) use ($request) {
-                $query->where('kategori_isu', $request->kategori);
+                 $query->where('kategori_isu', 'like', '%' . $request->kategori . '%');
             }])
             ->orderBy('id', 'asc')
             ->get();
