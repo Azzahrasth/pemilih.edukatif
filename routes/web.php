@@ -5,6 +5,7 @@ use App\Http\Controllers\PartaiController;
 use App\Http\Controllers\KandidatController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +37,9 @@ Route::get('/tentangkami', function () {
     return view('tentangkami');
 })->name('tentangkami');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('register', [RegisterController::class, 'register'])->name('register');
+Route::post('register/action', [RegisterController::class, 'actionregister'])->name('actionregister');
+Route::get('register/verify/{verify_key}', [RegisterController::class, 'verify'])->name('verify');
 
 Route::get('/profilkandidat', function () {
     return view('profilkandidat');
@@ -81,3 +82,13 @@ Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandida
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
 Route::post('createFeedback', [FeedbackController::class, 'store'])->name('createFeedback');
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

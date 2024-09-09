@@ -24,11 +24,11 @@ class LoginController extends Controller
 
     public function actionlogin(Request $request)
     {
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('email', 'password');
         $remember = $request->has('remember');
 
         // Check if the user is active
-        $user = User::where('username', $credentials['username'])->first();
+        $user = User::where('email', $credentials['email'])->first();
 
         if ($user && $user->email_verified_at == null) {
             Session::flash('error', 'Akun Anda tidak aktif. Lakukan verifikasi akun');
@@ -38,7 +38,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials, $remember)) {
             return redirect('/');
         } else {
-            Session::flash('error', 'Username atau Password Salah');
+            Session::flash('error', 'Email atau Password Salah');
             return redirect('/login');
         }
     }

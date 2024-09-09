@@ -2,11 +2,11 @@
 
 @section('content')
 @if(session('success'))
-    <div class="mt-4 alert alert-success">
-        {{ session('success') }}
-    </div>
+<div class="mt-4 alert alert-success">
+    {{ session('success') }}
+</div>
 @endif
-<div class="row mt-lg-5 mt-4 mb-5">
+<div class="row mt-lg-5 mt-4 mb-1">
     <div class="col-12 text-center"><img src="{{ $berita->image }}" style="border-radius: 8px;" alt="Foto Berita" style="height: auto;" class="foto-berita"></div>
     <div class="col-12 pt-4 ps-lg-6 ps-4">
         <span class="d-flex align-items-center montserrat-regular" style="color: #747474;"><img src="{{ asset('storage/images/element/vector-calendar.png') }}" class="ps-lg-2 pe-2"> {{$berita->tanggal_berita}} |<img src="{{ asset('storage/images/element/vector-chat.png') }}" class="ps-lg-2 ps-1 pe-2"> {{$berita->komentar}} Komentar</span>
@@ -24,7 +24,7 @@
     </div>
     <div class="col-12 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-semibold" style="font-size: 32px;">
         <form action="{{ route('berita.komentar') }}" method="post">
-        @csrf
+            @csrf
             <div class="position-relative mb-3">
                 <input type="hidden" name="berita_id" value="{{ $berita->id }}">
                 <textarea class="form-control poppins-medium" name="komentar" id="exampleFormControlTextarea1" rows="3" placeholder="Tambahkan Komentar..." style="resize: none; background-color: #F6B951; border-radius: 15px; padding-right: 160px;"></textarea>
@@ -50,16 +50,6 @@
             </div>
         </div>
         @endforeach
-        <!-- <div class="row m-1 mt-lg-2 mt-3 p-2" style="background-color: #BAD7E9; border-radius: 15px;">
-            <div class="col-lg-1 col-3 text-center"><img src="{{ asset('storage/images/element/vector-people.png') }}" class="ps-lg-2 ps-2 pe-3 foto-profil-berita"></div>
-            <div class="col-lg-11 col-9 ps-lg-5 ps-0 pt-lg-3">
-                <div>
-                    <div class="poppins-semibold">Jule</div>
-                    <div class="poppins-light">Jangan pada golput yach..</div>
-                    <div class="montserrat-regular text-end" style="font-size: 15px; color: #747474;">31 Agustus 2024</div>
-                </div>
-            </div>
-        </div> -->
     </div>
 </div>
 @endsection

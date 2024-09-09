@@ -42,8 +42,8 @@
                 <form action="{{ route('actionlogin') }}" method="POST">
                     @csrf
                     <div class="mb-4">
-                        <label for="username" class="form-label poppins-semibold blue">Username</label>
-                        <input type="text" class="form-control form-login" id="username" name="username" placeholder="Masukan Username Anda" required>
+                        <label for="email" class="form-label poppins-semibold blue">Email</label>
+                        <input type="email" class="form-control form-login" id="email" name="email" placeholder="Masukan Email Anda" required>
                     </div>
 
                     <div class="mb-4">

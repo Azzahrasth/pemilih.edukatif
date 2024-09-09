@@ -37,7 +37,7 @@ class BeritaController extends Controller
         $berita->komentar = Komentar::where('berita_id', $id)->count();
         $komentar = Komentar::where('berita_id', $id)->get();
         for ($i = 0; $i < $komentar->count(); $i++) {
-            $komentar[$i]->nama = User::where('id', $komentar[$i]->user_id)->pluck('name')->first();
+            $komentar[$i]->nama = User::where('id', $komentar[$i]->user_id)->pluck('username')->first();
         }
 
         // Jika berita tidak ditemukan, kembalikan halaman 404
