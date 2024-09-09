@@ -21,8 +21,8 @@ class UserSeeder extends Seeder
                 'name' => 'Abdullah Hafidz Furqon',
                 'email' => 'abdullahhafidzfurqon@gmail.com',
                 'username' => 'bedulsundae',
-                'password' => bcrypt('bedulsundae'),
                 'email_verified_at' => Carbon::now(),
+                'password' => bcrypt('bedulsundae'),
                 'created_at' => Carbon::now(), // Menggunakan waktu sekarang
                 'updated_at' => Carbon::now(),
             ],
@@ -30,6 +30,7 @@ class UserSeeder extends Seeder
                 'name' => 'Noqruf Zdifah Halludba',
                 'email' => 'ahf@gmail.com',
                 'username' => 'ahf',
+                'email_verified_at' => null,
                 'password' => bcrypt('ahf'),
                 'created_at' => Carbon::now(), // Menggunakan waktu sekarang
                 'updated_at' => Carbon::now(),
