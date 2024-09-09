@@ -22,12 +22,18 @@ class Paslon extends Model
 
     public function Pengusung()
     {
-        return $this->hasMany(Pengusung::class, 'paslon_id', 'id');
+        return $this->belongsToMany(Partai::class, 'pengusungs', 'paslon_id', 'partai_id');
     }
+   
     public function Kandidat()
     {
         return $this->hasMany(Kandidat::class, 'paslon_id', 'id');
     }
+
+    public function Kategorisasi()
+    {
+        return $this->hasMany(Kategorisasi::class, 'paslon_id', 'id');
+    }
 }
 
-/////// ini cuman buat nyoba tabel kandidat soalnya ada foreign key, nanti ganti
+

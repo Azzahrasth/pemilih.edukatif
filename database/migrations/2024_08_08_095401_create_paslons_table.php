@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('image', 225)->nullable();
             $table->string('kategori', 225);
             $table->string('daerah', 225);
-            $table->text('visi_misi');
             $table->text('target_sasaran');
             $table->text('motivasi');
             $table->timestamps();

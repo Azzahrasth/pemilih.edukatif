@@ -23,15 +23,15 @@
         </div>
     @endif
 
-    <form action="{{ route('createFeedback') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('feedback.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
        <div class="mt-5 mb-4 text-center">
             <label for="jenisMasukan" class="form-label poppins-semibold blue"><h5>Jenis Masukan:</h5></label>
             <select id="jenisMasukan" name="jenis_masukan" class="form-select mx-auto d-block" style="width: 10rem;  border-radius: 10px; border: 2px solid #162f50;" required>
                 <option value="" disabled selected>Pilih</option>
-                <option value="feedback">Saran</option>
-                <option value="keluhan">Keluhan</option>
-                <option value="saran">Pertanyaan</option>
+                <option value="Saran">Saran</option>
+                <option value="Keluhan">Keluhan</option>
+                <option value="Pertanyaan">Pertanyaan</option>
             </select>
         </div>
 

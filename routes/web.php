@@ -3,8 +3,10 @@
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\PartaiController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\PaslonController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KategorisasiController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -61,18 +63,6 @@ Route::get('/login', function () {
     }
 })->name('login');
 
-Route::get('/kandidat', function () {
-    return view('kandidat');
-})->name('kandidat');
-
-Route::get('/paslon', function () {
-    return view('paslon');
-})->name('paslon');
-Route::get('/kategorisasi', function () {
-    return view('kategorisasi');
-})->name('kategorisasi');
-
-
 Route::get('/partai', [PartaiController::class, 'index'])->name('partai');
 Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.detail');
 
@@ -80,7 +70,10 @@ Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat');
 Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandidat.detail');
 
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
-Route::post('createFeedback', [FeedbackController::class, 'store'])->name('createFeedback');
+Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
+
+Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
+Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');
 
 
 Route::middleware([
@@ -92,3 +85,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/kategorisasi', [KategorisasiController::class, 'index'])->name('kategorisasi');

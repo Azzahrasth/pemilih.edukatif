@@ -52,7 +52,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Mendirikan startup unicorn',
             'kontroversi' => 'Kontroversi dengan rekan bisnis',
             'organisasi' => 'Partai DEF',
-            'paslon_id' => 1,
+            'paslon_id' => 2,
         ]);
 
         Kandidat::create([
@@ -66,7 +66,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Memenangkan kasus penting HAM',
             'kontroversi' => 'Terlibat dalam protes kontroversial',
             'organisasi' => 'Partai GHI',
-            'paslon_id' => 1,
+            'paslon_id' => 2,
         ]);
 
         Kandidat::create([
@@ -80,7 +80,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Memimpin operasi militer sukses',
             'kontroversi' => 'Kebijakan militer kontroversial',
             'organisasi' => 'Partai JKL',
-            'paslon_id' => 1,
+            'paslon_id' => 3,
         ]);
 
         Kandidat::create([
@@ -94,7 +94,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Memenangkan penghargaan jurnalisme investigasi',
             'kontroversi' => 'Artikel kontroversial tentang pemerintah',
             'organisasi' => 'Partai MNO',
-            'paslon_id' => 1,
+            'paslon_id' => 3,
         ]);
 
         Kandidat::create([
@@ -108,7 +108,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Penemuan metode pengobatan baru',
             'kontroversi' => 'Pandangan kontroversial tentang vaksin',
             'organisasi' => 'Partai PQR',
-            'paslon_id' => 1,
+            'paslon_id' => 4,
         ]);
 
         Kandidat::create([
@@ -122,7 +122,7 @@ class KandidatSeeder extends Seeder
             'prestasi' => 'Mengembangkan kurikulum pendidikan inklusif',
             'kontroversi' => 'Kebijakan sekolah yang kontroversial',
             'organisasi' => 'Partai STU',
-            'paslon_id' => 1,
+            'paslon_id' => 4,
         ]);
     }
 }

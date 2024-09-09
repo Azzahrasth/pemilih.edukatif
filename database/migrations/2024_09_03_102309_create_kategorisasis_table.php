@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kategorisasis', function (Blueprint $table) {
             $table->id();
             $table->text('visi_misi');
-            $table->string('kategori_isu', 225);
+            $table->text('kategori_isu');
             $table->unsignedBigInteger('paslon_id');
             $table->timestamps();
             $table->softDeletes();

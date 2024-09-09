@@ -12,7 +12,7 @@
     </div>
     <div class="col-lg-6 poppins-bold pe-xl-5 pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center" style="color: #162f50;">
         <form method="GET" action="{{ url('/kandidat') }}" class="mb-4">
-            <select name="daerah" class="form-select" onchange="this.form.submit()">
+            <select name="daerah" class="form-select search-berita" onchange="this.form.submit()">
                 <option value="">Pilih Daerah</option>
                 @foreach($daerahs as $daerah)
                     <option value="{{ $daerah }}" {{ request('daerah') == $daerah ? 'selected' : '' }}>
@@ -44,7 +44,7 @@
     </div>
 </div>
 
-<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
+<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5 justify-content-center">
     @foreach($kandidats as $kandidat)
     <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
