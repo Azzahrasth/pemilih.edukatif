@@ -14,90 +14,58 @@ use IntlDateFormatter;
 
 class BeritaController extends Controller
 {
-    // Metode untuk menampilkan semua berita
+    // Menampilkan semua berita
     public function index()
     {
-        // Mengambil semua data berita
-        $data = Berita::all();
-        for ($i = 0; $i < $data->count(); $i++) {
-            $data[$i]->komentar = Komentar::where('berita_id', $data[$i]->id)->count();
-        }
+        // Mengambil semua berita beserta jumlah komentar (memanfaatkan eager loading untuk menghindari N+1 query)
+        $data = Berita::withCount('Komentar')->get();
 
+        // Mengambil berita terkini
         $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->limit(3)->get();
 
-        // Mengirimkan data berita ke view
+        // Mengirimkan data ke view
         return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);
     }
 
-    // Metode untuk menampilkan detail berita berdasarkan ID
+    // Menampilkan detail berita
     public function show($id)
     {
-        // Mengambil data berita berdasarkan ID
-        $berita = Berita::find($id);
-        $berita->komentar = Komentar::where('berita_id', $id)->count();
-        $komentar = Komentar::where('berita_id', $id)->get();
-        for ($i = 0; $i < $komentar->count(); $i++) {
-            $komentar[$i]->nama = User::where('id', $komentar[$i]->user_id)->pluck('username')->first();
-        }
+        // Mengambil berita berdasarkan ID dengan komentar terkait dan user dari komentar tersebut
+        $berita = Berita::with(['Komentar.User'])->find($id);
 
         // Jika berita tidak ditemukan, kembalikan halaman 404
         if (!$berita) {
             abort(404);
         }
 
+        // Format tanggal berita
         $date = new DateTime($berita->tanggal_berita);
-
         $formatter = new IntlDateFormatter(
             'id_ID',
             IntlDateFormatter::LONG,
             IntlDateFormatter::NONE,
             'Asia/Jakarta'
         );
+        $berita->tanggal_berita = $formatter->format($date);
 
-        $formattedDate = $formatter->format($date);
-        $berita->tanggal_berita = $formattedDate;
-
-        // Mengirimkan detail berita ke view
-        return view('detailberita', ['berita' => $berita, 'komentars' => $komentar]);
+        // Mengirimkan data ke view
+        return view('detailberita', ['berita' => $berita, 'komentars' => $berita->Komentar]);
     }
 
+    // Fungsi pencarian berita
     public function search(Request $request)
     {
-        $keyword = $request->input('search'); // Mengambil input dari form
+        $keyword = $request->input('search');
 
-        // Mencari berita berdasarkan keyword di kolom yang relevan
-        $data = Berita::where('judul', 'like', "%{$keyword}%")->get();
+        // Mencari berita berdasarkan judul dengan jumlah komentar menggunakan eager loading
+        $data = Berita::withCount('Komentar')
+            ->where('judul', 'like', "%{$keyword}%")
+            ->get();
 
-        for ($i = 0; $i < $data->count(); $i++) {
-            $data[$i]->komentar = Komentar::where('berita_id', $data[$i]->id)->count();
-        }
-
+        // Berita terkini
         $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->limit(3)->get();
 
+        // Mengirimkan data ke view
         return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);
-    }
-
-    public function komentar(Request $request)
-    {
-        if (Auth::check()) {
-            // Validasi input
-            $request->validate([
-                'komentar' => 'required|string|max:255',
-            ]);
-
-            // Menyimpan komentar ke database
-            Komentar::create([
-                'komentar' => $request->input('komentar'),
-                'berita_id' => $request->input('berita_id'),
-                'user_id' => auth()->user()->id,
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ]);
-
-            return redirect()->route('berita.detail', ['id' => $request->input('berita_id')])->with('success', 'Komentar berhasil ditambahkan!');
-        } else {
-            Session::flash('error', 'Login terlebih dahulu');
-            return view('login');
-        }
     }
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KategorisasiController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\KomentarController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +31,6 @@ Route::get('/berita', [BeritaController::class, 'index'])->name('berita');
 Route::get('/berita/{id}', [BeritaController::class, 'show'])->name('berita.detail');
 Route::get('/search', [BeritaController::class, 'search'])->name('berita.search');
 
-Route::post('/komentar', [BeritaController::class, 'komentar'])->name('berita.komentar');
 
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
@@ -80,5 +80,10 @@ Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedb
 
 Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
 Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');
+
+Route::post('/komentar', [KomentarController::class, 'store'])->name('komentar.store');
+Route::get('/komentar/{id}/edit', [KomentarController::class, 'edit'])->name('komentar.edit');
+Route::put('/komentar/{id}', [KomentarController::class, 'update'])->name('komentar.update');
+Route::delete('/komentar/{id}', [KomentarController::class, 'destroy'])->name('komentar.delete');
 
 Route::get('/kategorisasi', [KategorisasiController::class, 'index'])->name('kategorisasi');

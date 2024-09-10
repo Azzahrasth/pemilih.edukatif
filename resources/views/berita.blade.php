@@ -36,7 +36,7 @@
                 </p>
                 <div class="row pt-lg-5">
                     <div class="d-flex align-items-center col-lg-4 text-lg-start text-center ps-lg-5 montserrat-regular"><img src="{{asset('storage/images/element/vector-calendar.png')}}" alt="Kalender" style="width: 20px; height: 20px;"><span class="ps-4">{{ $berita->tanggal_berita}}</span></div>
-                    <div class="d-flex align-items-center col-lg-4 text-lg-start text-center pt-lg-0 pt-2 montserrat-regular"><img src="{{asset('storage/images/element/vector-chat.png')}}" alt="Komentar" style="width: 20px; height: 20px;"><span class="ps-4">{{$berita->komentar}} Komentar</span></div>
+                    <div class="d-flex align-items-center col-lg-4 text-lg-start text-center pt-lg-0 pt-2 montserrat-regular"><img src="{{asset('storage/images/element/vector-chat.png')}}" alt="Komentar" style="width: 20px; height: 20px;"><span class="ps-4">{{$berita->komentar->count()}} Komentar</span></div>
                     <div class="col-lg-4 text-lg-end pt-lg-0 pt-3 text-center poppins-semibold"><a href="{{ url('/berita/' . $berita->id) }}" class="btn align-items-center" style="background-color: #195A94; color: white; font-size: 13px;">Selengkapnya<img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2"></a></div>
                 </div>
             </div>
@@ -71,39 +71,5 @@
     </div>
     @endforeach
     
-    <!-- <div
-        class="col-lg-4 col-12 pt-lg-0 pt-5 deskripsi-daftar-partai poppins-light d-flex justify-content-center">
-        <div class="card p-4"
-            style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 388px;">
-            <img class="card-img-top mx-auto foto-terkini" src="{{ asset('storage/images/berita/dummy-terkini-1.png') }}" alt="Card image cap" style="width: 100%; height: auto; border-radius: 8px;">
-            <div class="card-body">
-                <h5 class="card-title montserrat-semibold" style="font-size: 22px;">Masa Puncak Kampanye Kandidat Pilkada 2024</h5>
-                <div class="row pt-3">
-                    <div class="col-6 col-lg-5 d-flex align-items-center montserrat-regular"><i style="font-size: 20px;" class="bi bi-calendar2-event"></i><span class="ps-2" style="font-size: 13px;">24 Mei 2024</span></div>
-                    <div class="col-6 col-lg-7 text-end justify-content-end d-flex align-items-center">
-                        <a href="{{ url('/detailberita') }}" class="btn montserrat-semibold px-3 py-2"
-                            style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">Selengkapnya<img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        class="col-lg-4 col-12 pt-lg-0 pt-5 pb-sm-0 pb-3 deskripsi-daftar-partai poppins-light  d-flex justify-content-center">
-        <div class="card p-4"
-            style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 388px;">
-            <img class="card-img-top mx-auto foto-terkini" src="{{ asset('storage/images/berita/dummy-terkini-2.png') }}" alt="Card image cap" style="width: 100%; height: auto; border-radius: 8px;">
-            <div class="card-body">
-                <h5 class="card-title montserrat-semibold" style="font-size: 22px;">Hasil Kandidat Terpilih Pilkada 2024</h5>
-                <div class="row pt-3">
-                    <div class="col-6 col-lg-5 d-flex align-items-center montserrat-regular"><i style="font-size: 20px;" class="bi bi-calendar2-event"></i><span class="ps-2" style="font-size: 13px;">24 Mei 2024</span></div>
-                    <div class="col-6 col-lg-7 text-end justify-content-end d-flex align-items-center">
-                        <a href="{{ url('/detailberita') }}" class="btn montserrat-semibold px-3 py-2"
-                            style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">Selengkapnya<img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
 @endsection

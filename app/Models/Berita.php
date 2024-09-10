@@ -19,4 +19,9 @@ class Berita extends Model
         'sumber',
         'tanggal_berita'
     ];
+
+    public function Komentar()
+    {
+        return $this->hasMany(Komentar::class, 'berita_id', 'id');
+    }
 }
