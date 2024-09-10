@@ -51,6 +51,12 @@ Route::get('/profilpaslon', function () {
     return view('profilpaslon');
 })->name('profilpaslon');
 
+Route::get('/chatbot', function () {
+    return view('chatbot');
+})->name('chatbot');
+
+Route::post('/chat', 'App\Http\Controllers\ChatController');
+
 // Route::get('/profilpartai', function () {
 //     return view('profilpartai');
 // })->name('profilpartai');
@@ -75,14 +81,4 @@ Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedb
 Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
 Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');
 
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
 Route::get('/kategorisasi', [KategorisasiController::class, 'index'])->name('kategorisasi');
