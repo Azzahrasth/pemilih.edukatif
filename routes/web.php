@@ -75,15 +75,19 @@ Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.deta
 Route::get('/kandidat', [KandidatController::class, 'index'])->name('kandidat');
 Route::get('/kandidat/{id}', [KandidatController::class, 'show'])->name('kandidat.detail');
 
-Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
-Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
 
 Route::get('/paslon', [PaslonController::class, 'index'])->name('paslon');
 Route::get('/paslon/{id}', [PaslonController::class, 'show'])->name('paslon.detail');
 
-Route::post('/komentar', [KomentarController::class, 'store'])->name('komentar.store');
-Route::get('/komentar/{id}/edit', [KomentarController::class, 'edit'])->name('komentar.edit');
-Route::put('/komentar/{id}', [KomentarController::class, 'update'])->name('komentar.update');
-Route::delete('/komentar/{id}', [KomentarController::class, 'destroy'])->name('komentar.delete');
-
 Route::get('/kategorisasi', [KategorisasiController::class, 'index'])->name('kategorisasi');
+
+Route::middleware('auth.custom')->group(function () {
+    Route::post('/komentar', [KomentarController::class, 'store'])->name('komentar.store');
+    Route::get('/komentar/{id}/edit', [KomentarController::class, 'edit'])->name('komentar.edit');
+    Route::put('/komentar/{id}', [KomentarController::class, 'update'])->name('komentar.update');
+    Route::delete('/komentar/{id}', [KomentarController::class, 'destroy'])->name('komentar.delete');
+    
+    Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
+    Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
+});
+
