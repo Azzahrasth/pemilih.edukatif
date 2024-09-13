@@ -161,7 +161,7 @@
             <div class="pt-5 mt-2 col-12 poppins-extrabold mb-4 slogan-beranda">🌐 QUIZ 🌐</div>
             <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Untuk mengukur tingkat pemahamanmu mengenai Pilkada.</div>
             <div class="col-lg-12 mb-5">
-                <a href="#" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
+                <a href="{{route('quiz.home')}}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
             </div>
         </div>
     </div>

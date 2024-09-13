@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KategorisasiController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\KomentarController;
+use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -91,3 +92,6 @@ Route::middleware('auth.custom')->group(function () {
     Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
 });
 
+Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.home');
+Route::get('/quiz/soal', [QuizController::class, 'show'])->name('quiz.soal');
+Route::get('/quiz/hasil', [QuizController::class, 'show2'])->name('quiz.hasil');
