@@ -51,32 +51,25 @@
             <div class="container my-5">
                 <div class="row">
                     @foreach($datas as $data)
-                    <div class="col-md-3">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <img src={{ asset('storage/images/' . $data->image) }} class="card-img-top" alt="Kim Jennie" style="width: 100px; height: 100px; margin: 0 auto;">
-                                <h5 class="card-title mt-3">{{ $data->nama }}</h5>
-                                 <div class="col-12 d-flex justify-content-center align-items-center">
-                                    <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                                        Selengkapnya
-                                        <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                                    </a>
+                        @if($data->paslon->daerah == $daerah && $data->id != $kandidat->id)
+                            <div class="col-md-3">
+                                <div class="card text-center">
+                                    <div class="card-body">
+                                        <img src="{{ asset('storage/images/' . $data->image) }}" class="card-img-top" alt="Image" style="width: 100px; height: 100px; margin: 0 auto;">
+                                        <h5 class="card-title mt-3">{{ $data->nama }}</h5>
+                                        <div class="col-12 d-flex justify-content-center align-items-center">
+                                            <a href="{{ url('/kandidat/' . $data->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                                                Selengkapnya
+                                                <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        @endif
                     @endforeach
-                    {{-- <div class="col-md-3">
-                        <div class="card text-center">
-                            <div class="card-body">
-                                <img src="storage/images/tentangkami/member2.png" class="card-img-top" alt="Kim Taehyung" style="width: 100px; height: 100px; margin: 0 auto;">
-                                <h5 class="card-title mt-3">Kim Taehyung</h5>
-                                <a href="#" class="btn btn-link text-warning">Selengkapnya &rarr;</a>
-                            </div>
-                        </div>
-                    </div> --}}
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
 

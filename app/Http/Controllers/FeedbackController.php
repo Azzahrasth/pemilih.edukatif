@@ -11,13 +11,7 @@ class FeedbackController extends Controller
     // Metode untuk menampilkan halaman feedback
     public function index()
     {
-        if (Auth::check()) {
-            // Menampilkan view feedback
-            return view('feedback');
-        } else {
-            Session::flash('error', 'Login terlebih dahulu');
-            return view('login');
-        }
+        return view('feedback');
         
     }
 
@@ -32,7 +26,7 @@ class FeedbackController extends Controller
             // 'lampiran' => 'nullable|file|mimes:jpg,jpeg,png,pdf,doc,docx|max:2048', // Uncomment jika file upload diaktifkan
         ], [
         'rating.required' => 'Anda belum memberikan rating',
-    ]);
+         ]);
 
         // Membuat objek Feedback dan menyimpannya ke database
         Feedback::create([

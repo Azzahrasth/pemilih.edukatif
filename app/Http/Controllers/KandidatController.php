@@ -32,7 +32,7 @@ class KandidatController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show($id, Request $request)
     {
         $kandidat = Kandidat::with('paslon')->find($id); // Menggunakan eager loading
 
@@ -56,13 +56,26 @@ class KandidatController extends Controller
         $formattedDate = $formatter->format($tanggalLahir);
         $kandidat->tanggal_lahir = $formattedDate;
 
-        $data = Kandidat::orderBy('id', 'asc')->get();
+        $query = Kandidat::query();
+
+        // Filter berdasarkan daerah yang dipilih
+        if ($request->has('daerah') && $request->daerah != '') {
+            $query->whereHas('paslon', function($q) use ($request) {
+                $q->where('daerah', $request->daerah);
+            });
+        }
+
+        $data = $query->orderBy('id', 'asc')->get();
+
+        // Ambil daftar semua daerah untuk dropdown
+        $daerahs = Paslon::pluck('daerah')->unique();
 
         return view('profilkandidat', [
             'kandidat' => $kandidat,
             'datas' => $data,
             'umur' => $umur,
-            'daerah' => $kandidat->paslon->daerah // Mengakses daerah melalui relasi
+            'daerah' => $kandidat->paslon->daerah, // Mengakses daerah melalui relasi
+            'daerahs' => $daerahs
         ]);
     }
 }
