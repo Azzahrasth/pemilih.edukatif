@@ -51,12 +51,6 @@ Route::get('/profilpaslon', function () {
     return view('profilpaslon');
 })->name('profilpaslon');
 
-Route::get('/chatbot', function () {
-    return view('chatbot');
-})->name('chatbot');
-
-Route::post('/chat', 'App\Http\Controllers\ChatController');
-
 // Route::get('/profilpartai', function () {
 //     return view('profilpartai');
 // })->name('profilpartai');
@@ -68,6 +62,16 @@ Route::get('/login', function () {
         return view('login');
     }
 })->name('login');
+
+Route::get('/chatbot', function () {
+    if (Auth::check()) {
+        return redirect('/');
+    } else {
+        return view('chatbot');
+    }
+})->name('chatbot');
+
+Route::post('/chat', 'App\Http\Controllers\ChatController');
 
 Route::get('/partai', [PartaiController::class, 'index'])->name('partai');
 Route::get('/partai/{id}', [PartaiController::class, 'show'])->name('partai.detail');

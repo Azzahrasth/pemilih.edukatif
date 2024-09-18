@@ -20,9 +20,9 @@
 
   <!-- Header -->
   <div class="top">
-    <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
+    <img src="{{ asset('storage/images/sobat_pemilih.png') }}" alt="Avatar">
     <div>
-      <p>Ross Edlin</p>
+      <p>Sobat Pemilih</p>
       <small>Online</small>
     </div>
   </div>
@@ -31,8 +31,8 @@
   <!-- Chat -->
   <div class="messages">
     <div class="left message">
-      <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">
-      <p>Start chatting with Chat GPT AI below!!</p>
+      <img src="{{ asset('storage/images/sobat_pemilih.png') }}" alt="Avatar">
+      <p>Ayo mulai berdiskusi dengan sobat pemilih!!</p>
     </div>
   </div>
   <!-- End Chat -->
@@ -75,19 +75,19 @@
       }
     }).done(function (res) {
 
-      //Populate sending message
+      // Populate sending message
       $(".messages > .message").last().after('<div class="right message">' +
         '<p>' + $("form #message").val() + '</p>' +
-        '<img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">' +
+        '<img src="{{ asset("storage/images/sobat_pemilih.png") }}" alt="Avatar">' +
         '</div>');
 
-      //Populate receiving message
+      // Populate receiving message
       $(".messages > .message").last().after('<div class="left message">' +
-        '<img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar">' +
+        '<img src="{{ asset("storage/images/sobat_pemilih.png") }}" alt="Avatar">' +
         '<p>' + res + '</p>' +
         '</div>');
 
-      //Cleanup
+      // Cleanup
       $("form #message").val('');
       $(document).scrollTop($(document).height());
 

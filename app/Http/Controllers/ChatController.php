@@ -32,16 +32,19 @@ class ChatController extends Controller
                 "temperature" => 0,
                 "max_tokens" => 2048
             ])->body();
-
+            
+            // Decode the response JSON string to an array
+            $responseArray = json_decode($response, true);
+            
             // Log the entire response for debugging
-            Log::info('OpenAI API Response:', $response);
-
+            Log::info('OpenAI API Response:', $responseArray);
+            
             // Check if the response contains the expected keys
-            if (isset($response['choices'][0]['message']['content'])) {
-                return $response['choices'][0]['message']['content'];
+            if (isset($responseArray['choices'][0]['message']['content'])) {
+                return $responseArray['choices'][0]['message']['content'];
             } else {
                 // Log if the expected keys are not present
-                Log::warning('Unexpected API response structure:', $response);
+                Log::warning('Unexpected API response structure:', $responseArray);
                 return "Unexpected API response structure.";
             }
 
