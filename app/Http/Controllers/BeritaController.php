@@ -18,10 +18,10 @@ class BeritaController extends Controller
     public function index()
     {
         // Mengambil semua berita beserta jumlah komentar (memanfaatkan eager loading untuk menghindari N+1 query)
-        $data = Berita::withCount('Komentar')->get();
+        $data = Berita::withCount('Komentar')->limit(3)->get();
 
         // Mengambil berita terkini
-        $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->limit(3)->get();
+        $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->get();
 
         // Mengirimkan data ke view
         return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);
@@ -58,12 +58,10 @@ class BeritaController extends Controller
         $keyword = $request->input('search');
 
         // Mencari berita berdasarkan judul dengan jumlah komentar menggunakan eager loading
-        $data = Berita::withCount('Komentar')
-            ->where('judul', 'like', "%{$keyword}%")
-            ->get();
+        $data = Berita::withCount('Komentar')->limit(3)->get();
 
         // Berita terkini
-        $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->limit(3)->get();
+        $data_terkini = Berita::orderBy('tanggal_berita', 'desc')->where('judul', 'like', "%{$keyword}%")->limit(3)->get();
 
         // Mengirimkan data ke view
         return view('berita', ['beritas' => $data, 'beritas_terkini' => $data_terkini]);

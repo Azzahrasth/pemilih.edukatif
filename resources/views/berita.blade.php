@@ -14,7 +14,7 @@
 <div class="row mt-lg-5 mt-4">
     <div class="col-12 poppins-bold text-center judul-berita" style="color: #162f50">Berita Pilkada 2024</div>
     <div class="col-12 pt-lg-2 pt-3 ps-lg-0 ps-4 pe-lg-0 pe-4 pb-lg-0 pb-3 poppins-bold text-center deskripsi-berita" style="color: #F6B951">Dapatkan berita terkini tentang para calon pemimpin daerah kita dan pilkada 2024</div>
-    <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-5 pt-3 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Populer</div>
+    <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-5 pt-3 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Terkini</div>
     <div class="col-lg-6 poppins-bold pe-xl-5 pt-lg-5 pt-2 d-flex justify-content-lg-end justify-content-center" style="color: #162f50;">
         <form class="form-inline poppins-regular position-relative" method="get" action="{{ route('berita.search') }}">
             <input class="form-control pl-5 search-berita" name="search" type="search" placeholder="Cari Berita" aria-label="Search" style="padding-left: 2.5rem;">
@@ -25,7 +25,7 @@
     </div>
 </div>
 
-@foreach($beritas as $berita)
+@foreach($beritas_terkini as $berita)
 <div class="row m-xl-5 m-4">
     <div class="col-12 p-xl-3 p-3 pt-4" style="background-color: rgba(246, 185, 81, 0.13); border-radius: 15px;">
         <div class="row">
@@ -46,12 +46,12 @@
 @endforeach
 
 <div class="row">
-    <div class="col-lg-12 poppins-bold ps-xl-5 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Terkini</div>
+    <div class="col-lg-12 poppins-bold ps-xl-5 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Populer</div>
 </div>
 
 
 <div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
-    @foreach($beritas_terkini as $berita)
+    @foreach($beritas as $berita)
     <div
         class="col-lg-4 col-12 col-12 pt-3 pt-sm-0 deskripsi-daftar-partai d-flex justify-content-center">
         <div class="card p-4"

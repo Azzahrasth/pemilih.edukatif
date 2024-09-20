@@ -66,9 +66,9 @@ Route::get('/login', function () {
 
 Route::get('/chatbot', function () {
     if (Auth::check()) {
-        return redirect('/');
-    } else {
         return view('chatbot');
+    } else {
+        return redirect('/');
     }
 })->name('chatbot');
 
