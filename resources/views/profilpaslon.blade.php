@@ -29,13 +29,23 @@
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $paslon->daerah }} </p></br>
         </div>
         <div>
-            <h4 class="poppins-bold" style="text-align: justify;">Visi Misi</h4>
+        <h4 class="poppins-bold" style="text-align: justify;">Visi</h4>
             <ul class="poppins-regular" style="font-size: 20px; text-align: justify;">
-                 @foreach($paslon->kategorisasi as $kategori)
-                    <li>{{ $kategori->visi_misi }}</li>
+                @foreach($visi as $v)
+                    <li>{{ $v->visi_misi }}</li>
                 @endforeach                
-            </ul> </br>
+            </ul>
         </div>
+
+        <div>
+            <h4 class="poppins-bold" style="text-align: justify;">Misi</h4>
+            <ol class="poppins-regular" style="font-size: 20px; text-align: justify;">
+                @foreach($misi as $m)
+                    <li>{{ $m->visi_misi }}</li>
+                @endforeach                
+            </ol>
+        </div>
+
 
         {{-- @php
             // Memisahkan string menjadi array berdasarkan tanda '$'

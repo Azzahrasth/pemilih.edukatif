@@ -32,19 +32,26 @@ class PaslonController extends Controller
 
 
 
-    public function show($id)
+   public function show($id)
     {
-        $paslon = Paslon::with(['pengusung', 'kategorisasi', 'kandidat'])->find($id); // Eager loading pengusung, kategorisasi, dan kandidat
+        $paslon = Paslon::with(['pengusung', 'kategorisasi', 'kandidat'])->find($id);
 
         if (!$paslon) {
             abort(404);
         }
 
+        // Pisahkan visi dan misi
+        $visi = $paslon->kategorisasi->where('kategori_isu', 'Visi');
+        $misi = $paslon->kategorisasi->where('kategori_isu', '!=', 'Visi');
+
         return view('profilpaslon', [
             'paslon' => $paslon,
-            'kandidats' => $paslon->kandidat // Data kandidat sudah tersedia di $paslon
+            'kandidats' => $paslon->kandidat,
+            'visi' => $visi,
+            'misi' => $misi
         ]);
     }
+
 
 }
 
