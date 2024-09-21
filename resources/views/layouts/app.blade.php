@@ -25,6 +25,11 @@
         @yield('content')
     </div>
 
+    <a href="/chatbot" class="floating-btn">
+        <img src="{{ asset('storage/images/sobat_pemilih.png') }}" alt="Chat Sobat Pemilih" class="floating-icon">
+    </a>
+
+ 
     @include('templates.footer')
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

@@ -64,14 +64,6 @@ Route::get('/login', function () {
     }
 })->name('login');
 
-Route::get('/chatbot', function () {
-    if (Auth::check()) {
-        return view('chatbot');
-    } else {
-        return redirect('/');
-    }
-})->name('chatbot');
-
 Route::post('/chat', 'App\Http\Controllers\ChatController');
 
 Route::get('/partai', [PartaiController::class, 'index'])->name('partai');
@@ -94,8 +86,12 @@ Route::middleware('auth.custom')->group(function () {
     
     Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
     Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
+    Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.home');
+    Route::get('/quiz/soal', [QuizController::class, 'show'])->name('quiz.soal');
+    Route::get('/quiz/hasil', [QuizController::class, 'show2'])->name('quiz.hasil');
+
+    Route::get('/chatbot', function () {
+       return view('chatbot');
+})->name('chatbot');
 });
 
-Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.home');
-Route::get('/quiz/soal', [QuizController::class, 'show'])->name('quiz.soal');
-Route::get('/quiz/hasil', [QuizController::class, 'show2'])->name('quiz.hasil');
