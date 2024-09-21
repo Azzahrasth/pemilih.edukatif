@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use Illuminate\Http\Request;
 use App\Models\Kandidat;
 use App\Models\Paslon; // Pastikan untuk mengimpor model Paslon
@@ -26,7 +27,11 @@ class KandidatController extends Controller
         // Ambil daftar semua daerah untuk dropdown
         $daerahs = Paslon::pluck('daerah')->unique();
 
+        // Mengambil semua berita beserta jumlah komentar (memanfaatkan eager loading untuk menghindari N+1 query)
+        $databerita = Berita::withCount('Komentar')->limit(3)->get();
+
         return view('kandidat', [
+            'beritas' => $databerita,
             'kandidats' => $data,
             'daerahs' => $daerahs,
         ]);
