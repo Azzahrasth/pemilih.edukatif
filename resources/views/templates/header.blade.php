@@ -19,10 +19,10 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{{ url('/kandidat') }}">Kandidat</a>
             <a class="dropdown-item" href="{{ url('/paslon') }}">Gubernur</a>
-            <a class="dropdown-item" href="{{ url('/paslon') }}">Walikota</a>
-            <a class="dropdown-item" href="{{ url('/paslon') }}">Bupati</a>
-            <a class="dropdown-item" href="{{ url('/partai') }}">Partai</a>
-            <a class="dropdown-item" href="{{ url('/chatbot') }}">Chatbot</a>
+            <a class="dropdown-item" href="{{ url('/partai') }}">Partai </a>
+            {{-- <a class="dropdown-item" href="{{ url('/paslon') }}">Walikota</a>
+            <a class="dropdown-item" href="{{ url('/paslon') }}">Bupati</a> --}}
+            {{-- <a class="dropdown-item" href="{{ url('/chatbot') }}">Chatbot</a> --}}
           </div>
         </li>
         <li class="nav-item pe-lg-4">

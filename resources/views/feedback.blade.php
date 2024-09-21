@@ -28,10 +28,13 @@
        <div class="mt-5 mb-4 text-center">
             <label for="jenisMasukan" class="form-label poppins-semibold blue"><h5>Jenis Masukan:</h5></label>
             <select id="jenisMasukan" name="jenis_masukan" class="form-select mx-auto d-block" style="width: 10rem;  border-radius: 10px; border: 2px solid #162f50;" required>
-                <option value="" disabled selected>Pilih</option>
-                <option value="Saran">Saran</option>
-                <option value="Keluhan">Keluhan</option>
-                <option value="Pertanyaan">Pertanyaan</option>
+                <option value="" disabled selected>Pilih Fitur</option>
+                <option value="Berita">Berita</option>
+                <option value="Chatbot">Chatbot</option>
+                <option value="Gubernur">Gubernur</option>
+                <option value="Kandidat">Kandidat</option>
+                <option value="Kuis">Kuis</option>
+                <option value="Partai">Partai</option>
             </select>
         </div>
 
@@ -57,7 +60,7 @@
             </div>
         </div>
 
-        <div class="mb-4 text-center">
+        {{-- <div class="mb-4 text-center">
             <label for="lampiran" class=" form-label poppins-semibold blue"><h5>Lampiran:</h5></label>
             <div class="input-group mx-auto"  style="width: 25rem; border-radius: 10px; border: 2px solid #162f50;">
                 <span class="input-group-text my-1 mx-2"  style="border-radius: 20px; background-color: #162f50; color:white;" >
@@ -65,7 +68,7 @@
                 </span>
                 <input type="file" id="lampiran" name="lampiran" class="my-1 form-select mx-auto d-block" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
             </div>
-        </div>
+        </div> --}}
 
         <div class="mt-5 d-flex justify-content-center">
             <button type="submit" class="btn btn-primary poppins-semibold px-5 py-2 me-5" style="background-color: #162f50; border-radius: 10px;">Kirim</button>
