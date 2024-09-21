@@ -8,14 +8,13 @@ use App\Models\Kandidat;
 
 class PaslonController extends Controller
 {
-        // Menampilkan daftar paslon
-        public function index(Request $request)
+    public function index(Request $request)
     {
         // Ambil daftar semua daerah untuk dropdown
         $daerahs = Paslon::pluck('daerah')->unique();
 
         // Query untuk mendapatkan kandidat
-        $query = Paslon::query();
+        $query = Paslon::with('kandidat'); // Eager loading kandidat
 
         // Filter berdasarkan daerah yang dipilih
         if ($request->filled('daerah')) {
@@ -24,7 +23,7 @@ class PaslonController extends Controller
 
         // Ambil data paslon berdasarkan filter
         $paslons = $query->orderBy('id', 'asc')->get();
-
+        
         return view('paslon', [
             'paslons' => $paslons,
             'daerahs' => $daerahs,
@@ -32,20 +31,20 @@ class PaslonController extends Controller
     }
 
 
-    // Menampilkan detail paslon
-  public function show($id)
+
+    public function show($id)
     {
-        $paslon = Paslon::with(['pengusung', 'kategorisasi'])->find($id); // Menggunakan eager loading
-        $kandidats = Kandidat::where('paslon_id', $id)->get();
+        $paslon = Paslon::with(['pengusung', 'kategorisasi', 'kandidat'])->find($id); // Eager loading pengusung, kategorisasi, dan kandidat
+
         if (!$paslon) {
             abort(404);
         }
 
-    //   dd($paslon);
         return view('profilpaslon', [
             'paslon' => $paslon,
-            'kandidats' => $kandidats
+            'kandidats' => $paslon->kandidat // Data kandidat sudah tersedia di $paslon
         ]);
     }
+
 }
 

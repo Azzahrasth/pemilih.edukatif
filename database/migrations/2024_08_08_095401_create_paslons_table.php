@@ -13,12 +13,7 @@ return new class extends Migration
     {
         Schema::create('paslons', function (Blueprint $table) {
             $table->id();
-            $table->string('nama', 225);
-            $table->string('image', 225)->nullable();
-            $table->string('kategori', 225);
             $table->string('daerah', 225);
-            $table->text('target_sasaran');
-            $table->text('motivasi');
             $table->timestamps();
             $table->softDeletes();
             

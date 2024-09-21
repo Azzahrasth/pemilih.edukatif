@@ -14,13 +14,13 @@ class Kandidat extends Model
 
     protected $fillable = [
         'nama',
+        'image',
         'tempat_lahir',
         'tanggal_lahir',
         'latar_belakang',
         'pendidikan',
         'jejak_karir',
         'prestasi',
-        'kontroversi',
         'organisasi',
         'paslon_id'
     ];

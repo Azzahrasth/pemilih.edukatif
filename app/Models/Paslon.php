@@ -12,12 +12,7 @@ class Paslon extends Model
     protected $table = 'paslons';
     public $timestamps = false;
     protected $fillable = [
-        'nama',
-        'image',
-        'kategori',
         'daerah',
-        'target_sasaran',
-        'motivasi'
     ];
 
     public function Pengusung()

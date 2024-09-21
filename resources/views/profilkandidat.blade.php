@@ -40,10 +40,6 @@
             <h4 class="poppins-bold" style=" text-align: justify;">Riwayat Organisasi</h4>
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $kandidat->organisasi }} </p> </br>
         </div>
-        <div>            
-            <h4 class="poppins-bold" style=" text-align: justify;">Kontroversi</h4>
-            <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $kandidat->kontroversi }} </p> </br>
-        </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10 col-sm-12 text-center">

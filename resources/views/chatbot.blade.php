@@ -29,6 +29,7 @@
     }
 
     .top {
+      border-radius: 6px;
       display: flex;
       align-items: center;
       padding: 15px;
