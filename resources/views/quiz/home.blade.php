@@ -4,7 +4,7 @@
     <div class="left" style="flex: 1; padding-right: 20px;">
         <div class="col-12 poppins-bold text-left judul-berita" style="color: #162f50; margin-bottom: 15px; margin-top: 50px;">Quiz</div>
         <div class="col-12 pt-lg-2 pt-3 ps-lg-0 ps-4 pe-lg-0 pe-4 pb-lg-0 pb-3 poppins-bold text-left deskripsi-berita" style="color: #162f50; margin-bottom: 15px;">
-            Dapatkan berita terkini tentang para calon pemimpin daerah kita dan pilkada 2024
+            Jelajahi Prioritas Anda! Cari tahu isu yang paling Anda pedulikan dan temukan kandidat yang tepat!
         </div>
         <div class="col-lg-12 mb-5" style="margin-bottom: 15px;">
             <a href="{{route('quiz.soal')}}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>

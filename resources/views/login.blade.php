@@ -23,7 +23,7 @@
                     Kembali ke Beranda <i class="bi bi-house-fill"></i>
                 </a>
             </p>
-            <div class="col-lg-5 text-center mb-4 position-relative">
+            <div class="col-lg-5 mt-5 text-center mb-4 position-relative">
                 <div class="starburst-blue"></div>
                 <h2 class="blue poppins-bold text-start mt-4">
                     HALLO SOBAT PELIF!
@@ -34,7 +34,7 @@
                 <img src="{{ asset('storage/images/logo2.png') }}" alt="Pemilih Edukatif Logo" class="img-fluid logo-background mt-3 position-relative" style="z-index: 1;">
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-5">
                 <h3 class="blue poppins-bold">LOGIN</h3>
                 <div class="text-start link mt-1 mb-4">
                     <p class="text-start ">Masuk ke akun mu untuk menjelajah lebih luas !</p>
@@ -51,20 +51,20 @@
                         <input type="password" class="form-control form-login" id="password" name="password" placeholder="*******" required>
                     </div>
 
-                    <div class="d-flex justify-content-between align-items-center mb-4">
+                    {{-- <div class="d-flex justify-content-between align-items-center mb-4">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label blue poppins-regular" for="remember">Ingat Saya</label>
                         </div>
                         <a href="#" class="blue poppins-regular text-decoration-none">Lupa password?</a>
-                    </div>
-                    <button type="submit" class=" poppins-semibold btn btn-primary btn-blue w-100 mb-4">Masuk</button>
+                    </div> --}}
+                    <button type="submit" class=" mt-3 poppins-semibold btn btn-primary btn-blue w-100 mb-4">Masuk</button>
                     @if (session('error'))
                     <div class="alert alert-danger">
                         {{ session('error') }}
                     </div>
                     @endif
-                    <div class="text-center my-3 mx-5">
+                    {{-- <div class="text-center my-3 mx-5">
                         <div class="text-center my-3 d-flex align-items-center">
                             <hr class="flex-grow-1">
                             <span class="px-2 poppins-regular blue">atau masuk dengan</span>
@@ -74,7 +74,7 @@
                             <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="Google Logo" class="me-2">
                             Login dengan Google
                         </a>
-                    </div>
+                    </div> --}}
                 </form>
             </div>
             <p class="text-start mt-4 mt-lg-1 ">Tidak memiliki akun?<br>Kamu bisa <a class="text-decoration-none" href="{{ url('/register') }}">Daftar disini!</a></p>

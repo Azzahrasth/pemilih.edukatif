@@ -71,17 +71,8 @@
             <div class="timeline-step">
                 <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
                     <div class="inner-circle"></div>
-                    <div class="poppins-bold mt-3" style="background-color: #F1F1F1; color: #162F50; border-radius: 20px 20px 0px 0px; font-size: 96px;">22</div>
-                    <div class="poppins-regular p-2" style="background-color: #162F50; color: white; border-radius: 0px 0px 20px 20px;">September 2024</div>
-                    <p class="h6 mt-3 mb-1 poppins-bold">Penetapan Pasangan Calon</p>
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-step">
-                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                    <div class="inner-circle"></div>
                     <div class="poppins-bold mt-3" style="background-color: #F1F1F1; color: #162F50; border-radius: 20px 20px 0px 0px; font-size: 96px;">25</div>
-                    <div class="poppins-regular p-2" style="background-color: #162F50; color: white; border-radius: 0px 0px 20px 20px;">Oktober 2024</div>
+                    <div class="poppins-regular p-2" style="background-color: #162F50; color: white; border-radius: 0px 0px 20px 20px;">September 2024</div>
                     <p class="h6 mt-3 mb-1 poppins-bold">Periode Kampanye</p>
                     </p>
                 </div>
@@ -92,6 +83,15 @@
                     <div class="poppins-bold mt-3" style="background-color: #F1F1F1; color: #162F50; border-radius: 20px 20px 0px 0px; font-size: 96px;">27</div>
                     <div class="poppins-regular p-2" style="background-color: #162F50; color: white; border-radius: 0px 0px 20px 20px;">November 2024</div>
                     <p class="h6 mt-3 mb-1 poppins-bold">Pemungutan Suara</p>
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-step">
+                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                    <div class="inner-circle"></div>
+                    <div class="poppins-bold mt-3" style="background-color: #F1F1F1; color: #162F50; border-radius: 20px 20px 0px 0px; font-size: 96px;">16</div>
+                    <div class="poppins-regular p-2" style="background-color: #162F50; color: white; border-radius: 0px 0px 20px 20px;">Desember 2024</div>
+                    <p class="h6 mt-3 mb-1 poppins-bold">Rekapitulasi Hasil</p>
                     </p>
                 </div>
             </div>
@@ -159,7 +159,7 @@
         <div class="starburst-yellow"></div>
         <div class="row">
             <div class="pt-5 mt-2 col-12 poppins-extrabold mb-4 slogan-beranda">🌐 QUIZ 🌐</div>
-            <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Untuk mengukur tingkat pemahamanmu mengenai Pilkada.</div>
+            <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Kenali Prioritas Anda untuk Memilih Calon Pemimpin yang Sesuai!</div>
             <div class="col-lg-12 mb-5">
                 <a href="{{route('quiz.home')}}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
             </div>
