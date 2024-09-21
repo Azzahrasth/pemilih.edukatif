@@ -10,14 +10,12 @@
                 <div class="col-md-3">
                     <div class="card text-center">
                         <div class="card-body">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/KPU_Ahmad_Syaikhu.jpg/330px-KPU_Ahmad_Syaikhu.jpg" class="card-img-top" alt="Kim Jennie" style=" margin: 0 auto;">
-                            <h5 class="card-title blue text-center poppins-bold mt-3">{{ $kandidat->nama }}</h5>
-                            <div class="col-12 d-flex justify-content-center align-items-center">
-                                <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-2 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 10px;">
-                                    Selengkapnya
-                                    <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                            <img src={{ $kandidat->image }} class="card-img-top" alt="Kim Jennie" style=" margin: 0 auto;">
+                            
+                                <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-2 py-1" >
+                                    <h5 class="card-title blue text-center poppins-bold mt-3">{{ $kandidat->nama }}</h5>
                                 </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

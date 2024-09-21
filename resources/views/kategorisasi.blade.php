@@ -76,9 +76,18 @@
             @foreach($paslons as $paslon)
                 <div class="col-lg-4 col-12 pt-3 deskripsi-daftar-partai d-flex justify-content-center">
                     <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px;">
-                       <img class="card-img-top mx-auto" src="{{ 'storage/images/' . $paslon->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
+                       <div class="row pt-3">
+                            <div class="col-6 d-flex justify-content-center">
+                                <img src="{{ $paslon->kandidat->first()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: auto;" class="">
+                            </div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <img src="{{ $paslon->kandidat->last()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: auto;" class="">
+                            </div>
+                        </div>
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title blue text-center poppins-bold mb-3" style="font-size: 23px;">{{ $paslon->nama }}</h5>
+                            <h5 class="card-title blue text-center poppins-bold" style="font-size: 23px;">{{ $paslon->kandidat->first()->nama }} </h5>
+                            <h5 class="card-title  text-center poppins-bold" style="font-size: 23px;">-</h5>
+                            <h5 class="card-title yellow text-center poppins-bold" style="font-size: 23px;">{{ $paslon->kandidat->last()->nama }}</h5>
                             <ul style="color: #162f50; font-size: 16px;" class="poppins-regular">
                                 <!-- Display vision and mission -->
                                 @foreach($paslon->kategorisasi as $kategorisasi)

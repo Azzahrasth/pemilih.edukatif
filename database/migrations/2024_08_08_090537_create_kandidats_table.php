@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('kandidats', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 225);
-            $table->string('image', 225)->nullable();
+            $table->text('image')->nullable();
             $table->string('tempat_lahir', 225);
             $table->date('tanggal_lahir');
             $table->text('latar_belakang');
