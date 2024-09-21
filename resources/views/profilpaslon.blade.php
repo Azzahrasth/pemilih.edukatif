@@ -30,11 +30,11 @@
         </div>
         <div>
         <h4 class="poppins-bold" style="text-align: justify;">Visi</h4>
-            <ul class="poppins-regular" style="font-size: 20px; text-align: justify;">
-                @foreach($visi as $v)
-                    <li>{{ $v->visi_misi }}</li>
-                @endforeach                
-            </ul>
+        
+            @foreach($visi as $v)
+                <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $v->visi_misi}} </p></br>
+            @endforeach                
+            
         </div>
 
         <div>
