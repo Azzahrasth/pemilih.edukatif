@@ -7,7 +7,7 @@
             Jelajahi Prioritas Anda! Cari tahu isu yang paling Anda pedulikan dan temukan kandidat yang tepat!
         </div>
         <div class="col-lg-12 mb-5" style="margin-bottom: 15px;">
-            <a href="{{route('quiz.soal')}}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
+            <a href="{{ route('quiz.question', ['questionNumber' => 0]) }}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Cobain, yuk!</a>
         </div>
         
     </div>
