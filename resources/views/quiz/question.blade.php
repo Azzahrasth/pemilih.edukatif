@@ -50,19 +50,22 @@
                     </label>
                 </div>
             @endforeach
-        
+
             <!-- Navigation Buttons -->
             <div class="d-flex justify-content-start mt-4 poppins-bold">
-                @if($currentQuestionNumber < 9)
-                    <button type="submit" class="btn" style="background-color: #162f50; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem;" id="nextButton">Next</button>
-                @else
-                    <button type="submit" class="btn" style="background-color: #28a745; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem;" id="submitButton">Submit</button>
-                @endif
+                <form method="POST" action="{{ route('quiz.submit', ['questionNumber' => $currentQuestionNumber]) }}">
+                    @csrf
+                    @if($currentQuestionNumber < 9)
+                        <button type="submit" class="btn" style="background-color: #162f50; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem;" id="nextButton">Next</button>
+                    @else
+                        <button type="submit" class="btn" style="background-color: #28a745; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem;" id="submitButton">Submit</button>
+                    @endif
+                </form>
             
-                <!-- Back Button -->
-                {{-- @if($currentQuestionNumber > 0)
-                    <a href="{{ route('quiz.question', ['questionNumber' => $currentQuestionNumber]) }}" class="btn" style="background-color: #F6B951; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem; margin-left: 20px;">Back</a>
-                @endif --}}
+                @if($currentQuestionNumber > 0)
+                    <a href="{{ route('quiz.question', ['questionNumber' => $currentQuestionNumber - 1]) }}" class="btn" style="background-color: #F6B951; color: white; border-radius: 15px; padding: 10px 30px; font-size: 1.2rem; margin-left: 20px;">Back</a>
+                @endif
+            </div>
             </div>
             
         </form>
