@@ -75,7 +75,7 @@ class KandidatSeeder extends Seeder
         'paslon_id' => 3
     ],
     [
-        'nama' => 'Dr. H. R. Achmad Dimyati Natakusumah, S.H., M.H., M.Si',
+        'nama' => 'Dr. Achmad Dimyati Natakusumah, S.H., M.H.',
         'image' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Dimyati_Natakusumah%2C_PKS_candidate_for_Banten_I_in_2024.jpg/220px-Dimyati_Natakusumah%2C_PKS_candidate_for_Banten_I_in_2024.jpg',
         'tempat_lahir' => 'Tangerang',
         'tanggal_lahir' => '1966-09-17',

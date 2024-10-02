@@ -73,40 +73,44 @@
         </div>
     @else
         <div class="row pl-4 pr-4 m-xl-5 m-4 mb-5 justify-content-center">
-            @foreach($paslons as $paslon)
-                <div class="col-lg-4 col-12 pt-3 deskripsi-daftar-partai d-flex justify-content-center">
-                    <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px;">
-                       <div class="row pt-3">
-                            <div class="col-6 d-flex justify-content-center">
-                                <img src="{{ $paslon->kandidat->first()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: auto;" class="">
-                            </div>
-                            <div class="col-6 d-flex justify-content-center">
-                                <img src="{{ $paslon->kandidat->last()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: auto;" class="">
-                            </div>
+    @foreach($paslons as $paslon)
+        <div class="col-lg-4 col-12 pt-3 deskripsi-daftar-partai d-flex justify-content-center">
+            <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px; height: 100%;">
+                <div class="row pt-3">
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 8px;">
+                            <img src="{{ $paslon->kandidat->first()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title blue text-center poppins-bold" style="font-size: 23px;">{{ $paslon->kandidat->first()->nama }} </h5>
-                            <h5 class="card-title  text-center poppins-bold" style="font-size: 23px;">-</h5>
-                            <h5 class="card-title yellow text-center poppins-bold" style="font-size: 23px;">{{ $paslon->kandidat->last()->nama }}</h5>
-                            <ul style="color: #162f50; font-size: 16px;" class="poppins-regular">
-                                <!-- Display vision and mission -->
-                                @foreach($paslon->kategorisasi as $kategorisasi)
-                                    <li>{{ $kategorisasi->visi_misi }}</li>
-                                @endforeach
-                            </ul>
-                            <div class="row pt-3 mt-auto">
-                                <div class="col-12 d-flex justify-content-center align-items-center">
-                                    <a href="{{ url('/paslon/' . $paslon->id) }}" class="btn montserrat-semibold px-3 py-2" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                                        Selengkapnya
-                                        <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                                    </a>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <div style="width: 100%; height: 160px; overflow: hidden; border-radius: 8px;">
+                            <img src="{{ $paslon->kandidat->last()->image }}" alt="Pemilih Edukatif" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
-            @endforeach
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title blue text-center poppins-bold" style="font-size: 20px; margin: 0;">{{ $paslon->kandidat->first()->nama }}</h5>
+                    {{-- <h5 class="card-title text-center poppins-bold" style="font-size: 23px; margin: 0;">-</h5> --}}
+                    <h5 class="card-title yellow text-center poppins-bold mb-3" style="font-size: 20px; margin: 0;">{{ $paslon->kandidat->last()->nama }}</h5>
+                    <ul style="color: #162f50; font-size: 16px;" class="poppins-regular">
+                        @foreach($paslon->kategorisasi as $kategorisasi)
+                            <li>{{ $kategorisasi->visi_misi }}</li>
+                        @endforeach
+                    </ul>
+                    <div class="row pt-3 mt-auto">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <a href="{{ url('/paslon/' . $paslon->id) }}" class="btn montserrat-semibold px-3 py-2" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                                Selengkapnya
+                                <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    @endforeach
+</div>
+
     @endif
 </div>
 @endsection

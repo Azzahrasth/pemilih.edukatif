@@ -26,10 +26,6 @@ class PengusungSeeder extends Seeder
             'paslon_id' => 1,
         ]);
         Pengusung::create([
-            'partai_id' => 7,
-            'paslon_id' => 1,
-        ]);
-        Pengusung::create([
             'partai_id' => 8,
             'paslon_id' => 2,
         ]);

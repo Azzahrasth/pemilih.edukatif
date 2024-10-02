@@ -55,3 +55,5 @@ class ChatController extends Controller
         }
     }
 }
+
+// sementara ini gakepake controller nya wiii

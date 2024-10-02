@@ -66,33 +66,34 @@
             </ul> </br>
         </div>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-lg-8 col-md-10 col-sm-12 text-center">
-            <h2 class="poppins-bold" style="color: #162f50; font-size: 36px; text-align: left">Kandidat Lainnya</h2>
-            <div class="container my-5">
-                <div class="row">
-                    @foreach($datas as $data)
-                        @if($data->paslon->daerah == $daerah && $data->id != $kandidat->id)
-                            <div class="col-md-3">
-                                <div class="card text-center">
-                                    <div class="card-body">
-                                        <img src="{{  $data->image }}" class="card-img-top" alt="Image" style="width: 100px; height: 100px; margin: 0 auto;">
-                                        <h5 class="card-title mt-3">{{ $data->nama }}</h5>
-                                        <div class="col-12 d-flex justify-content-center align-items-center">
-                                            <a href="{{ url('/kandidat/' . $data->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                                                Selengkapnya
-                                                <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                                            </a>
-                                        </div>
+   <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+        <h2 class="poppins-bold" style="color: #162f50; font-size: 36px; text-align: left">Kandidat Lainnya</h2>
+        <div class="container my-5">
+            <div class="row">
+                @foreach($datas as $data)
+                    @if($data->paslon->daerah == $daerah && $data->id != $kandidat->id)
+                        <div class="col-md-3">
+                            <div class="card" style="height: 350px;">
+                                <img src="{{ $data->image }}" class="card-img-top" alt="Image" style="width: 100%; height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <h5 class="card-title mt-1">{{ $data->nama }}</h5>
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a href="{{ url('/kandidat/' . $data->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                                            Selengkapnya
+                                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>            
-        </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>            
     </div>
+</div>
+
 
 </div>
 @endsection

@@ -25,7 +25,7 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      height: 88vh; /* Mengatur tinggi chat bot */
+      height: 88vh;
     }
 
     .top {
@@ -57,7 +57,7 @@
 
     .messages {
       flex: 1;
-      max-height: calc(80vh - 120px); /* Mengurangi tinggi agar sesuai dengan header dan footer */
+      max-height: calc(80vh - 120px);
       overflow-y: auto;
       padding: 10px;
     }
@@ -111,13 +111,13 @@
     }
 
     .bottom input {
-      flex: 1; /* Mengambil sisa ruang */
+      flex: 1;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 4px;
       margin-right: 10px;
-      box-sizing: border-box; /* Memastikan padding tidak menambah lebar total */
-      font-size: 16px; /* Ukuran font yang lebih besar */
+      box-sizing: border-box;
+      font-size: 16px;
     }
 
     .bottom button {
@@ -128,15 +128,13 @@
       padding: 10px 15px;
       cursor: pointer;
       min-width: 80px;
-      font-size: 16px; /* Ukuran font yang lebih besar */
+      font-size: 16px;
     }
 
     .bottom button:hover {
       background-color: #214b81;
     }
-
-</style>
-
+  </style>
 </head>
 
 <body>
@@ -164,7 +162,7 @@
 
   <!-- Footer -->
   <div class="bottom">
-    <form>
+    <form id="chatForm">
       <input type="text" id="message" name="message" placeholder="Masukan pesan..." autocomplete="off">
       <button type="submit">Kirim</button>
     </form>
@@ -174,51 +172,50 @@
 </div>
 
 <script>
-  // Broadcast messages
-  $("form").submit(function (event) {
+  document.getElementById("chatForm").addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    // Stop empty messages
-    if ($("form #message").val().trim() === '') {
-      return;
+    const message = document.getElementById("message").value.trim();
+
+    if (!message) {
+      return; // Jangan kirim pesan kosong
     }
 
-    // Disable form
-    $("form #message").prop('disabled', true);
-    $("form button").prop('disabled', true);
+    // Tampilkan pesan pengguna
+    const userMessageHTML = '<div class="right message">' +
+      '<p>' + message + '</p>' +
+      '<img src="{{ asset("storage/images/sobat_pemilih.png") }}" alt="Avatar">' +
+      '</div>';
+    document.querySelector(".messages").insertAdjacentHTML("beforeend", userMessageHTML);
 
-    $.ajax({
-      url: "/chat",
-      method: 'POST',
-      headers: {
-        'X-CSRF-TOKEN': "{{ csrf_token() }}"
-      },
-      data: {
-        "model": "gpt-3.5-turbo",
-        "content": $("form #message").val()
-      }
-    }).done(function (res) {
+    // Scroll ke bawah
+    document.querySelector(".messages").scrollTop = document.querySelector(".messages").scrollHeight;
 
-      // Populate sending message
-      $(".messages").append('<div class="right message">' +
-        '<p>' + $("form #message").val() + '</p>' +
+    // Reset input
+    document.getElementById("message").value = '';
+
+    try {
+      // Panggil API chatbot
+      const response = await fetch('https://b51a-2404-8000-1024-22bb-2964-c3a9-6595-5b66.ngrok-free.app/api/chatbot', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: message })
+      });
+
+      const data = await response.json();
+
+      // Tampilkan pesan dari bot
+      const botMessageHTML = '<div class="left message">' +
         '<img src="{{ asset("storage/images/sobat_pemilih.png") }}" alt="Avatar">' +
-        '</div>');
+        '<p>' + data.response + '</p>' +
+        '</div>';
+      document.querySelector(".messages").insertAdjacentHTML("beforeend", botMessageHTML);
 
-      // Populate receiving message
-      $(".messages").append('<div class="left message">' +
-        '<img src="{{ asset("storage/images/sobat_pemilih.png") }}" alt="Avatar">' +
-        '<p>' + res + '</p>' +
-        '</div>');
-
-      // Cleanup
-      $("form #message").val('');
-      $(".messages").scrollTop($(".messages")[0].scrollHeight);
-
-      // Enable form
-      $("form #message").prop('disabled', false);
-      $("form button").prop('disabled', false);
-    });
+      // Scroll ke bawah
+      document.querySelector(".messages").scrollTop = document.querySelector(".messages").scrollHeight;
+    } catch (error) {
+      console.error("Error fetching chatbot response:", error);
+    }
   });
 </script>
 </body>

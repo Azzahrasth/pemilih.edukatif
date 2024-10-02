@@ -45,44 +45,20 @@
     </div>
 
     <div class="row pl-4 pr-4 m-xl-5 m-4 mb-5 justify-content-center">
-        @foreach($kandidats as $kandidat)
-        <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
-            <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
-                <img class="card-img-top mx-auto" src="{{ $kandidat->image }}" alt="Card image cap" style="width: 100%; height: auto; max-height: 260px; border-radius: 8px;">
-                <div class="card-body d-flex flex-column">
-                    <h5 class="card-title blue text-center poppins-bold" style="font-size: 26px;">{{ $kandidat->nama }}</h5>
-                    <div class="row pt-2 mt-auto">
-                        <div class="col-12 d-flex justify-content-center align-items-center">
-                            <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                                Selengkapnya
-                                <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    @foreach($kandidats as $kandidat)
+    <div class="col-lg-4 col-12 pt-3 mb-3 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-3" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 300px;">
+            <div style="width: 100%; height: 260px; overflow: hidden; border-radius: 8px;">
+                <img class="card-img-top mx-auto" src="{{ $kandidat->image }}" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-        </div>
-        @endforeach
-</div>
-
-<div class="row">
-    <div class="col-lg-12 poppins-bold ps-xl-5 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Populer</div>
-</div>
-
-<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
-@foreach($beritas as $berita)
-    <div
-        class="col-lg-4 col-12 col-12 pt-3 pt-sm-0 deskripsi-daftar-partai d-flex justify-content-center">
-        <div class="card p-4"
-            style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 388px;">
-            <img class="card-img-top mx-auto foto-terkini" src="{{ $berita->image }}" alt="Card image cap" style="width: 100%; height: auto; border-radius: 8px;">
-            <div class="card-body">
-                <h5 class="card-title montserrat-semibold limited-text" style="font-size: 22px;">{{ $berita->judul }}</h5>
-                <div class="row pt-3">
-                    <div class="col-6 col-lg-5 d-flex align-items-center montserrat-regular"><i style="font-size: 20px;" class="bi bi-calendar2-event"></i><span class="ps-2" style="font-size: 13px;">{{ $berita->tanggal_berita }}</span></div>
-                    <div class="col-6 col-lg-7 text-end justify-content-end d-flex align-items-center">
-                        <a href="{{ url('/berita/' . $berita->id) }}" class="btn montserrat-semibold px-3 py-2"
-                            style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">Selengkapnya<img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2"></a>
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <h5 class="card-title blue text-center poppins-bold" style="font-size: 18px; text-align: center; margin: 0 auto;">{{ $kandidat->nama }}</h5>
+                <div class="row pt-2 mt-auto">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -90,4 +66,36 @@
     </div>
     @endforeach
 </div>
+
+<div class="row">
+    <div class="col-lg-12 poppins-bold ps-xl-5 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">Berita Populer</div>
+</div>
+
+<div class="row pl-4 pr-4 m-xl-5 m-4 mb-5">
+    @foreach($beritas as $berita)
+    <div class="col-lg-4 col-12 pt-3 pt-sm-0 deskripsi-daftar-partai d-flex justify-content-center">
+        <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px;">
+            <div style="width: 100%; height: 260px; overflow: hidden; border-radius: 8px;">
+                <img class="card-img-top mx-auto foto-terkini" src="{{ $berita->image }}" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <h5 class="card-title montserrat-semibold limited-text" style="font-size: 18px;">{{ $berita->judul }}</h5>
+                <div class="row pt-3">
+                    <div class="col-6 col-lg-5 d-flex align-items-center montserrat-regular">
+                        <i style="font-size: 20px;" class="bi bi-calendar2-event"></i>
+                        <span class="ps-2" style="font-size: 13px;">{{ $berita->tanggal_berita }}</span>
+                    </div>
+                    <div class="col-6 col-lg-7 text-end d-flex justify-content-end align-items-center">
+                        <a href="{{ url('/berita/' . $berita->id) }}" class="btn montserrat-semibold " style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                            Selengkapnya
+                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
 @endsection

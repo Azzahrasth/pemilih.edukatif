@@ -17,7 +17,7 @@
 
 <body>
     <div class="poppins-regular container mt-5 mb-5 px-lg-1 px-4">
-        <div class="row justify-content-center align-items-center">
+        <div class="row justify-content-center mt-5 align-items-center">
             <p class="text-end poppins-semibold ">
                 <a href="{{ url('/') }}" class="yellow text-decoration-none">
                     Kembali ke Beranda <i class="bi bi-house-fill"></i>
@@ -35,7 +35,7 @@
             </div>
 
             <div class="col-lg-6 mt-5">
-                <h3 class="blue poppins-bold">LOGIN</h3>
+                <h3 class="blue mt-4 poppins-bold">LOGIN</h3>
                 <div class="text-start link mt-1 mb-4">
                     <p class="text-start ">Masuk ke akun mu untuk menjelajah lebih luas !</p>
                 </div>
