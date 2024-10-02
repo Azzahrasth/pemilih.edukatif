@@ -53,21 +53,5 @@
     </div>
     @endforeach
 </div>
-
-
-
-<div class="row text-center mt-lg-5 mt-1 py-5">
-    <div class="col-12" style="overflow: hidden; position: relative;">
-        <div class="starburst-yellow mt-5 "></div>
-        <div class="row">
-            <div class="col-12 poppins-extrabold mb-4 slogan-beranda blue">📜 KATEGORISASI VISI MISI 📜</div>
-            <div class="col-12 poppins-extrabold mb-4 penjelasan-beranda">Jelajahi Visi Misi paslon Berdasarkan Kategori <br> Isu Yang Paling Penting Bagi Anda.</div>
-            <div class="col-lg-12 pb-5 mb-5">
-                <a href="{{ url('/kategorisasi') }}" class="btn poppins-bold px-4 penjelasan-beranda" style="background-color: #F6B951; color: white; border-radius: 15px;">Lihat, yuk!</a>
-            </div>
-        </div>
-    </div>
-</div>
-
 </div>
 @endsection

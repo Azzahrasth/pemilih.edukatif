@@ -22,14 +22,14 @@ class KomentarSeeder extends Seeder
                 'user_id' => 1,
                 'berita_id' => 1,
                 'created_at' => Carbon::now(), // Menggunakan waktu sekarang
-                'updated_at' => Carbon::now(),
+                
             ],
             [
                 'komentar' => 'Noqruf fans gibran bngt',
                 'user_id' => 2,
                 'berita_id' => 1,
                 'created_at' => Carbon::now(), // Menggunakan waktu sekarang
-                'updated_at' => Carbon::now(),
+                
             ],
             // Tambahkan data lainnya jika diperlukan
         ]);

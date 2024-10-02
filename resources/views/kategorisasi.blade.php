@@ -26,22 +26,22 @@
                 </div>
 
                 <!-- Pilih Kategori -->
-               <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-3 pt-2 mt-lg-1 mt-sm-4 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
-                    Pilih Kategori
-                </div>
-                <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex mt-lg-1 justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
-                    <select id="kategori" name="kategori" class="form-select search-berita" required>
-                        <option value="" disabled {{ request('kategori') ? '' : 'selected' }}>Pilih Kategori</option>
-                        <option value="Budaya" {{ request('kategori') == 'Budaya' ? 'selected' : '' }}>Budaya</option>
-                        <option value="Ekonomi" {{ request('kategori') == 'Ekonomi' ? 'selected' : '' }}>Ekonomi</option>
-                        <option value="Keamanan dan Pertahanan" {{ request('kategori') == 'Keamanan dan Pertahanan' ? 'selected' : '' }}>Keamanan dan Pertahanan</option>
-                        <option value="Kesehatan" {{ request('kategori') == 'Kesehatan' ? 'selected' : '' }}>Kesehatan</option>
-                        <option value="Pendidikan" {{ request('kategori') == 'Pendidikan' ? 'selected' : '' }}>Pendidikan</option>
-                        <option value="Pertanian" {{ request('kategori') == 'Pertanian' ? 'selected' : '' }}>Pertanian</option>
-                        <option value="Teknologi" {{ request('kategori') == 'Teknologi' ? 'selected' : '' }}>Teknologi</option>
-                        <option value="Lingkungan" {{ request('kategori') == 'Lingkungan' ? 'selected' : '' }}>Lingkungan</option>
-                    </select>
-                </div>
+            <div class="col-lg-6 poppins-bold ps-xl-5 pt-lg-3 pt-2 mt-lg-1 mt-sm-4 d-flex justify-content-lg-start justify-content-center berita-populer" style="color: #162f50;">
+                Pilih Kategori
+            </div>
+            <div class="col-lg-6 poppins-bold pt-lg-3 pt-2 d-flex mt-lg-1 justify-content-lg-end justify-content-center position-relative" style="color: #162f50;">
+                <select id="kategori" name="kategori" class="form-select search-berita" required>
+                    <option value="" disabled {{ request('kategori') ? '' : 'selected' }}>Pilih Kategori</option>
+                    <option value="budaya" {{ request('kategori') == 'budaya' ? 'selected' : '' }}>Budaya</option>
+                    <option value="ekonomi" {{ request('kategori') == 'ekonomi' ? 'selected' : '' }}>Ekonomi</option>
+                    <option value="keamanan dan pertahanan" {{ request('kategori') == 'keamanan dan pertahanan' ? 'selected' : '' }}>Keamanan dan Pertahanan</option>
+                    <option value="kesehatan" {{ request('kategori') == 'kesehatan' ? 'selected' : '' }}>Kesehatan</option>
+                    <option value="pendidikan" {{ request('kategori') == 'pendidikan' ? 'selected' : '' }}>Pendidikan</option>
+                    <option value="infrastruktur" {{ request('kategori') == 'infrastruktur' ? 'selected' : '' }}>Infrastruktur</option>
+                    <option value="teknologi" {{ request('kategori') == 'teknologi' ? 'selected' : '' }}>Teknologi</option>
+                    <option value="lingkungan" {{ request('kategori') == 'lingkungan' ? 'selected' : '' }}>Lingkungan</option>
+                </select>
+            </div>
 
             </div>
 

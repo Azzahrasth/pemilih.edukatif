@@ -32,7 +32,9 @@
             <div class="col-xl-4 text-center p-xl-4"><img class="foto-list-berita" src="{{ $berita->image }}" style="border-radius: 8px;" alt="logo berita1"></div>
             <div class="col-xl-8 ps-5 pt-xl-5 pt-3 pe-5">
                 <p class="poppins-semibold text-xl-start text-center" style="font-size: 22px; color: #195A94;">{{ $berita->judul }}</p>
-                <p class="montserrat-regular limited-text" style="font-size: 17px; text-align: justify;">{{ $berita->berita }}
+                <p class="montserrat-regular limited-text" style="font-size: 17px; text-align: justify;">
+                    {{ str_replace('$', '', $berita->berita) }}
+                </p>                
                 </p>
                 <div class="row pt-lg-5">
                     <div class="d-flex align-items-center col-lg-4 text-lg-start text-center ps-lg-5 montserrat-regular"><img src="{{asset('storage/images/element/vector-calendar.png')}}" alt="Kalender" style="width: 20px; height: 20px;"><span class="ps-4">{{ $berita->tanggal_berita}}</span></div>

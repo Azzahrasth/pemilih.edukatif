@@ -16,8 +16,9 @@ class Berita extends Model
         'id',
         'judul',
         'berita',
+        'tanggal_berita',
         'sumber',
-        'tanggal_berita'
+        'penulis',
     ];
 
     public function Komentar()

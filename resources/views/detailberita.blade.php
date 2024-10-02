@@ -9,11 +9,14 @@
     </div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 poppins-bold judul-detail-berita" style="color: #162F50;">{{$berita->judul}}</div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-light deskripsi-detail-berita">
-        <span>{{$berita->berita}}</span>
-        <!-- <p>Pemilihan Umum (Pemilu) akan dilaksanakan pada tanggal 14 Februari 2024 secara serentak. Semua Warga Negara Indonesia (WNI) yang memenuhi syarat diwajibkan melakukan pencoblosan di Tempat Pemungutan Suara (TPS) yang sudah ditentukan.</p> -->
+        <span>{!! nl2br(e(str_replace('$', "\n\n", $berita->berita))) !!}</span>
     </div>
-    <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-regular" style="font-size: 20px; color: #747474;">
-        <p>SUMBER : BERITA KPU</p>
+    
+    <div class="col-12 pt-5 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-regular" style="font-size: 20px; color: #747474;">
+        <p>SUMBER : {{$berita->sumber}}</p>
+    </div>
+    <div class="col-12 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-regular" style="font-size: 20px; color: #747474;">
+        <p>PENULIS : {{$berita->penulis}}</p>
     </div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4">
         @if(session('success'))
@@ -64,7 +67,10 @@
                 </div>
                 @endif
 
-                <div class="montserrat-regular text-end mt-2" style="font-size: 15px; color: #747474;">{{ \Carbon\Carbon::parse($komentar->created_at)->format('d F Y') }}</div>
+                <div class="montserrat-regular text-end mt-2" style="font-size: 15px; color: #747474;">
+                    {{ \Carbon\Carbon::parse($komentar->updated_at ? $komentar->updated_at : $komentar->created_at)->format('d F Y') }}
+                </div>
+                
             </div>
         </div>
     </div>

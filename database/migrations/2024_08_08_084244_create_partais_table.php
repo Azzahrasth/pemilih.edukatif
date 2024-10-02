@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('partais', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 225);
+            $table->string('singkatan', 225);
             $table->string('image', 225)->nullable();
             $table->date('tanggal_dibentuk');
             $table->text('deskripsi');
             $table->string('ketua_umum', 225);
             $table->text('sejarah');
-            $table->text('kontroversi');
             $table->text('ideologi');
             $table->timestamps();
             $table->softDeletes();

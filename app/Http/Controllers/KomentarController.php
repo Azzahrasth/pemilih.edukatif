@@ -25,8 +25,6 @@ class KomentarController extends Controller
             'komentar' => $request->input('komentar'),
             'berita_id' => $request->input('berita_id'),
             'user_id' => auth()->user()->id,
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
         ]);
 
         return redirect()->route('berita.detail', ['id' => $request->input('berita_id')])->with('success', 'Komentar berhasil ditambahkan!');

@@ -16,8 +16,9 @@ return new class extends Migration
             $table->text('judul');
             $table->text('image')->nullable();
             $table->text('berita');
-            $table->string('sumber', 225);
             $table->date('tanggal_berita');
+            $table->string('sumber', 225);
+            $table->string('penulis', 225)->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

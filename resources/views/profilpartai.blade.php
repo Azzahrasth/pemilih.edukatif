@@ -26,7 +26,7 @@
         <div>
             <h4 class="poppins-bold" style=" text-align: justify;">Sejarah</h4>
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
-                {{ $partai->sejarah }}
+                {!! nl2br(e(str_replace('$', "\n\n", $partai->sejarah))) !!}
             </p> 
             </br>
         </div>
@@ -35,12 +35,6 @@
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
                 {{ $partai->ideologi }}
             </p> </br>
-        </div>
-        <div>
-            <h4 class="poppins-bold" style=" text-align: justify;">Kontroversi</h4>
-            <p class="poppins-regular" style="font-size: 20px; text-align: justify;">
-                {{ $partai->kontroversi }}
-            </p> 
         </div>
     </div>
 </div>

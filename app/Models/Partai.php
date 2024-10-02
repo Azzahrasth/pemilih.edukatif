@@ -13,12 +13,12 @@ class Partai extends Model
     public $timestamps = false;
     protected $fillable = [
         'nama',
+        'singkatan',
         'image',
         'tanggal_dibentuk',
         'deskripsi',
         'ketua_umum',
         'sejarah',
-        'kontroversi',
         'ideologi'
     ];
 

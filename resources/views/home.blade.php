@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row p-lg-5 p-2" style="background-color: #162F50; border-radius: 0 0 15% 15%;">
+<div class="row p-lg-5 p-2" style="background-color: #162F50; border-radius: 0 0 15% 15%; padding-top: 6rem; padding-bottom: 8rem;">
     <div class="col-lg-7 col-12 p-lg-5 p-3 order-2 order-xl-1 text-lg-start text-center" style="border-radius: 15px; overflow: hidden; position: relative;">
         <div class="starburst"></div>
         <div class="row">
@@ -52,11 +52,11 @@
 
 <div class="row p-3 mb-4 mx-5 justify-content-center" style="background-color: #F1F1F1; border-radius: 20px;">
     <div class="col-12 poppins-bold p-lg-4 p-2 pb-0 my-4 mb-0 text-center" style="color: #162F50;">
-        <p class="penjelasan-beranda">Pemilihan Kepala Daerah yang diadakan untuk <span style="color: #F6B951;">memilih</span> kepala daerah beserta wakilnya di tingkat <span style="color: #F6B951;">provinsi</span> (gubernur), <span style="color: #F6B951;">kota</span> (wali kota), dan <span style="color: #F6B951;">kabupaten</span> (bupati) secara langsung setiap lima tahun sekali. Tahun ini, pilkada akan dilaksanakan serentak di:</p>
+        <p class="penjelasan-beranda">Pemilihan Kepala Daerah yang diadakan untuk <span style="color: #F6B951;">memilih</span> kepala daerah beserta wakilnya di tingkat <span style="color: #F6B951;">provinsi</span> (gubernur), <span style="color: #F6B951;">kota</span> (wali kota), dan <span style="color: #F6B951;">kabupaten</span> (bupati) secara langsung setiap lima tahun sekali. Pilkada Serentak tahun 2024 akan diikuti oleh</p>
     </div>
     <div class="row justify-content-center mt-3">
         <div class="col-2 poppins-bold text-center me-5" style="background-color: #162F50; font-size: 96px; color: white; border-radius: 25px 25px 0px 0px;">37</div>
-        <div class="col-2 poppins-bold text-center ms-5" style="background-color: #162F50; font-size: 96px; color: white; border-radius: 25px 25px 0px 0px;">576</div>
+        <div class="col-2 poppins-bold text-center ms-5" style="background-color: #162F50; font-size: 96px; color: white; border-radius: 25px 25px 0px 0px;">508</div>
     </div>
     <div class="row pb-4 justify-content-center">
         <div class="col-2 poppins-bold text-center me-5" style="background-color: white; font-size: 24px; color: #162f50; border-radius: 0px 0px 25px 25px;">Provinsi</div>
@@ -131,7 +131,7 @@
             <div class="card">
                 <div class="card-body p-4">
                     <h3 class="poppins-bold">Tahap 3</h3>
-                    <p class="mb-0">Setelah dipanggil, Sobat Pemilih akan mendapatkan dua surat suara. Yakni surat suara Calon Gubernur (warna) dan Calon Bupati/Walikota (warna).</p>
+                    <p class="mb-0">Setelah dipanggil, Sobat Pemilih akan mendapatkan dua surat suara. Yakni surat suara Calon Gubernur dan Calon Bupati/Walikota.</p>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
             <div class="card">
                 <div class="card-body p-4">
                     <h3 class="poppins-bold">Tahap 4</h3>
-                    <p class="mb-0">Pergi ke bilik suara untuk melakukan pencoblosan. Setelah kedua surat suara dicoblos, Sobat Pemilih dapat melipat kembai surat suara sesuai petunjuk dan memasukkannya ke dalam kotak suara.</p>
+                    <p class="mb-0">Pergi ke bilik suara untuk melakukan pencoblosan. Setelah kedua surat suara dicoblos, Sobat Pemilih dapat melipat kembali surat suara sesuai petunjuk dan memasukkannya ke dalam kotak suara.</p>
                 </div>
             </div>
         </div>
@@ -169,7 +169,7 @@
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+    var countDownDate = new Date("Nov 27, 2024 00:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
