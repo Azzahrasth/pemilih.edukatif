@@ -86,9 +86,27 @@ Route::middleware('auth.custom')->group(function () {
     
     Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
     Route::post('createFeedback', [FeedbackController::class, 'store'])->name('feedback.store');
+    
+    // Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.home');
+    // // Route::post('/quiz/{questionNumber}', [QuizController::class, 'goBack'])->name('quiz.back');
+    // Route::get('/quiz/{questionNumber}', [QuizController::class, 'showQuestion'])->name('quiz.question');
+    // // Route::post('/quiz/{questionNumber}', [QuizController::class, 'submitAnswer'])->name('quiz.submit');
+    
+    // Route::post('/quiz/{questionNumber}/submit', [QuizController::class, 'submitAnswer'])->name('quiz.submit');
+    
+    // // Route::get('/quiz/{questionNumber}', [QuizController::class, 'showQuestion'])->name('quiz.question');
+
+
+    // Route::get('/quiz/hasil', [QuizController::class, 'getResults'])->name('quiz.results');
+    // Route::get('/quiz/reset', [QuizController::class, 'resetQuiz'])->name('quiz.reset');
+
     Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.home');
-    Route::get('/quiz/soal', [QuizController::class, 'show'])->name('quiz.soal');
-    Route::get('/quiz/hasil', [QuizController::class, 'show2'])->name('quiz.hasil');
+    Route::get('/quiz/question/{questionNumber}', [QuizController::class, 'showQuestion'])->name('quiz.question');
+    Route::post('/quiz/submit/{questionNumber}', [QuizController::class, 'submitAnswer'])->name('quiz.submit');
+    Route::get('/quiz/results', [QuizController::class, 'showResults'])->name('quiz.results');
+    Route::get('/quiz/reset', [QuizController::class, 'resetQuiz'])->name('quiz.reset');
+    // Route::get('/quiz/question/{questionNumber}', [QuizController::class, 'showQuestion'])->name('quiz.question');
+
 
     Route::get('/chatbot', function () {
        return view('chatbot');
