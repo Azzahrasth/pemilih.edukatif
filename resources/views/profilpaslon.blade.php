@@ -28,14 +28,16 @@
             <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $paslon->daerah }} </p></br>
         </div>
         <div>
-        <h4 class="poppins-bold" style="text-align: justify;">Visi</h4>
-        
-            @foreach($visi as $v)
-                <p class="poppins-regular" style="font-size: 20px; text-align: justify;"> {{ $v->visi_misi}} </p></br>
-            @endforeach                
-            
+      
+        <div>
+            <h4 class="poppins-bold" style="text-align: justify;">Visi</h4>
+            <ul class="poppins-regular" style="font-size: 20px; text-align: justify;">
+                @foreach($visi as $v)
+                    <li>{{ $v->visi_misi }}</li>
+                @endforeach                
+            </ul>
         </div>
-
+        <br>
         <div>
             <h4 class="poppins-bold" style="text-align: justify;">Misi</h4>
             <ol class="poppins-regular" style="font-size: 20px; text-align: justify;">
@@ -44,7 +46,7 @@
                 @endforeach                
             </ol>
         </div>
-
+        <br>
 
         {{-- @php
             // Memisahkan string menjadi array berdasarkan tanda '$'
@@ -64,13 +66,13 @@
             <div class="container my-5">
             <div class="row justify-content-left">
                 @foreach($paslon->pengusung as $partai)
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4"> <!-- Added mb-4 for margin-bottom -->
                     <div class="card text-center custom-card">
-                        <a href="{{ url('/partai/' . $partai->id) }}" class="d-block">
-                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <img src="{{ asset('storage/images/partai/' . $partai->image) }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
-                            </div>
-                        </a>
+                    <a href="{{ url('/partai/' . $partai->id) }}" class="d-block">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <img src="{{ asset($partai->image) }}" class="card-img-top" alt="{{ $partai->nama }}" style="max-width: 100px; height: 120px;">
+                        </div>
+                    </a>
                     </div>
                 </div>
                 @endforeach

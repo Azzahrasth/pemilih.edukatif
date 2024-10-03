@@ -41,8 +41,8 @@ class PaslonController extends Controller
         }
 
         // Pisahkan visi dan misi
-        $visi = $paslon->kategorisasi->where('kategori_isu', 'Visi');
-        $misi = $paslon->kategorisasi->where('kategori_isu', '!=', 'Visi');
+        $visi = $paslon->kategorisasi->where('kategori_isu', 'visi');
+        $misi = $paslon->kategorisasi->where('kategori_isu', '!=', 'visi');
 
         return view('profilpaslon', [
             'paslon' => $paslon,

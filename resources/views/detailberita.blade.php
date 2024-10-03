@@ -45,7 +45,7 @@
     </div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4" style="font-size: 20px;">
     @foreach($komentars as $komentar)
-    <div class="row m-1 p-2 mb-3" style="background-color: #BAD7E9; border-radius: 15px;">
+    <div class="row m-1 pt-3 p-2 mb-3" style="background-color: #BAD7E9; border-radius: 15px;">
         <div class="col-lg-1 col-3 text-center"><img src="{{ asset('storage/images/element/vector-people.png') }}" class="ps-lg-2 ps-2 pe-3 foto-profil-berita"></div>
         <div class="col-lg-11 col-9 ps-lg-5 ps-0 pt-lg-3">
             <div>
