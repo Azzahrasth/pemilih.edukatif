@@ -43,7 +43,7 @@
                 <p class="montserrat-regular limited-text" style="font-size: 17px; text-align: justify;">
                     {{ str_replace('$', '', $berita->berita) }}
                 </p>                
-                <div class="row pt-lg-5">
+                <div class="row pt-lg-3">
                     <div class="d-flex align-items-center col-lg-4 text-lg-start text-center ps-lg-5 montserrat-regular">
                         <img src="{{asset('storage/images/element/vector-calendar.png')}}" alt="Kalender" style="width: 20px; height: 20px;">
                         <span class="ps-4">{{ $berita->tanggal_berita}}</span>

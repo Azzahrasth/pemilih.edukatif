@@ -73,20 +73,21 @@
             <div class="row">
                 @foreach($datas as $data)
                     @if($data->paslon->daerah == $daerah && $data->id != $kandidat->id)
-                        <div class="col-md-3 mb-4">
-                            <div class="card" style="height: 350px;">
-                                <img src="{{ $data->image }}" class="card-img-top" alt="Image" style="width: 100%; height: 200px; object-fit: cover;">
-                                <div class="card-body d-flex flex-column justify-content-center">
-                                    <h5 class="card-title mt-1">{{ $data->nama }}</h5>
-                                    <div class="col-12 d-flex justify-content-center">
-                                        <a href="{{ url('/kandidat/' . $data->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
-                                            Selengkapnya
-                                            <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
-                                        </a>
-                                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card" style="height: 350px;">
+                            <img src="{{ $data->image }}" class="card-img-top" alt="Image" style="width: 100%; height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <h5 class="card-title mt-1">{{ $data->nama }}</h5>
+                                <div class="col-12 d-flex justify-content-center mt-auto">
+                                    <a href="{{ url('/kandidat/' . $data->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">
+                                        Selengkapnya
+                                        <img src="{{ asset('storage/images/element/vector-right.png') }}" class="ps-lg-2">
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    
                     @endif
                 @endforeach
             </div>

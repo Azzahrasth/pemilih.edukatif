@@ -22,65 +22,65 @@
         
         <div class="row justify-content-center mt-4 align-items-start">
             <div class="col-12 text-center">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px; margin: 0 auto;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Supervisor" style="width: 80px;" class="rounded-circle mb-2">
-                        <h5 class="card-title poppins-bold" style="color: #162f50;">Ani Anisyah S.Pd., M.T.</h5>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Supervisor</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px; margin: 0 auto;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/ibu_ani.png') }}" alt="Supervisor" style="width: 100px; height: 100px; object-fit: cover;" class="rounded-circle mb-3">
+                <h5 class="card-title poppins-bold" style="color: #162f50;">Ani Anisyah S.Pd., M.T.</h5>
+                <p class="card-text poppins-regular" style="color: #162f50;">Supervisor</p>
                 </div>
+            </div>
             </div>
         </div>
 
         <div class="row justify-content-center mt-4 align-items-start">
             <div class="col text-center mb-2">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
-                        <h6 class="card-title poppins-bold" style="color: #162f50;">Azzahra Siti Hadjar</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/azzahra.jpg') }}" alt="Software Developer" style="width: 110px; height: 110px; object-fit: cover;" class="rounded-circle mb-3">
+                <h6 class="card-title poppins-bold" style="color: #162f50;">Azzahra Siti Hadjar</h6>
+                <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                 </div>
+            </div>
             </div>
 
             <div class="col text-center mb-2">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Data Scientist" style="width: 80px;" class="rounded-circle mb-2">
-                        <h6 class="card-title poppins-bold" style="color: #162f50;">Cantika Putri Artabilansyah</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Data Scientist</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/cantika.png') }}" alt="Data Scientist" style="width: 110px; height: 110px; object-fit: cover;" class="rounded-circle mb-3">
+                <h6 class="card-title poppins-bold" style="color: #162f50;">Cantika Putri Artabilansyah</h6>
+                <p class="card-text poppins-regular" style="color: #162f50;">Data Scientist</p>
                 </div>
+            </div>
             </div>
 
             <div class="col text-center mb-2">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Data Scientist" style="width: 80px;" class="rounded-circle mb-2">
-                        <h6 class="card-title poppins-bold" style="color: #162f50;">Hestina Dwi Hartini</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Data Scientist</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/tina.jpeg') }}" alt="Data Scientist" style="width: 110px; height: 110px; object-fit: cover;" class="rounded-circle mb-3">
+                <h6 class="card-title poppins-bold" style="color: #162f50;">Hestina Dwi Hartini</h6>
+                <p class="card-text poppins-regular" style="color: #162f50;">Data Scientist</p>
                 </div>
+            </div>
             </div>
 
             <div class="col text-center mb-2">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
-                        <h6 class="card-title poppins-bold" style="color: #162f50;">Indah Resti Fauzi</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/indah.png') }}" alt="Software Developer" style="width: 110px; height: 110px; object-fit: cover;" class="rounded-circle mb-3">
+                <h6 class="card-title poppins-bold" style="color: #162f50;">Indah Resti Fauzi</h6>
+                <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                 </div>
+            </div>
             </div>
 
             <div class="col text-center mb-2">
-                <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
-                    <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member2.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
-                        <h6 class="card-title poppins-bold" style="color: #162f50;">Abdullah Hafidz Furqon</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
-                    </div>
+            <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
+                <div class="card-body">
+                <img src="{{ asset('storage/images/tentangkami/abdul.jpg') }}" alt="Software Developer" style="width: 110px; height: 110px; object-fit: cover;" class="rounded-circle mb-3">
+                <h6 class="card-title poppins-bold" style="color: #162f50;">Abdullah Hafidz Furqon</h6>
+                <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                 </div>
+            </div>
             </div>
         </div>
     </div>

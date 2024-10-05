@@ -10,7 +10,7 @@
         <span class="d-flex align-items-center montserrat-regular" style="color: #747474;"><img src="{{ asset('storage/images/element/vector-calendar.png') }}" class="ps-lg-2 pe-2"> {{$berita->tanggal_berita}} |<img src="{{ asset('storage/images/element/vector-chat.png') }}" class="ps-lg-2 ps-1 pe-2"> {{$berita->komentar->count()}} Komentar</span>
     </div>
     <div class="col-12 pt-2 ps-lg-6 ps-4 poppins-bold judul-detail-berita" style="color: #162F50;">{{$berita->judul}}</div>
-    <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-light deskripsi-detail-berita">
+    <div class="col-12 pt-2 ps-lg-6 ps-4 pe-lg-6 pe-4 poppins-light deskripsi-detail-berita" style="text-align: justify;">
         <span>{!! nl2br(e(str_replace('$', "\n\n", $berita->berita))) !!}</span>
     </div>
     
