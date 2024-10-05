@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 01:30 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Waktu pembuatan: 05 Okt 2024 pada 05.09
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `beritas`
+-- Struktur dari tabel `beritas`
 --
 
 CREATE TABLE `beritas` (
@@ -35,10 +35,10 @@ CREATE TABLE `beritas` (
   `penulis` varchar(255) DEFAULT NULL,
   `tanggal_berita` varchar(255) DEFAULT NULL,
   `berita` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `beritas`
+-- Dumping data untuk tabel `beritas`
 --
 
 INSERT INTO `beritas` (`id`, `sumber`, `judul`, `image`, `penulis`, `tanggal_berita`, `berita`) VALUES
@@ -349,29 +349,29 @@ INSERT INTO `beritas` (`id`, `sumber`, `judul`, `image`, `penulis`, `tanggal_ber
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `feedbacks`
+-- Struktur dari tabel `feedbacks`
 --
 
 CREATE TABLE `feedbacks` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `jenis` varchar(225) NOT NULL,
-  `feedback` text NOT NULL,
+  `jenis` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `feedback` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `rating` int(11) NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -382,7 +382,7 @@ CREATE TABLE `feedbacks` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kandidats`
+-- Struktur dari tabel `kandidats`
 --
 
 CREATE TABLE `kandidats` (
@@ -400,10 +400,10 @@ CREATE TABLE `kandidats` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `delete_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `kandidats`
+-- Dumping data untuk tabel `kandidats`
 --
 
 INSERT INTO `kandidats` (`id`, `nama`, `image`, `tempat_lahir`, `tanggal_lahir`, `latar_belakang`, `pendidikan`, `jejak_karir`, `prestasi`, `organisasi`, `paslon_id`, `created_at`, `updated_at`, `delete_at`) VALUES
@@ -464,7 +464,7 @@ INSERT INTO `kandidats` (`id`, `nama`, `image`, `tempat_lahir`, `tanggal_lahir`,
 (54, 'H. Rano Karno, S.Ip.', 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Rano_Karno_Gubernur.jpg/220px-Rano_Karno_Gubernur.jpg', 'Jakarta', '1960-10-08', 'H. Rano Karno, S.I.P., adalah aktor, sutradara, dan politikus Indonesia. Saat ini, ia menjabat sebagai anggota DPR RI untuk periode 2019–2024, mewakili daerah pemilihan Banten III dari PDI-P, setelah sebelumnya menyelesaikan masa jabatan sebagai Gubernur Banten pada 2017. Kariernya di dunia hiburan dimulai pada usia muda dengan debut di film Malin Kundang (1971) dan terkenal berkat peran utama di Si Doel Anak Betawi (1972). Ia meraih beberapa nominasi dan penghargaan, termasuk Pemeran Utama Pria Terbaik di Festival Film Indonesia.', 'S1 Sekolah Tinggi Ilmu Pemerintahan Abdi Negara Jakarta, S.IP, 2009 - 2013$SMA Negeri 6 Jakarta, 1977 - 1980', 'Anggota DPR Petahana, 2019$Gubernur Banten, 2015 - 2017$Wakil Bupati Tangerang, 2008 - 2011$Anggota MPR, 1997 - 1999', 'Lifetime Achievement - Indonesian Movie Actor Awards (IMAA), 2022$Lencana Melati Gerakan Pramuka - Presiden Republik Indonesia, 2016$Majelis Pembimbing Daerah (Mahida) Peduli Kwartir Daerah - Presiden Republik Indonesia, 2016$Kepala Daerah Inovatif Kategori Pembangunan Infrastruktur - Koran Sindo, 2016$Tokoh Inspiratif C&R sebagai artis pertama yang menjadi Gubernur - Majalah, 2016$Anugrah Akasar Utama - Pemerintah Indonesia, 2015$Bintang Drama Pria Terfavorit - Panasonic Award, 1997$Penghargaan BP2N - Dewan Film Nasional, 1997', 'PDI Perjuangan, Sekretaris Badan Kebudayaan Nasional Pusat, 2019 - 2024$DPP PDI Perjuangan, Ketua Bidang Infokom, 2011 - 2011', 27, NULL, NULL, NULL),
 (55, 'Drs. K.H. Acep Adang Ruhiat, M.S', 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Foto_Acep_Adang_Ruhiat.jpg/330px-Foto_Acep_Adang_Ruhiat.jpg', 'Tasikmalaya', '1958-08-01', 'Drs. H. Acep Adang Ruhiat, M.Si. adalah seorang politikus Indonesia yang menjabat sebagai anggota DPR-RI selama dua periode (2014–2019 dan 2019–2024). Ia mewakili daerah pemilihan Jawa Barat XI, yang meliputi Kabupaten Garut, Kabupaten Tasikmalaya dan Kota Tasikmalaya. Acep merupakan kader Partai Kebangkitan Bangsa. Saat ini, ia bertugas di Komisi VI.', 'S2 Universitas Garut, M.Si, 1998 - 2000$S1 Universitas Siliwangi, Drs, 1977 - 1981$SMA Islam Cipasung, 1973 - 1976', 'Anggota DPRD Provinsi Jawa Barat, 2009 - 2014,$Anggota DPR RI Komisi IV, 2014 - 2019,$Anggota DPR RI Komisi X, 2019 - 2024', '-', 'DPW PKB Jawa Barat, Ketua Dewan Syuro, 2021 - 2026$DPP PKB, Anggota Dewan Syuro, 2020 - 2025$PBNU, Anggota Katib Syuriah, 2015 - 2020$DPC PKB Kabupaten Tasikmalaya, Ketua Dewan Syuro, 2011 - 2020$DPC PKB Kabupaten Tasikmalaya, Ketua Tanfidz, 2008 - 2011$PW GP Ansor Jawa Barat, Wakil Ketua, 2008 - 2012$KTMU PWNU Jawa Barat, Ketua, 2006 - 2011$PC Nahdlatul Ulama, Wakil Ketua, 2006 - 2016$PC GP Ansor Kabupaten Tasikmalaya, Ketua, 2004 - 2008$MPC Pemuda Pancasila Kabupaten Tasikmalaya, Wakil Ketua, 2002 - 2008$DPD KNPI Kabupaten Tasikmalaya, Wakil ketua, 2000 - 2006', 28, NULL, NULL, NULL),
 (56, 'Gitalis Dwinatarina, S.Pd., M.Sos', 'https://thumb.viva.id/intipseleb/663x372/2024/08/30/66d196ea74ea8-gita-kdi.jpg', 'Garut', '1985-10-10', 'Hj. Gitalis Dwi Natarina, S.Pd. atau lebih dikenal sebagai Gita KDI adalah penyanyi dangdut dan lagu rohani Indonesia. Namanya mulai dikenal setelah menjadi juara Kontes Dangdut TPI periode kedua. Gita yang berzodiak Libra ini mempunyai satu orang saudara kandung, yaitu Gina dan 3 saudara tiri yaitu: Risa, Yudit, Reynald. Gita adalah putri kedua pasangan H. Sahidin Hassan S.Pd (Guru-Dosen) dengan Hj. Agis Juwiratna S.Pd. Penampilan Gita sebagai artis KDI telah menorehkan prestasi sebagai pendatang baru tersohor ajang Anugerah Dangdut TPI 2005. Meskipun tampil dengan berjlbab namun tidak membatasi Gita untuk mempunyai karier cemerlang di dunia hiburan Indonesia. Nama Gita Danaya menjadi sangat melambung sejak ia terpilih sebagai bintang utama dalam sinetron Rindu-Rindu Asmara. Sebuah sinetron drama musikal yang diproduksi oleh salah satu production house di Indonesia, Rapi Films. Meski masih terbilang baru dalam dunia akting, tetapi kiprah Gita dalam bidang seni peran patut diperhitungkan.', 'S2 UIN BANDUNG, M.Sos, 2021 - 2023$S1 UNIVERSITAS ISLAM NUSANTARA, S.pd, 2010 - 2012', 'Anggota DPR Komisi XI, 2011 - 2014', 'Kontes dangdut Indonesia (KDI), TPI, 2005$Remaja berprestasi, Gubernur, 2005', 'DPP LASQI JAYA, Ketua Harian, 2023 - 2028$PAMMI, Ketua DPC, 2022 - 2027$DPW PKB JABAR, Wakil Ketua, 2020 - 2024', 28, NULL, NULL, NULL),
-(57, 'H. Ronal Surapradja', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bupati_Pangandaran_Jeje_Wiradinata.jpg/330px-Bupati_Pangandaran_Jeje_Wiradinata.jpg', 'Pangandaran', '1965-02-14', 'H. Jeje Wiradinata adalah Bupati Pangandaran sejak 17 Februari 2016. Sebelumnya ia menjabat sebagai Wakil Bupati Ciamis periode 6 April 2014 hingga 26 Juni 2015. Sebelum kembali ke Kabupaten Pangandaran, Jeje Wiradinata sempat menduduki sebagai Wakil Bupati Ciamis dari tanggal 6 April 2014 sampai 26 Juni 2015. Pada saat Bupati Ciamis Iing Syam Arifin. Memilih untuk membangun tempat kelahirannya, Jeje Wiradinata melepaskan jabatan sebagai Wakil Bupati Ciamis. Dia kembali ke Pangandaran dan mengikuti kontestasi Pemilu Kepala Daerah (Pilkada) 2015. Jeje Wiradinata yang berpasangan dengan Adang Hadari berhasil memenangkan Pilkada 2015 dan dilantik pada 17 Februari 2016. Jeje Wiradinata bertekad untuk terus membangun Kabupaten Pangandaran dan mencalonkan kembali pada Pilkada tahun 2020. Pada Pilkada 2020 Jeje Wiradinata berganti pasangan dan memilih Ujang Endin Indrawan sebagai Wakilnya dan berhasil menanag untuk kedua kalinya. Jeje Wiradinata dan Ujang Endin Indrawan resmi dilantik oleh Gubernur Ridwan Kamil sebagai Bupati dan Wakil Bupati Pangandaran pada tanggal 26 Februari 2021 di Gedung Sate, Bandung, Jawa Barat.', 'D3 AUP JAKARTA, 1984 - 1987$SMA NEGRI 1 CIAMIS, 1981 - 1984', 'Ketua Umum KORAL AUP/STP Pusat, 2017 - 2022$Bupati Pangandaran, 2016 - 2021$Wakil Bupati Ciamis, 2014 - 2015$Anggota DPRD Kabupaten Ciamis, 2004 - 2009$Anggota DPRD Kabupaten Ciamis, 1999 - 2004$Manager Produksi PT. Wicakarya, 1991 - 1993$Staf Ahli Samudra Farmindo Luas, 1987 - 1991', 'PGM Award Indonesia, 2024$Anugerah Dwija Praja Nugraha dari Pengurus Besar Persatuan Guru Republik, 2023$Penggerak Koperasi Terbaik dari Menteri Koordinator Perekonomian, 2022', 'DPC PDI PERJUANGAN KABUPATEN PANGANDARAN, KETUA DPC, 2019 - 2025$DPC PDI PERJUANGAN KAB PANGANDARAN, KETUA DPC, 2015 - 2019$DPC PDI PERJUANGAN KAB CIAMIS, KETUA DPC, 2010 - 2015$HNSI KABUPATEN PANGANDARAN, KETUA, 2010 - 2015$DPC PDI PERJUANGAN KAB CIAMIS, KETUA DPC, 2005 - 2010$HNSI KABUPATEN CIAMIS, KETUA, 2005 - 2010$DPC PDI PERJUANGAN KABUPATEN CIAMIS, WAKIL KETUA DPC, 2000 - 2005', 29, NULL, NULL, NULL),
+(57, 'Jeje Wiradinata', 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Bupati_Pangandaran_Jeje_Wiradinata.jpg/330px-Bupati_Pangandaran_Jeje_Wiradinata.jpg', 'Pangandaran', '1965-02-14', 'H. Jeje Wiradinata adalah Bupati Pangandaran sejak 17 Februari 2016. Sebelumnya ia menjabat sebagai Wakil Bupati Ciamis periode 6 April 2014 hingga 26 Juni 2015. Sebelum kembali ke Kabupaten Pangandaran, Jeje Wiradinata sempat menduduki sebagai Wakil Bupati Ciamis dari tanggal 6 April 2014 sampai 26 Juni 2015. Pada saat Bupati Ciamis Iing Syam Arifin. Memilih untuk membangun tempat kelahirannya, Jeje Wiradinata melepaskan jabatan sebagai Wakil Bupati Ciamis. Dia kembali ke Pangandaran dan mengikuti kontestasi Pemilu Kepala Daerah (Pilkada) 2015. Jeje Wiradinata yang berpasangan dengan Adang Hadari berhasil memenangkan Pilkada 2015 dan dilantik pada 17 Februari 2016. Jeje Wiradinata bertekad untuk terus membangun Kabupaten Pangandaran dan mencalonkan kembali pada Pilkada tahun 2020. Pada Pilkada 2020 Jeje Wiradinata berganti pasangan dan memilih Ujang Endin Indrawan sebagai Wakilnya dan berhasil menanag untuk kedua kalinya. Jeje Wiradinata dan Ujang Endin Indrawan resmi dilantik oleh Gubernur Ridwan Kamil sebagai Bupati dan Wakil Bupati Pangandaran pada tanggal 26 Februari 2021 di Gedung Sate, Bandung, Jawa Barat.', 'D3 AUP JAKARTA, 1984 - 1987$SMA NEGRI 1 CIAMIS, 1981 - 1984', 'Ketua Umum KORAL AUP/STP Pusat, 2017 - 2022$Bupati Pangandaran, 2016 - 2021$Wakil Bupati Ciamis, 2014 - 2015$Anggota DPRD Kabupaten Ciamis, 2004 - 2009$Anggota DPRD Kabupaten Ciamis, 1999 - 2004$Manager Produksi PT. Wicakarya, 1991 - 1993$Staf Ahli Samudra Farmindo Luas, 1987 - 1991', 'PGM Award Indonesia, 2024$Anugerah Dwija Praja Nugraha dari Pengurus Besar Persatuan Guru Republik, 2023$Penggerak Koperasi Terbaik dari Menteri Koordinator Perekonomian, 2022', 'DPC PDI PERJUANGAN KABUPATEN PANGANDARAN, KETUA DPC, 2019 - 2025$DPC PDI PERJUANGAN KAB PANGANDARAN, KETUA DPC, 2015 - 2019$DPC PDI PERJUANGAN KAB CIAMIS, KETUA DPC, 2010 - 2015$HNSI KABUPATEN PANGANDARAN, KETUA, 2010 - 2015$DPC PDI PERJUANGAN KAB CIAMIS, KETUA DPC, 2005 - 2010$HNSI KABUPATEN CIAMIS, KETUA, 2005 - 2010$DPC PDI PERJUANGAN KABUPATEN CIAMIS, WAKIL KETUA DPC, 2000 - 2005', 29, NULL, NULL, NULL),
 (58, 'H. Ronal Surapradja', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/KPU_Ronal_Surapradja.jpg', 'Bandung', '1977-05-26', 'H. Ronal Sunandar Surapradja adalah salah satu pemeran asal Indonesia berdarah Sunda. Namanya mulai mencuat setelah bermain dalam acara komedi Extravaganza di TransTV dan sebagai penyiar di radio Jak FM. Saat ini, Ronal merupakan anggota klub motor The Prediksi yang didirikan oleh Andre Taulany, mantan vokalis grup musik Stinky dan juga host Go Healthy Metro TV. Ronal menikah dengan Seruni Purnamasari pada tanggal 25 Mei 2008, namun mereka telah resmi bercerai pada 23 Juni 2023.', 'SMA NEGRI 5 BANDUNG, 1992 - 1995', 'Wakil Bupati Ciamis, 2014 - 2015$Bupati Pangandaran, 2016 - 2021', '-', '-', 29, NULL, NULL, NULL),
 (59, 'H. Ahmad Syaikhu', 'https://asset-2.tstatic.net/bangka/foto/bank/images/20211112_presiden-pks-ahmad-saikhu.jpg', 'Cirebon', '1965-01-23', 'H. Ahmad Syaikhu adalah seorang politikus Indonesia yang menjabat sebagai Presiden Partai Keadilan Sejahtera. Ia juga adalah Anggota DPR RI fraksi PKS periode 2019-2024 dari Daerah Pemilihan Jawa Barat VII. Ia juga adalah Wakil Wali Kota Bekasi, Jawa Barat periode 2013-2018 mendampingi Rahmat Effendi yang dilantik pada 10 Maret 2013. Pasangan ini diusung Partai Golkar, Partai Keadilan Sejahtera (PKS). Sebelumnya, Ahmad Syaikhu merupakan Anggota DPRD Provinsi Jawa Barat dari Fraksi PKS. Ia pernah mengikuti Pemilihan umum Gubernur Jawa Barat 2018 sebagai Calon Wakil Gubernur mendampingi Mayjen. (Purn.) Sudrajat yang diusung oleh Gerindra dan PKS, Namun tidak terpilih.', 'S2 SWINS Jakarta, M.M., 2022 - 2024$S1 STIE Swadaya, S.Ak., 2018 - 2022$D3 STAN Jakarta, 1983 - 1986$SMAN Sindanglaut, 1980 - 1983', 'Wakil Walikota Bekasi, 2013 - 2018$Anggota DPRD Jawa Barat, 2009 - 2013$Anggota DPRD Bekasi, 2004 - 2009$Auditor di BPKP Pusat pada Deputi Bidang Pengawasan Keuangan Daerah, 1990$Auditor Badan Pengawasan Keuangan dan Pembangunan (BPKP) Perwakilan Provinsi Sumatera Selatan, 1986 - 1989', 'Rising Star of Democracy, 2020$Juara 1 Menembak pada Pelatihan Anggota DPRD Angkatan I, Lemhanas RI, 2005', 'Perbakin Kota Bekasi, Penasihat, 2018 - 2024$Badan Pengelola Klub Jantung (BPK) Kota Bekasi, Ketua, 2017 - 2022', 30, NULL, NULL, NULL),
 (60, 'Dr. Ing. H. Ilham Akbar Habibie, M.B.A.', 'https://castfoundation.id/wp-content/uploads/2021/04/Pak-Ilham.jpg', 'Jerman', '1963-05-16', 'Dr. Ing. H. Ilham Akbar Habibie, M.B.A. adalah pakar penerbangan berdarah Suku Gorontalo dari Indonesia. Keluarga besar Habibie berasal dari Kabila, sebuah kecamatan di Provinsi Gorontalo. Ilham adalah anak pertama dari pasangan Hasri Ainun Habibie dan B. J. Habibie, Presiden Indonesia periode 1998–1999. Sebagai sarjana penerbangan, melalui PT Regio Aviasi Industri, ia membidani Program Regio Prop, proyek pesawat komersial buatan dalam negeri yang merupakan pengembangan dari N-250. Ia menggandeng Erry Firmansyah, mantan direktur utama PT Bursa Efek Indonesia (BEI), untuk membangun perusahaan PT Regio Aviasi Industri (RAI). Mewarisi kecerdasan orang tuanya, Ilham Habibie berusaha keras melaksanakan impian ayahnya agar Indonesia terus membuat pesawat terbang sendiri.', 'S3 Technische Universität München, Dr.-Ing., 1994 - 1994$S2 University of Chicago, Singapore Campus, M.B.A., 2001 - 2003$S2 Technische Universität München, - Ing, 1981 - 1987$S1 Technische Universität München, - Ing, 1981 - 1987', 'AFEO Honorary Fellow (ASEAN Federation of Engineering Organization), ASEAN Federation of Engineering, 2009$Satyalancana Wira Karya, Republic of Indonesia, Pemerintah Indonesia, 1997$Adikarsa Pemuda, Republic of Indonesia, Pemerintah Indonesia, 1997', 'AFEO Honorary Fellow (ASEAN Federation of Engineering Organization), ASEAN Federation of Engineering, 2009$Adikarsa Pemuda, Republic of Indonesia, Pemerintah Indonesia, 1997$Satyalancana Wira Karya, Republic of Indonesia, Pemerintah Indonesia, 1997', 'Kamar Dagang Indonesia – KADIN, Ketua Badan Riset dan Teknologi, 2021 - 2024$Ikatan Cendekiawan Muslim se-Indonesia – ICMI, Ketua Dewan Pakar, 2021 - 2024$Persatuan Insiyur Indonesia - PII, Wakil Ketua Umum, 2021 - 2024$Yayasan Visi Indonesia Raya Emisi Nol Bersih - Viriya ENB, Wakil Ketua Dewan Pembina, 2022 - 2024$Yayasan The Habibie Center - THC, Pendiri dan Ketua Dewan Pembina, 2019 - 2024$The International Islamic Forum for Science, Technology and Human Resources Development - IIFTIHAR, Sekretaris Jenderal, 2016 - 2024$Indonesia International Chamber of Commerce - ICC, Presiden, 2016 - 2024$Dewan TIK Nasional - WANTIKNAS, Ketua Tim Pelaksana, 2014 - 2024$Yayasan International University Liaison Indonesia - IULI, Pendiri dan Ketua Dewan Pembina, 2013 - 2024$Ikatan Saudagar Muslim Indonesia – ISMI, Ketua Umum, 2013 - 2024$Yayasan Inovasi Teknologi Indonesia - INOTEK, Ketua Dewan Pembina, 2012 - 2024', 30, NULL, NULL, NULL),
@@ -623,7 +623,7 @@ INSERT INTO `kandidats` (`id`, `nama`, `image`, `tempat_lahir`, `tanggal_lahir`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategorisasis`
+-- Struktur dari tabel `kategorisasis`
 --
 
 CREATE TABLE `kategorisasis` (
@@ -634,10 +634,10 @@ CREATE TABLE `kategorisasis` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `kategorisasis`
+-- Dumping data untuk tabel `kategorisasis`
 --
 
 INSERT INTO `kategorisasis` (`id`, `visi_misi`, `kategori_isu`, `paslon_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -1416,7 +1416,7 @@ INSERT INTO `kategorisasis` (`id`, `visi_misi`, `kategori_isu`, `paslon_id`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `komentars`
+-- Struktur dari tabel `komentars`
 --
 
 CREATE TABLE `komentars` (
@@ -1427,22 +1427,29 @@ CREATE TABLE `komentars` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `komentars`
+--
+
+INSERT INTO `komentars` (`id`, `komentar`, `user_id`, `berita_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Gaboleh terlewat nih', 1, 18, '2024-10-05 02:35:24', '2024-10-05 02:35:24', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -1464,7 +1471,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `partais`
+-- Struktur dari tabel `partais`
 --
 
 CREATE TABLE `partais` (
@@ -1480,10 +1487,10 @@ CREATE TABLE `partais` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `delete_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `partais`
+-- Dumping data untuk tabel `partais`
 --
 
 INSERT INTO `partais` (`id`, `nama`, `singkatan`, `image`, `tanggal_dibentuk`, `deskripsi`, `ketua_umum`, `sejarah`, `ideologi`, `created_at`, `updated_at`, `delete_at`) VALUES
@@ -1509,7 +1516,7 @@ INSERT INTO `partais` (`id`, `nama`, `singkatan`, `image`, `tanggal_dibentuk`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paslons`
+-- Struktur dari tabel `paslons`
 --
 
 CREATE TABLE `paslons` (
@@ -1518,10 +1525,10 @@ CREATE TABLE `paslons` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `delete_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `paslons`
+-- Dumping data untuk tabel `paslons`
 --
 
 INSERT INTO `paslons` (`id`, `daerah`, `created_at`, `updated_at`, `delete_at`) VALUES
@@ -1632,19 +1639,19 @@ INSERT INTO `paslons` (`id`, `daerah`, `created_at`, `updated_at`, `delete_at`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_reset_tokens`
+-- Struktur dari tabel `password_reset_tokens`
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengusungs`
+-- Struktur dari tabel `pengusungs`
 --
 
 CREATE TABLE `pengusungs` (
@@ -1654,10 +1661,10 @@ CREATE TABLE `pengusungs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pengusungs`
+-- Dumping data untuk tabel `pengusungs`
 --
 
 INSERT INTO `pengusungs` (`id`, `partai_id`, `paslon_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2192,16 +2199,16 @@ INSERT INTO `pengusungs` (`id`, `partai_id`, `paslon_id`, `created_at`, `updated
 -- --------------------------------------------------------
 
 --
--- Table structure for table `personal_access_tokens`
+-- Struktur dari tabel `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `expires_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -2211,40 +2218,40 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sessions`
+-- Struktur dari tabel `sessions`
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) NOT NULL,
+  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) DEFAULT NULL,
-  `user_agent` text DEFAULT NULL,
-  `payload` longtext NOT NULL,
+  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `verify_key` varchar(255) DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `verify_key` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Dumping data untuk tabel `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `verify_key`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -2256,72 +2263,72 @@ INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `ve
 --
 
 --
--- Indexes for table `beritas`
+-- Indeks untuk tabel `beritas`
 --
 ALTER TABLE `beritas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indexes for table `feedbacks`
+-- Indeks untuk tabel `feedbacks`
 --
 ALTER TABLE `feedbacks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `feedbacks_user_id_foreign` (`user_id`);
 
 --
--- Indexes for table `kandidats`
+-- Indeks untuk tabel `kandidats`
 --
 ALTER TABLE `kandidats`
   ADD PRIMARY KEY (`id`),
   ADD KEY `foreign_key` (`paslon_id`);
 
 --
--- Indexes for table `kategorisasis`
+-- Indeks untuk tabel `kategorisasis`
 --
 ALTER TABLE `kategorisasis`
   ADD PRIMARY KEY (`id`),
   ADD KEY `yyyyy` (`paslon_id`);
 
 --
--- Indexes for table `komentars`
+-- Indeks untuk tabel `komentars`
 --
 ALTER TABLE `komentars`
   ADD PRIMARY KEY (`id`),
   ADD KEY `xxxxxxxx` (`berita_id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `partais`
+-- Indeks untuk tabel `partais`
 --
 ALTER TABLE `partais`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `paslons`
+-- Indeks untuk tabel `paslons`
 --
 ALTER TABLE `paslons`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_reset_tokens`
+-- Indeks untuk tabel `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
   ADD PRIMARY KEY (`email`);
 
 --
--- Indexes for table `pengusungs`
+-- Indeks untuk tabel `pengusungs`
 --
 ALTER TABLE `pengusungs`
   ADD PRIMARY KEY (`id`),
@@ -2329,7 +2336,7 @@ ALTER TABLE `pengusungs`
   ADD KEY `ssss` (`partai_id`);
 
 --
--- Indexes for table `personal_access_tokens`
+-- Indeks untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
@@ -2337,7 +2344,7 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `sessions`
+-- Indeks untuk tabel `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -2345,7 +2352,7 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -2354,111 +2361,111 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_verify_key_unique` (`verify_key`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `beritas`
+-- AUTO_INCREMENT untuk tabel `beritas`
 --
 ALTER TABLE `beritas`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=284;
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `feedbacks`
+-- AUTO_INCREMENT untuk tabel `feedbacks`
 --
 ALTER TABLE `feedbacks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `kandidats`
+-- AUTO_INCREMENT untuk tabel `kandidats`
 --
 ALTER TABLE `kandidats`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=207;
 
 --
--- AUTO_INCREMENT for table `kategorisasis`
+-- AUTO_INCREMENT untuk tabel `kategorisasis`
 --
 ALTER TABLE `kategorisasis`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=769;
 
 --
--- AUTO_INCREMENT for table `komentars`
+-- AUTO_INCREMENT untuk tabel `komentars`
 --
 ALTER TABLE `komentars`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=323;
 
 --
--- AUTO_INCREMENT for table `partais`
+-- AUTO_INCREMENT untuk tabel `partais`
 --
 ALTER TABLE `partais`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `paslons`
+-- AUTO_INCREMENT untuk tabel `paslons`
 --
 ALTER TABLE `paslons`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
--- AUTO_INCREMENT for table `pengusungs`
+-- AUTO_INCREMENT untuk tabel `pengusungs`
 --
 ALTER TABLE `pengusungs`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=528;
 
 --
--- AUTO_INCREMENT for table `personal_access_tokens`
+-- AUTO_INCREMENT untuk tabel `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `feedbacks`
+-- Ketidakleluasaan untuk tabel `feedbacks`
 --
 ALTER TABLE `feedbacks`
   ADD CONSTRAINT `feedbacks_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Constraints for table `kandidats`
+-- Ketidakleluasaan untuk tabel `kandidats`
 --
 ALTER TABLE `kandidats`
   ADD CONSTRAINT `foreign_key` FOREIGN KEY (`paslon_id`) REFERENCES `paslons` (`id`);
 
 --
--- Constraints for table `kategorisasis`
+-- Ketidakleluasaan untuk tabel `kategorisasis`
 --
 ALTER TABLE `kategorisasis`
   ADD CONSTRAINT `yyyyy` FOREIGN KEY (`paslon_id`) REFERENCES `paslons` (`id`);
 
 --
--- Constraints for table `komentars`
+-- Ketidakleluasaan untuk tabel `komentars`
 --
 ALTER TABLE `komentars`
   ADD CONSTRAINT `xxxxxxxx` FOREIGN KEY (`berita_id`) REFERENCES `beritas` (`id`);
 
 --
--- Constraints for table `pengusungs`
+-- Ketidakleluasaan untuk tabel `pengusungs`
 --
 ALTER TABLE `pengusungs`
   ADD CONSTRAINT `ssss` FOREIGN KEY (`partai_id`) REFERENCES `partais` (`id`),
