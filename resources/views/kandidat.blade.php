@@ -52,7 +52,7 @@
                 <img class="card-img-top mx-auto" src="{{ $kandidat->image }}" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
             <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                <h5 class="card-title blue text-center poppins-bold" style="font-size: 18px; text-align: center; margin: 0 auto;">{{ $kandidat->nama }}</h5>
+                <h5 class="card-title blue text-center poppins-bold d-flex align-items-center justify-content-center" style="font-size: 18px; text-align: center; margin: 0 auto; height: 100%;">{{ $kandidat->nama }}</h5>
                 <div class="row pt-2 mt-auto">
                     <div class="col-12 d-flex justify-content-center align-items-center">
                         <a href="{{ url('/kandidat/' . $kandidat->id) }}" class="btn montserrat-semibold px-3 py-1" style="background-color: #F6B951; color: white; border-radius: 8px; font-size: 13px;">

@@ -8,7 +8,7 @@
             <img src="{{ asset('storage/images/logo2.png') }}" alt="Pemilih Edukatif" class="img-fluid my-4" style="width: 500px">
         </div>
         <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
-            <strong style="color: #F6B951;">Pemilih Edukatif</strong> adalah platform yang dirancang untuk memberikan akses mudah dan terpercaya kepada para pemilih dalam <strong style="color: #F6B951;">PILKADA 2024</strong> agar memperoleh informasi lengkap dan obyektif mengenai calon-calon dalam <strong style="color: #F6B951;">Pilkada 2024</strong>. Kami membantu masyarakat memahami <strong style="color: #F6B951;">visi, misi</strong>, dan <strong style="color: #F6B951;">program kerja</strong> setiap calon, sehingga mereka dapat membuat <strong style="color: #F6B951;">keputusan</strong> yang lebih terinformasi dan <strong style="color: #F6B951;">bijak</strong>.
+            <strong style="color: #F6B951;">Pemilih Edukatif</strong> adalah platform yang dirancang untuk memberikan akses mudah dan terpercaya kepada para pemilih dalam <strong style="color: #F6B951;">PILKADA 2024</strong> agar memperoleh informasi lengkap dan obyektif mengenai calon-calon dalam <strong style="color: #F6B951;">Pilkada 2024</strong>. Kami membantu masyarakat memahami <strong style="color: #F6B951;">visi, misi</strong>, dan <strong style="color: #F6B951;">profile</strong> setiap calon, sehingga mereka dapat membuat <strong style="color: #F6B951;">keputusan</strong> yang lebih terinformasi dan <strong style="color: #F6B951;">bijak</strong>.
         </p>
         <p class="poppins-regular" style="color: #162f50; font-size: 18px; text-align: justify;">
             Kami percaya bahwa dengan memberikan akses <strong style="color: #F6B951;">informasi komprehensif</strong>, Pemilih Edukatif dapat berperan dalam menciptakan pilkada yang lebih adil, transparan, dan demokratis. Mari wujudkan <strong style="color: #F6B951;">masa depan yang lebih baik</strong> melalui pilkada yang berkualitas dan berintegritas.
@@ -33,17 +33,17 @@
         </div>
 
         <div class="row justify-content-center mt-4 align-items-start">
-            <div class="col text-center mb-4">
+            <div class="col text-center mb-2">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Backend Developer" style="width: 80px;" class="rounded-circle mb-2">
+                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
                         <h6 class="card-title poppins-bold" style="color: #162f50;">Azzahra Siti Hadjar</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Backend Developer</p>
+                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col text-center mb-4">
+            <div class="col text-center mb-2">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
                         <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Data Scientist" style="width: 80px;" class="rounded-circle mb-2">
@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="col text-center mb-4">
+            <div class="col text-center mb-2">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
                         <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Data Scientist" style="width: 80px;" class="rounded-circle mb-2">
@@ -63,22 +63,22 @@
                 </div>
             </div>
 
-            <div class="col text-center mb-4">
+            <div class="col text-center mb-2">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Backend Developer" style="width: 80px;" class="rounded-circle mb-2">
+                        <img src="{{ asset('storage/images/tentangkami/member1.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
                         <h6 class="card-title poppins-bold" style="color: #162f50;">Indah Resti Fauzi</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Backend Developer</p>
+                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col text-center mb-4">
+            <div class="col text-center mb-2">
                 <div class="card" style="background-color: #F6B951; border-radius: 10px; width: 180px; height: 250px;">
                     <div class="card-body">
-                        <img src="{{ asset('storage/images/tentangkami/member2.png') }}" alt="Frontend Developer" style="width: 80px;" class="rounded-circle mb-2">
+                        <img src="{{ asset('storage/images/tentangkami/member2.png') }}" alt="Software Developer" style="width: 80px;" class="rounded-circle mb-2">
                         <h6 class="card-title poppins-bold" style="color: #162f50;">Abdullah Hafidz Furqon</h6>
-                        <p class="card-text poppins-regular" style="color: #162f50;">Frontend Developer</p>
+                        <p class="card-text poppins-regular" style="color: #162f50;">Software Developer</p>
                     </div>
                 </div>
             </div>

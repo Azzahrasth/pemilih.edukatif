@@ -79,7 +79,7 @@
     <div class="col-lg-4 col-12 pt-3 pt-sm-0 deskripsi-daftar-partai d-flex justify-content-center mb-4">
         <div class="card p-4" style="box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; max-width: 388px;">
             <div style="width: 100%; height: 230px; overflow: hidden; border-radius: 8px;">
-                <img class="card-img-top mx-auto foto-terkini" src="{{ $berita->image }}" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                <img class="card-img-top mx-auto foto-terkini" src="{{ $berita->image }}" alt="Card image cap" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" onerror="this.onerror=null;this.src='{{ asset('storage/images/berita/dummy-terkini-1.png') }}';">
             </div>
             <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title montserrat-semibold limited-text" style="font-size: 18px;">{{ $berita->judul }}</h5>

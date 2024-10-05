@@ -3,7 +3,9 @@
 @section('content')
 
 <div class="row mt-lg-5 mt-4 mb-5">
-    <div class="col-12 text-center"><img src="{{ $berita->image }}" style="border-radius: 8px;" alt="Foto Berita" style="height: auto;" class="foto-berita"></div>
+    <div class="col-12 text-center">
+        <img src="{{ $berita->image }}" onerror="this.onerror=null;this.src='{{ asset('storage/images/berita/dummy-terkini-1.png') }}';" style="border-radius: 8px; max-width: 50%; height: auto;" alt="Foto Berita" class="foto-berita">
+    </div>
     <div class="col-12 pt-4 ps-lg-6 ps-4">
         <span class="d-flex align-items-center montserrat-regular" style="color: #747474;"><img src="{{ asset('storage/images/element/vector-calendar.png') }}" class="ps-lg-2 pe-2"> {{$berita->tanggal_berita}} |<img src="{{ asset('storage/images/element/vector-chat.png') }}" class="ps-lg-2 ps-1 pe-2"> {{$berita->komentar->count()}} Komentar</span>
     </div>

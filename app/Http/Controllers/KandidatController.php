@@ -22,7 +22,7 @@ class KandidatController extends Controller
             });
         }
 
-        $data = $query->orderBy('id', 'asc')->get();
+        $data = $query->orderBy('nama', 'asc')->get();
 
         // Ambil daftar semua daerah untuk dropdown
         $daerahs = Paslon::pluck('daerah')->unique();
