@@ -72,10 +72,12 @@ class RegisterController extends Controller
             ->update([
                 'email_verified_at' => date('Y-m-d H:i:s')
             ]);
-            
-            return "Verifikasi Berhasil. Akun Anda sudah aktif.";
+            session(['allow_verif_access' => true]);
+            return redirect()->route('verif')->with('success', 1);
+            // return "Verifikasi Berhasil. Akun Anda sudah aktif.";
         }else{
-            return "Key tidak valid!";
+            session(['allow_verif_access' => true]);
+            return redirect()->route('verif')->with('success', 0);
         }
     }
 }

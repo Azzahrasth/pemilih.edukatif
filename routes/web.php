@@ -52,6 +52,10 @@ Route::get('/profilpaslon', function () {
     return view('profilpaslon');
 })->name('profilpaslon');
 
+Route::get('/verif', function () {
+    return view('verif');
+})->name('verif')->middleware('verify.access');
+
 // Route::get('/profilpartai', function () {
 //     return view('profilpartai');
 // })->name('profilpartai');

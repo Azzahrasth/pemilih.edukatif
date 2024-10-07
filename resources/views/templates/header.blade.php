@@ -37,7 +37,7 @@
           @else
           <a class="nav-link"
             style="background-color: #F6B951; color: #162f50; border-radius: 20px; padding: 10px 25px; display: flex; justify-content: center; align-items: center;"
-            href="{{ url('/login') }}">Masuk</a>
+            href="{{ route('login') }}">Masuk</a>
           @endif
         </li>
       </ul>
